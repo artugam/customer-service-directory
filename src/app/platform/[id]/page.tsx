@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getPlatformsServer, generatePlatformId } from "@/lib/platforms";
+import { generatePlatformMetadata, generateJSONLD } from "@/lib/metadata";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -32,6 +33,27 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const platforms = await getPlatformsServer();
+  const platform = platforms.find(
+    (p) => generatePlatformId(p.trade_name) === id
+  );
+
+  if (!platform) {
+    return {
+      title: "Platform Not Found",
+      description: "The requested platform could not be found.",
+    };
+  }
+
+  return generatePlatformMetadata(platform, `/platform/${id}`);
+}
+
 export default async function PlatformPage({
   params,
 }: {
@@ -49,8 +71,48 @@ export default async function PlatformPage({
 
   const platformId = generatePlatformId(platform.trade_name);
 
+  // Generate JSON-LD structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: platform.trade_name,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: platform.pricing.plans
+        .filter((p) => p.price_annual || p.price_monthly || p.price)
+        .map((p) => {
+          const price = p.price_annual || p.price_monthly || p.price || "";
+          const match = price.match(/\$(\d+)/);
+          return match ? parseInt(match[1]) : 0;
+        })
+        .sort((a, b) => a - b)[0] || 0,
+      offerCount: platform.pricing.plans.length,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: platform.reputation.g2_rating,
+      ratingCount: platform.reputation.g2_reviews_count,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    description: platform.description,
+    url: platform.website_url,
+    creator: {
+      "@type": "Organization",
+      name: platform.company_name,
+    },
+    featureList: platform.features.map((f) => f.name).join(", "),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={generateJSONLD(jsonLd)}
+      />
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         {/* Back Button */}
         <Button asChild variant="ghost" className="mb-6">

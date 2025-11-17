@@ -11,6 +11,7 @@ import { useState } from "react";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Browse", href: "/#platforms" },
+  { name: "AI Solutions", href: "/ai-customer-service" },
   { name: "Compare", href: "/compare" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
