@@ -17,14 +17,14 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold">Quick Links</h3>
+            <h3 className="text-sm font-semibold">Platform Tools</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/"
+                  href="/find-platform"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Home
+                  Platform Finder
                 </Link>
               </li>
               <li>
@@ -32,7 +32,7 @@ export function Footer() {
                   href="/#platforms"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Browse Platforms
+                  Browse All Platforms
                 </Link>
               </li>
               <li>
@@ -40,15 +40,15 @@ export function Footer() {
                   href="/compare"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Compare
+                  Compare Platforms
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/ai-customer-service"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  About Us
+                  AI Solutions Guide
                 </Link>
               </li>
             </ul>
@@ -87,8 +87,16 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold">Get in Touch</h3>
+            <h3 className="text-sm font-semibold">Company</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/contact"
@@ -97,35 +105,14 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://konrado.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Konrado.AI
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 border-t pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground text-center sm:text-left">
+        <div className="mt-12 border-t pt-8">
+          <p className="text-sm text-muted-foreground text-center">
             © {currentYear} Customer Service Directory. All rights reserved.
-          </p>
-          <p className="text-sm text-muted-foreground text-center sm:text-right">
-            Created by{" "}
-            <a
-              href="https://konrado.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-foreground hover:text-primary transition-colors"
-            >
-              Konrado.AI CTO
-            </a>
           </p>
         </div>
       </div>
