@@ -10,6 +10,7 @@ import { useState } from "react";
 
 const navigation = [
   { name: "Home", href: "/" },
+  { name: "Find Platform", href: "/find-platform" },
   { name: "Browse", href: "/#platforms" },
   { name: "AI Solutions", href: "/ai-customer-service" },
   { name: "Compare", href: "/compare" },

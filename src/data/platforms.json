@@ -125,7 +125,39 @@
           }
         ],
         "enterprise_custom": true,
-        "contact_sales_for_enterprise": true
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": 0,
+            "max": 10000
+          },
+          "training_hours_estimate": 40,
+          "training_cost_per_hour": 150,
+          "premium_integrations": [
+            {
+              "name": "Zendesk Sunshine Conversations",
+              "cost": 1,
+              "per": "month"
+            },
+            {
+              "name": "Advanced AI (beyond basic)",
+              "cost": 50,
+              "per": "month"
+            }
+          ],
+          "api_limits": {
+            "included_calls": 200,
+            "overage_per_10k": 75
+          },
+          "data_storage_limits": {
+            "included_gb": 100,
+            "overage_per_gb": 0.5
+          },
+          "migration_estimate": {
+            "min": 2000,
+            "max": 15000
+          }
+        }
       },
       "features": [
         {
@@ -318,6 +350,47 @@
         ],
         "mission": "Power exceptional service for every person on the planet"
       },
+      "suitability": {
+        "company_size": ["51-200", "201-1000", "1001+"],
+        "industries": ["All", "SaaS", "E-commerce", "Finance", "Healthcare", "Education", "Technology"],
+        "support_volume": ["1K-10K", "10K+"],
+        "complexity_score": 7,
+        "implementation_time_days": 30,
+        "best_for": [
+          "Enterprise companies needing advanced automation and AI capabilities",
+          "Organizations with high support volumes (1000+ tickets/month)",
+          "Companies requiring HIPAA compliance",
+          "Businesses needing multi-channel support (email, chat, phone, social)",
+          "Teams wanting comprehensive analytics and reporting",
+          "Organizations requiring advanced integrations and API access"
+        ],
+        "not_ideal_for": [
+          "Very small teams (1-5 agents) with simple needs",
+          "Businesses with very limited budgets (<$500/month)",
+          "Organizations needing only basic email ticketing",
+          "Companies wanting on-premise deployment"
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "Medium",
+        "lock_in_risk": "Low",
+        "contract_flexibility": "Monthly and annual plans available; month-to-month option for all tiers",
+        "data_export": "Full data export via API and UI; supports CSV, JSON exports",
+        "common_complaints": [
+          "Steep learning curve for advanced features and customizations",
+          "Pricing can be high for small teams when adding AI and advanced features",
+          "Some integrations require higher-tier plans",
+          "Mobile app has limited functionality compared to desktop",
+          "Customer support response times vary by plan tier"
+        ],
+        "mitigation": [
+          "14-day free trial available on Suite Professional plan",
+          "Month-to-month billing available (no long-term lock-in)",
+          "Comprehensive documentation and training resources",
+          "Strong community forum and knowledge base",
+          "Full data export capabilities (low switching cost)"
+        ]
+      },
       "last_verified": "2025-11-17T13:29:20.609007"
     },
     {
@@ -419,6 +492,38 @@
         "add_ons": {
           "freddy_ai_agent": "Starting at $49 per 100 sessions (first 500 sessions included in Enterprise)",
           "note": "First 500 AI agent resolution sessions included with Enterprise plan"
+        },
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": 0,
+            "max": 3000
+          },
+          "training_hours_estimate": 20,
+          "training_cost_per_hour": 0,
+          "premium_integrations": [
+            {
+              "name": "Shopify Premium",
+              "cost": 0,
+              "per": "month"
+            },
+            {
+              "name": "Advanced Freddy AI Sessions",
+              "cost": 49,
+              "per": "month"
+            }
+          ],
+          "api_limits": {
+            "included_calls": 50000,
+            "overage_per_10k": 25
+          },
+          "data_storage_limits": {
+            "included_gb": 50,
+            "overage_per_gb": 0.25
+          },
+          "migration_estimate": {
+            "min": 500,
+            "max": 5000
+          }
         }
       },
       "features": [
@@ -569,6 +674,48 @@
         "primary_market": "North America (24.48% of traffic), India (11.49%), UK (6.13%), Brazil (5.12%)",
         "traffic_source": "69.48% direct traffic (strong brand recognition), 17.12% organic search, 10.87% referrals",
         "global_ranking": "8th most used ticketing system globally; 7th in 100K+ sites category"
+      },
+      "suitability": {
+        "company_size": ["1-10", "11-50", "51-200", "201-1000"],
+        "industries": ["All", "Retail", "E-commerce", "Software", "SaaS", "Financial Services", "Healthcare", "Hospitality", "Technology"],
+        "support_volume": ["<100", "100-1K", "1K-10K"],
+        "complexity_score": 5,
+        "implementation_time_days": 14,
+        "best_for": [
+          "Small to mid-sized businesses (1-100 agents) seeking affordable, easy-to-use solutions",
+          "E-commerce companies needing omnichannel support with Shopify/WooCommerce integration",
+          "Growing teams that want to scale without complexity",
+          "Budget-conscious organizations wanting enterprise features at SMB prices",
+          "Teams prioritizing ease of use and quick implementation",
+          "Companies wanting AI capabilities without premium enterprise pricing"
+        ],
+        "not_ideal_for": [
+          "Very large enterprises (1000+ agents) needing advanced customization",
+          "Organizations requiring extensive on-premise deployment options",
+          "Companies needing highly specialized compliance (e.g., FedRAMP)",
+          "Businesses with extremely complex workflow requirements"
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "Low",
+        "lock_in_risk": "Low",
+        "contract_flexibility": "Monthly and annual plans available; 21-day free trial; can cancel anytime",
+        "data_export": "Full data export via API and CSV; easy migration tools",
+        "common_complaints": [
+          "Some advanced features only available in higher tiers",
+          "Reporting could be more customizable on lower plans",
+          "Mobile app functionality limited compared to web version",
+          "Integration marketplace smaller than enterprise competitors",
+          "Phone support not included in lower-tier plans"
+        ],
+        "mitigation": [
+          "21-day free trial available on all plans",
+          "Flexible month-to-month billing options",
+          "Comprehensive knowledge base and documentation",
+          "Strong community support and forums",
+          "Easy data export and migration tools (low switching cost)",
+          "Freddy AI available across all paid plans"
+        ]
       },
       "last_verified": "2025-11-17"
     },
