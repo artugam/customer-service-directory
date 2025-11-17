@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, Suspense } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { platforms } from "@/data/platforms";
+import { Platform } from "@/types/platform";
+import { generatePlatformId } from "@/lib/platforms";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,19 +15,38 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeft, ExternalLink, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, X, Star } from "lucide-react";
 
 function ComparePageContent() {
   const searchParams = useSearchParams();
   const initialPlatforms = searchParams.get("platforms")?.split(",") || [];
 
+  const [platforms, setPlatforms] = useState<Platform[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedPlatformIds, setSelectedPlatformIds] = useState<string[]>(
     initialPlatforms.slice(0, 3)
   );
 
+  useEffect(() => {
+    async function fetchPlatforms() {
+      try {
+        const response = await fetch("/api/platforms");
+        const result = await response.json();
+        if (result.success) {
+          setPlatforms(result.data);
+        }
+      } catch (error) {
+        console.error("Error fetching platforms:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchPlatforms();
+  }, []);
+
   const selectedPlatforms = selectedPlatformIds
-    .map((id) => platforms.find((p) => p.id === id))
-    .filter(Boolean);
+    .map((id) => platforms.find((p) => generatePlatformId(p.trade_name) === id))
+    .filter((p): p is Platform => p !== undefined);
 
   const handleAddPlatform = (platformId: string) => {
     if (
@@ -45,8 +65,19 @@ function ComparePageContent() {
   };
 
   const availablePlatforms = platforms.filter(
-    (p) => !selectedPlatformIds.includes(p.id)
+    (p) => !selectedPlatformIds.includes(generatePlatformId(p.trade_name))
   );
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4" />
+          <p className="text-muted-foreground">Loading platforms...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -78,11 +109,14 @@ function ComparePageContent() {
                   <SelectValue placeholder="Select a platform..." />
                 </SelectTrigger>
                 <SelectContent>
-                  {availablePlatforms.map((platform) => (
-                    <SelectItem key={platform.id} value={platform.id}>
-                      {platform.name} - {platform.category}
-                    </SelectItem>
-                  ))}
+                  {availablePlatforms.map((platform) => {
+                    const platformId = generatePlatformId(platform.trade_name);
+                    return (
+                      <SelectItem key={platformId} value={platformId}>
+                        {platform.trade_name} - {platform.category_primary.split("/")[0].trim()}
+                      </SelectItem>
+                    );
+                  })}
                 </SelectContent>
               </Select>
             </CardContent>
@@ -101,42 +135,53 @@ function ComparePageContent() {
         ) : (
           <div className="overflow-x-auto">
             <div className="min-w-full inline-block align-middle">
-              <div className="grid gap-6" style={{ gridTemplateColumns: `repeat(${selectedPlatforms.length}, 1fr)` }}>
-                {selectedPlatforms.map((platform) => (
-                  platform && (
-                    <Card key={platform.id} className="relative">
+              <div className="grid gap-6" style={{ gridTemplateColumns: `repeat(${selectedPlatforms.length}, minmax(350px, 1fr))` }}>
+                {selectedPlatforms.map((platform) => {
+                  const platformId = generatePlatformId(platform.trade_name);
+                  return (
+                    <Card key={platformId} className="relative">
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="absolute right-2 top-2"
-                        onClick={() => handleRemovePlatform(platform.id)}
+                        className="absolute right-2 top-2 z-10"
+                        onClick={() => handleRemovePlatform(platformId)}
                       >
                         <X className="h-4 w-4" />
                       </Button>
 
                       <CardHeader>
                         <CardTitle className="text-2xl pr-8">
-                          {platform.name}
+                          {platform.trade_name}
                         </CardTitle>
+                        <p className="text-sm text-muted-foreground">
+                          {platform.company_name}
+                        </p>
                         <Badge variant="secondary" className="w-fit">
-                          {platform.category}
+                          {platform.category_primary.split("/")[0].trim()}
                         </Badge>
-                        {platform.rating && (
-                          <div className="text-sm">
-                            <span className="font-semibold">
-                              {platform.rating}/5.0
-                            </span>{" "}
-                            <span className="text-muted-foreground">
-                              ({platform.reviewCount} reviews)
-                            </span>
-                          </div>
-                        )}
+                        <div className="flex items-center gap-2 pt-2">
+                          <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <span className="font-semibold text-sm">
+                            {platform.reputation.g2_rating}/5.0
+                          </span>
+                          <span className="text-sm text-muted-foreground">
+                            ({platform.reputation.g2_reviews_count.toLocaleString()} reviews)
+                          </span>
+                        </div>
                       </CardHeader>
 
                       <CardContent className="space-y-6">
+                        {/* Tagline */}
+                        <div>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Tagline</h3>
+                          <p className="text-sm italic border-l-2 border-primary/30 pl-3">
+                            "{platform.tagline}"
+                          </p>
+                        </div>
+
                         {/* Description */}
                         <div>
-                          <h3 className="font-semibold mb-2">Description</h3>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Description</h3>
                           <p className="text-sm text-muted-foreground">
                             {platform.description}
                           </p>
@@ -144,80 +189,95 @@ function ComparePageContent() {
 
                         {/* Pricing */}
                         <div>
-                          <h3 className="font-semibold mb-2">Pricing</h3>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Pricing Plans</h3>
                           <div className="space-y-2">
-                            {platform.pricing.map((tier) => (
+                            {platform.pricing.plans.slice(0, 4).map((tier, index) => (
                               <div
-                                key={tier.name}
-                                className="border rounded-lg p-3"
+                                key={`${tier.name}-${index}`}
+                                className="border rounded-lg p-3 bg-muted/30"
                               >
-                                <div className="font-medium">{tier.name}</div>
-                                <div className="text-lg font-bold text-primary">
-                                  {tier.price}
-                                  {tier.billingPeriod && (
-                                    <span className="text-sm font-normal text-muted-foreground">
-                                      {" "}
-                                      {tier.billingPeriod}
-                                    </span>
-                                  )}
+                                <div className="font-medium text-sm">{tier.name}</div>
+                                <div className="text-base font-bold text-primary">
+                                  {tier.price || tier.price_annual || tier.price_monthly || "Contact Sales"}
                                 </div>
                               </div>
                             ))}
-                          </div>
-                        </div>
-
-                        {/* Features */}
-                        <div>
-                          <h3 className="font-semibold mb-2">Key Features</h3>
-                          <ul className="space-y-1 text-sm">
-                            {platform.features.map((feature) => (
-                              <li key={feature} className="flex items-start">
-                                <span className="mr-2">•</span>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* Best For */}
-                        <div>
-                          <h3 className="font-semibold mb-2">Best For</h3>
-                          <div className="flex flex-wrap gap-1">
-                            {platform.bestFor.map((item) => (
-                              <Badge key={item} variant="outline" className="text-xs">
-                                {item}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Integrations */}
-                        <div>
-                          <h3 className="font-semibold mb-2">Integrations</h3>
-                          <div className="flex flex-wrap gap-1">
-                            {platform.integrations.slice(0, 6).map((int) => (
-                              <Badge key={int} variant="secondary" className="text-xs">
-                                {int}
-                              </Badge>
-                            ))}
-                            {platform.integrations.length > 6 && (
-                              <Badge variant="secondary" className="text-xs">
-                                +{platform.integrations.length - 6} more
-                              </Badge>
+                            {platform.pricing.plans.length > 4 && (
+                              <p className="text-xs text-muted-foreground text-center pt-1">
+                                +{platform.pricing.plans.length - 4} more plans
+                              </p>
                             )}
                           </div>
                         </div>
 
+                        {/* Key Features */}
+                        <div>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Key Features</h3>
+                          <ul className="space-y-1.5 text-sm">
+                            {platform.features.slice(0, 5).map((feature, index) => (
+                              <li key={index} className="flex items-start">
+                                <span className="mr-2 text-primary font-bold">→</span>
+                                <span className="text-muted-foreground">{feature.name}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          {platform.features.length > 5 && (
+                            <p className="text-xs text-muted-foreground mt-2">
+                              +{platform.features.length - 5} more features
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Target Audience */}
+                        <div>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Best For</h3>
+                          <div className="flex flex-wrap gap-1">
+                            {platform.target_audience.slice(0, 3).map((item, index) => (
+                              <Badge key={index} variant="outline" className="text-xs">
+                                {item.split(" ").slice(0, 3).join(" ")}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Top Integrations */}
+                        <div>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">
+                            Top Integrations ({platform.integrations.total_integrations}+)
+                          </h3>
+                          <div className="flex flex-wrap gap-1">
+                            {platform.integrations.top_integrations.slice(0, 6).map((int, index) => (
+                              <Badge key={index} variant="secondary" className="text-xs">
+                                {int}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Stats */}
+                        <div>
+                          <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Stats</h3>
+                          <div className="space-y-1 text-sm">
+                            <p className="text-muted-foreground">
+                              <span className="font-medium text-foreground">Founded:</span> {platform.founded_year}
+                            </p>
+                            <p className="text-muted-foreground">
+                              <span className="font-medium text-foreground">Customers:</span>{" "}
+                              {platform.statistics.customer_count.split(";")[0]}
+                            </p>
+                          </div>
+                        </div>
+
                         {/* Actions */}
-                        <div className="space-y-2 pt-4">
+                        <div className="space-y-2 pt-4 border-t">
                           <Button asChild className="w-full">
-                            <Link href={`/platform/${platform.id}`}>
-                              View Details
+                            <Link href={`/platform/${platformId}`}>
+                              View Full Details
                             </Link>
                           </Button>
                           <Button asChild variant="outline" className="w-full">
                             <a
-                              href={platform.website}
+                              href={platform.website_url}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -228,8 +288,8 @@ function ComparePageContent() {
                         </div>
                       </CardContent>
                     </Card>
-                  )
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
