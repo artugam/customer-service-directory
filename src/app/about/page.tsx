@@ -1,11 +1,21 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
+import { generateSEOMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  title: "About Us - Customer Service Platform Directory",
-  description: "Learn about our mission to help businesses find the perfect customer service solution.",
-};
+export const metadata = generateSEOMetadata({
+  title: "About Customer Service Directory - Your Guide to Support Platforms",
+  description:
+    "Learn how Customer Service Directory helps businesses compare and choose the best AI-powered customer service platforms. Unbiased reviews, detailed comparisons, and up-to-date pricing for enterprise support solutions.",
+  path: "/about",
+  keywords: [
+    "customer service directory",
+    "help desk comparison",
+    "customer service platform reviews",
+    "support software guide",
+    "AI customer service comparison",
+  ],
+});
 
 export default function AboutPage() {
   return (
