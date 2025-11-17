@@ -15,7 +15,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeft, ExternalLink, X, Star } from "lucide-react";
+import { ArrowLeft, ExternalLink, X, Star, Download, FileText } from "lucide-react";
+import {
+  downloadComparisonCSV,
+  downloadComparisonMatrix,
+} from "@/lib/export-utils";
 
 function ComparePageContent() {
   const searchParams = useSearchParams();
@@ -92,9 +96,31 @@ function ComparePageContent() {
           </Button>
 
           <h1 className="text-4xl font-bold mb-2">Compare Platforms</h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-4">
             Select up to 3 platforms to compare their features and pricing
           </p>
+
+          {/* Export Buttons */}
+          {selectedPlatforms.length > 0 && (
+            <div className="flex flex-wrap gap-3">
+              <Button
+                onClick={() => downloadComparisonCSV(selectedPlatforms)}
+                variant="outline"
+                size="sm"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Export as CSV
+              </Button>
+              <Button
+                onClick={() => downloadComparisonMatrix(selectedPlatforms)}
+                variant="outline"
+                size="sm"
+              >
+                <FileText className="mr-2 h-4 w-4" />
+                Export as Matrix
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Platform Selector */}

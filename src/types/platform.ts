@@ -25,6 +25,9 @@ export type {
   MarketPresence,
   AdditionalInfo,
   DataSources,
+  Suitability,
+  HiddenCosts,
+  RiskAssessment,
 } from "@/schemas/platform.schema";
 
 // Legacy types for backward compatibility (deprecated)

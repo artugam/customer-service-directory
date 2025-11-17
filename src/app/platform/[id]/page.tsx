@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import TCOCalculator from "@/components/tco-calculator";
 import {
   ArrowLeft,
   ExternalLink,
@@ -329,6 +330,11 @@ export default async function PlatformPage({
                   </Card>
                 ))}
               </div>
+            </section>
+
+            {/* TCO Calculator */}
+            <section>
+              <TCOCalculator platform={platform} />
             </section>
 
             {/* Features */}

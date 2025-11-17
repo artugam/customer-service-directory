@@ -46,6 +46,7 @@ export const pricingSchema = z.object({
   additional_costs: z.array(additionalCostSchema).optional(),
   enterprise_custom: z.boolean().optional(),
   contact_sales_for_enterprise: z.boolean().optional(),
+  hidden_costs: z.lazy(() => hiddenCostsSchema).optional(), // Forward reference
 });
 
 // Statistics Schema
@@ -172,6 +173,54 @@ export const dataSourcesSchema = z.object({
   wikipedia: z.string().url().optional(),
 });
 
+// Suitability Schema (for Platform Finder Wizard)
+export const suitabilitySchema = z.object({
+  company_size: z.array(z.enum(["1-10", "11-50", "51-200", "201-1000", "1001+"])),
+  industries: z.array(z.string()), // e.g., ["All", "Healthcare", "Finance", "Retail", "SaaS"]
+  support_volume: z.array(z.enum(["<100", "100-1K", "1K-10K", "10K+"])),
+  complexity_score: z.number().min(1).max(10), // 1 = simple, 10 = complex
+  implementation_time_days: z.number().min(1).max(365), // typical implementation time
+  best_for: z.array(z.string()), // target use cases
+  not_ideal_for: z.array(z.string()), // scenarios where it's not recommended
+});
+
+// Hidden Costs Schema (for TCO Calculator)
+export const hiddenCostsSchema = z.object({
+  implementation_fee: z.object({
+    min: z.number(),
+    max: z.number(),
+  }),
+  training_hours_estimate: z.number(), // estimated hours needed for training
+  training_cost_per_hour: z.number().optional(), // if platform offers paid training
+  premium_integrations: z.array(z.object({
+    name: z.string(),
+    cost: z.number(),
+    per: z.enum(["month", "year", "one-time"]),
+  })).optional(),
+  api_limits: z.object({
+    included_calls: z.number(),
+    overage_per_10k: z.number(), // cost per 10k additional API calls
+  }).optional(),
+  data_storage_limits: z.object({
+    included_gb: z.number(),
+    overage_per_gb: z.number(),
+  }).optional(),
+  migration_estimate: z.object({
+    min: z.number(),
+    max: z.number(),
+  }),
+});
+
+// Risk Assessment Schema (for decision confidence)
+export const riskAssessmentSchema = z.object({
+  switching_difficulty: z.enum(["Low", "Medium", "High"]),
+  lock_in_risk: z.enum(["Low", "Medium", "High"]),
+  contract_flexibility: z.string(), // e.g., "Month-to-month available"
+  data_export: z.string(), // e.g., "Full export via API"
+  common_complaints: z.array(z.string()), // top complaints from reviews
+  mitigation: z.array(z.string()), // how to mitigate risks
+});
+
 // Main Platform Schema
 export const platformSchema = z.object({
   company_name: z.string(),
@@ -199,6 +248,8 @@ export const platformSchema = z.object({
   market_presence: marketPresenceSchema.optional(),
   additional_info: additionalInfoSchema.optional(),
   data_sources: dataSourcesSchema.optional(),
+  suitability: suitabilitySchema.optional(), // NEW: For Platform Finder Wizard
+  risk_assessment: riskAssessmentSchema.optional(), // NEW: For decision confidence
   last_verified: z.string(),
 });
 
@@ -223,5 +274,8 @@ export type CompanyInfo = z.infer<typeof companyInfoSchema>;
 export type MarketPresence = z.infer<typeof marketPresenceSchema>;
 export type AdditionalInfo = z.infer<typeof additionalInfoSchema>;
 export type DataSources = z.infer<typeof dataSourcesSchema>;
+export type Suitability = z.infer<typeof suitabilitySchema>;
+export type HiddenCosts = z.infer<typeof hiddenCostsSchema>;
+export type RiskAssessment = z.infer<typeof riskAssessmentSchema>;
 export type Platform = z.infer<typeof platformSchema>;
 export type PlatformsDirectory = z.infer<typeof platformsDirectorySchema>;
