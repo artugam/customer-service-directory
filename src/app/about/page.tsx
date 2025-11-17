@@ -145,7 +145,7 @@ export default function AboutPage() {
             <CardHeader>
               <CardTitle className="text-2xl">Contact Us</CardTitle>
               <CardDescription>
-                Have questions or suggestions? We'd love to hear from you!
+                Have questions or suggestions? We&apos;d love to hear from you!
               </CardDescription>
             </CardHeader>
             <CardContent>

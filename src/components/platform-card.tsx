@@ -73,7 +73,7 @@ export function PlatformCard({ platform }: PlatformCardProps) {
 
         {/* Tagline */}
         <p className="text-xs italic text-muted-foreground border-l-2 border-primary/30 pl-3 py-1">
-          "{platform.tagline}"
+          &quot;{platform.tagline}&quot;
         </p>
 
         {/* Description */}
