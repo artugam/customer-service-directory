@@ -11,7 +11,6 @@ import {
   Bot,
   Sparkles,
   TrendingUp,
-  Zap,
   Clock,
   DollarSign,
   Users,
