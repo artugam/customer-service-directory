@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import WizardStep1 from "@/components/wizard-steps/step-1";
 import WizardStep2 from "@/components/wizard-steps/step-2";
 import WizardStep3 from "@/components/wizard-steps/step-3";
@@ -56,32 +57,27 @@ export default function PlatformWizard() {
   return (
     <div className="space-y-6">
       {/* Progress Bar */}
-      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div
-          className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
-          style={{ width: `${progress}%` }}
-        ></div>
-      </div>
+      <Progress value={progress} className="h-2.5" />
 
       {/* Step Indicator */}
       <div className="flex justify-center space-x-4 mb-6">
         {[1, 2, 3].map((step) => (
           <div key={step} className="flex items-center">
             <div
-              className={`flex items-center justify-center w-10 h-10 rounded-full border-2 ${
+              className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors ${
                 currentStep === step
-                  ? "border-blue-600 bg-blue-600 text-white"
+                  ? "border-primary bg-primary text-primary-foreground"
                   : currentStep > step
-                    ? "border-green-600 bg-green-600 text-white"
-                    : "border-gray-300 bg-white text-gray-500"
+                    ? "border-green-500 bg-green-500 text-white dark:border-green-600 dark:bg-green-600"
+                    : "border-muted-foreground/30 bg-background text-muted-foreground"
               }`}
             >
               {currentStep > step ? "✓" : step}
             </div>
             {step < 3 && (
               <div
-                className={`w-12 h-0.5 ${
-                  currentStep > step ? "bg-green-600" : "bg-gray-300"
+                className={`w-12 h-0.5 transition-colors ${
+                  currentStep > step ? "bg-green-500 dark:bg-green-600" : "bg-muted-foreground/30"
                 }`}
               ></div>
             )}

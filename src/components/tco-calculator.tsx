@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -74,10 +76,11 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Number of Agents */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">
+            <Label htmlFor="num-agents">
               Number of Support Agents
-            </label>
+            </Label>
             <Input
+              id="num-agents"
               type="number"
               min="1"
               value={inputs.numberOfAgents}
@@ -92,10 +95,11 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
 
           {/* Expected Tickets */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">
+            <Label htmlFor="expected-tickets">
               Monthly Ticket Volume
-            </label>
+            </Label>
             <Input
+              id="expected-tickets"
               type="number"
               min="0"
               value={inputs.expectedTickets}
@@ -110,14 +114,14 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
 
           {/* Plan Selection */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">Select Plan</label>
+            <Label htmlFor="plan-select">Select Plan</Label>
             <Select
               value={inputs.selectedPlan}
               onValueChange={(value) =>
                 setInputs((prev) => ({ ...prev, selectedPlan: value }))
               }
             >
-              <SelectTrigger>
+              <SelectTrigger id="plan-select">
                 <SelectValue placeholder="Choose a plan" />
               </SelectTrigger>
               <SelectContent>
@@ -132,23 +136,25 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
 
           {/* Integrations */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">
+            <Label>
               Required Integrations (Optional)
-            </label>
+            </Label>
             <div className="flex flex-wrap gap-2">
               {COMMON_INTEGRATIONS.slice(0, 6).map((integration) => (
-                <button
+                <Button
                   key={integration}
                   type="button"
+                  variant="outline"
+                  size="sm"
                   onClick={() => toggleIntegration(integration)}
-                  className={`px-3 py-1 text-xs border-2 rounded-full transition-all ${
+                  className={`text-xs transition-all ${
                     inputs.integrations.includes(integration)
-                      ? "border-blue-600 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300"
-                      : "border-gray-300 hover:border-gray-400"
+                      ? "border-primary bg-primary/10 text-primary"
+                      : ""
                   }`}
                 >
                   {integration}
-                </button>
+                </Button>
               ))}
             </div>
           </div>
@@ -157,16 +163,15 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
         {/* Checkboxes */}
         <div className="mt-6 space-y-3">
           <label className="flex items-center gap-3 cursor-pointer">
-            <input
-              type="checkbox"
+            <Checkbox
+              id="premium-support"
               checked={inputs.includePremiumSupport}
-              onChange={(e) =>
+              onCheckedChange={(checked) =>
                 setInputs((prev) => ({
                   ...prev,
-                  includePremiumSupport: e.target.checked,
+                  includePremiumSupport: checked === true,
                 }))
               }
-              className="w-4 h-4"
             />
             <div>
               <div className="text-sm font-medium">Premium Support</div>
@@ -177,16 +182,15 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
           </label>
 
           <label className="flex items-center gap-3 cursor-pointer">
-            <input
-              type="checkbox"
+            <Checkbox
+              id="implementation-support"
               checked={inputs.implementationSupport}
-              onChange={(e) =>
+              onCheckedChange={(checked) =>
                 setInputs((prev) => ({
                   ...prev,
-                  implementationSupport: e.target.checked,
+                  implementationSupport: checked === true,
                 }))
               }
-              className="w-4 h-4"
             />
             <div>
               <div className="text-sm font-medium">
@@ -199,16 +203,15 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
           </label>
 
           <label className="flex items-center gap-3 cursor-pointer">
-            <input
-              type="checkbox"
+            <Checkbox
+              id="training-required"
               checked={inputs.trainingRequired}
-              onChange={(e) =>
+              onCheckedChange={(checked) =>
                 setInputs((prev) => ({
                   ...prev,
-                  trainingRequired: e.target.checked,
+                  trainingRequired: checked === true,
                 }))
               }
-              className="w-4 h-4"
             />
             <div>
               <div className="text-sm font-medium">Team Training</div>
@@ -229,7 +232,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
 
       {/* Results */}
       {showResults && results && (
-        <Card className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950">
+        <Card className="p-6 bg-muted/50">
           <div className="flex justify-between items-start mb-6">
             <div>
               <h3 className="text-2xl font-bold mb-2">Your True Cost Breakdown</h3>
@@ -243,7 +246,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
           </div>
 
           {/* Monthly Costs */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 mb-6">
+          <div className="bg-card rounded-lg p-6 mb-6">
             <h4 className="text-lg font-bold mb-4">Monthly Recurring Costs</h4>
             <div className="space-y-3">
               <div className="flex justify-between">
@@ -299,7 +302,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
               <div className="border-t pt-3 mt-3">
                 <div className="flex justify-between text-lg">
                   <span className="font-bold">Monthly Total</span>
-                  <span className="font-bold text-blue-600 dark:text-blue-400">
+                  <span className="font-bold text-primary">
                     {formatCurrency(results.monthlyTotal)}
                   </span>
                 </div>
@@ -308,7 +311,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
           </div>
 
           {/* One-Time Costs */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 mb-6">
+          <div className="bg-card rounded-lg p-6 mb-6">
             <h4 className="text-lg font-bold mb-4">One-Time Costs</h4>
             <div className="space-y-3">
               <div className="flex justify-between">
@@ -346,7 +349,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
               <div className="border-t pt-3 mt-3">
                 <div className="flex justify-between text-lg">
                   <span className="font-bold">One-Time Total</span>
-                  <span className="font-bold text-purple-600 dark:text-purple-400">
+                  <span className="font-bold text-purple-500">
                     {formatCurrency(results.oneTimeTotal + results.trainingCost)}
                   </span>
                 </div>
@@ -355,7 +358,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
           </div>
 
           {/* Year Projections */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 mb-6">
+          <div className="bg-card rounded-lg p-6 mb-6">
             <h4 className="text-lg font-bold mb-4">3-Year Cost Projection</h4>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
@@ -394,7 +397,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
               <div className="border-t pt-3 mt-3">
                 <div className="flex justify-between text-xl">
                   <span className="font-bold">3-Year Total</span>
-                  <span className="font-bold text-green-600 dark:text-green-400">
+                  <span className="font-bold text-green-600 dark:text-green-500">
                     {formatCurrency(results.threeYearTotal)}
                   </span>
                 </div>
@@ -403,7 +406,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
           </div>
 
           {/* Key Metrics */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 mb-6">
+          <div className="bg-card rounded-lg p-6 mb-6">
             <h4 className="text-lg font-bold mb-4">Key Metrics</h4>
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -427,7 +430,7 @@ export default function TCOCalculator({ platform }: TCOCalculatorProps) {
 
           {/* Warnings */}
           {results.warnings.length > 0 && (
-            <div className="bg-orange-50 dark:bg-orange-950 rounded-lg p-6">
+            <div className="bg-orange-50 dark:bg-orange-950/50 rounded-lg p-6 border border-orange-200 dark:border-orange-900">
               <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
                 ⚠️ Important Considerations
               </h4>
