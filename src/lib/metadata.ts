@@ -104,7 +104,7 @@ export function generatePlatformMetadata(platform: Platform, path: string): Meta
   });
 }
 
-export function generateJSONLD(data: any) {
+export function generateJSONLD(data: Record<string, unknown>) {
   return {
     __html: JSON.stringify(data),
   };

@@ -5,7 +5,7 @@ import { AIFeaturesSection } from "@/components/ai-features-section";
 import { FAQSection } from "@/components/faq-section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Shield, Zap, TrendingUp, Bot, Star } from "lucide-react";
+import { ArrowRight, Shield, TrendingUp, Bot, Star } from "lucide-react";
 
 export default async function Home() {
   const platforms = await getPlatformsServer();
