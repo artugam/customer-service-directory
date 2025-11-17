@@ -209,38 +209,57 @@ export default async function PlatformPage({
 
             {/* Pricing Plans */}
             <section>
-              <h2 className="text-3xl font-bold mb-6">Pricing Plans</h2>
-              <p className="text-muted-foreground mb-4">
-                {platform.pricing.model}
-                {platform.pricing.free_trial && ` • Free trial available`}
-                {platform.pricing.free_plan && ` • Free plan available`}
-              </p>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-3xl font-bold">Pricing Plans</h2>
+                {platform.pricing.free_trial && (
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm">
+                    <Zap className="h-4 w-4 mr-1.5" />
+                    Free Trial Available
+                  </Badge>
+                )}
+              </div>
+
+              <div className="mb-6 p-4 bg-muted/50 rounded-lg border">
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Pricing Model:</span>{" "}
+                  {platform.pricing.model}
+                </p>
+                {platform.pricing.free_plan && (
+                  <p className="text-sm text-muted-foreground mt-1">
+                    <span className="font-semibold text-foreground">Free Plan:</span> Available
+                  </p>
+                )}
+              </div>
+
               <div className="grid gap-4">
                 {platform.pricing.plans.map((tier, index) => (
                   <Card key={`${tier.name}-${index}`} className="border-2 hover:border-primary/50 transition-colors">
-                    <CardHeader>
+                    <CardHeader className="pb-4">
                       <div className="flex items-start justify-between">
-                        <div>
-                          <CardTitle className="text-2xl">{tier.name}</CardTitle>
-                          <CardDescription className="mt-2">
-                            <span className="text-3xl font-bold text-foreground">
-                              {tier.price || tier.price_annual || tier.price_monthly || "Contact Sales"}
+                        <div className="flex-1">
+                          <CardTitle className="text-2xl mb-3">{tier.name}</CardTitle>
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-4xl font-bold text-primary">
+                              {tier.price || tier.price_annual || tier.price_monthly || "Custom"}
                             </span>
                             {(tier.billing_period || tier.billing_unit) && (
-                              <span className="text-sm ml-2">
+                              <span className="text-sm text-muted-foreground">
                                 {tier.billing_unit || tier.billing_period}
                               </span>
                             )}
-                          </CardDescription>
+                          </div>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2">
+                      <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                        What's Included
+                      </h4>
+                      <ul className="space-y-2.5">
                         {tier.key_features.map((feature, idx) => (
                           <li key={idx} className="flex items-start">
-                            <CheckCircle2 className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm">{feature}</span>
+                            <CheckCircle2 className="h-4 w-4 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -255,28 +274,33 @@ export default async function PlatformPage({
               <h2 className="text-3xl font-bold mb-6">Key Features</h2>
               <div className="space-y-4">
                 {platform.features.map((feature, index) => (
-                  <Card key={index}>
-                    <CardHeader>
+                  <Card key={index} className="hover:border-primary/30 transition-colors">
+                    <CardHeader className="pb-3">
                       <CardTitle className="text-xl flex items-start gap-3">
                         <CheckCircle2 className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                         <span>{feature.name}</span>
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground mb-3">
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
                         {feature.description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        {feature.available_in_plans.slice(0, 4).map((plan, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
-                            {plan}
-                          </Badge>
-                        ))}
-                        {feature.available_in_plans.length > 4 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{feature.available_in_plans.length - 4} more
-                          </Badge>
-                        )}
+                      <div className="pt-3 border-t">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
+                          Included in these plans:
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {feature.available_in_plans.slice(0, 5).map((plan, idx) => (
+                            <Badge key={idx} variant="secondary" className="text-xs font-normal">
+                              {plan}
+                            </Badge>
+                          ))}
+                          {feature.available_in_plans.length > 5 && (
+                            <Badge variant="secondary" className="text-xs font-normal">
+                              +{feature.available_in_plans.length - 5} more plans
+                            </Badge>
+                          )}
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
