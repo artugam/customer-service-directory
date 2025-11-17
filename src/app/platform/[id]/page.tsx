@@ -152,7 +152,7 @@ export default async function PlatformPage({
               </div>
 
               <p className="text-lg italic text-muted-foreground border-l-4 border-primary pl-4 py-2 mb-4">
-                "{platform.tagline}"
+                &quot;{platform.tagline}&quot;
               </p>
 
               <p className="text-lg leading-relaxed mb-6">
@@ -315,7 +315,7 @@ export default async function PlatformPage({
                     </CardHeader>
                     <CardContent>
                       <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                        What's Included
+                        What&apos;s Included
                       </h4>
                       <ul className="space-y-2.5">
                         {tier.key_features.map((feature, idx) => (

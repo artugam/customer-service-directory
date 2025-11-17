@@ -175,7 +175,7 @@ function ComparePageContent() {
                         <div>
                           <h3 className="font-semibold mb-2 text-sm text-muted-foreground uppercase">Tagline</h3>
                           <p className="text-sm italic border-l-2 border-primary/30 pl-3">
-                            "{platform.tagline}"
+                            &quot;{platform.tagline}&quot;
                           </p>
                         </div>
 
