@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
 import {
   Select,
   SelectContent,
@@ -149,26 +151,27 @@ export default function WizardStep2({
 
       {/* Required Integrations */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
+        <Label>
           Required Integrations (Optional)
-        </label>
+        </Label>
         <p className="text-xs text-muted-foreground">
           Select the tools your platform must integrate with
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {COMMON_INTEGRATIONS.map((integration) => (
-            <button
+            <Button
               key={integration}
               type="button"
+              variant="outline"
               onClick={() => toggleIntegration(integration)}
-              className={`p-2 border-2 rounded-lg text-sm transition-all ${
+              className={`p-2 h-auto text-sm transition-all ${
                 formData.requiredIntegrations?.includes(integration)
-                  ? "border-blue-600 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300"
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "border-primary bg-primary/10 text-primary"
+                  : ""
               }`}
             >
               {integration}
-            </button>
+            </Button>
           ))}
         </div>
 
@@ -195,49 +198,46 @@ export default function WizardStep2({
         {formData.requiredIntegrations
           ?.filter((i) => !COMMON_INTEGRATIONS.includes(i as any))
           .map((integration) => (
-            <div
+            <Badge
               key={integration}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm mr-2"
+              variant="secondary"
+              className="mr-2 cursor-pointer"
+              onClick={() => toggleIntegration(integration)}
             >
               {integration}
-              <button
-                type="button"
-                onClick={() => toggleIntegration(integration)}
-                className="text-blue-700 dark:text-blue-300 hover:text-blue-900"
-              >
-                ×
-              </button>
-            </div>
+              <span className="ml-2">×</span>
+            </Badge>
           ))}
       </div>
 
       {/* AI Capabilities */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">AI Capabilities (Optional)</label>
+        <Label>AI Capabilities (Optional)</Label>
         <p className="text-xs text-muted-foreground">Select all that apply</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {aiOptions.map((capability) => (
-            <button
+            <Button
               key={capability}
               type="button"
+              variant="outline"
               onClick={() => toggleAI(capability)}
-              className={`p-2 border-2 rounded-lg text-sm transition-all ${
+              className={`p-2 h-auto text-sm transition-all ${
                 formData.aiCapabilities?.includes(capability)
-                  ? "border-purple-600 bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300"
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "border-purple-500 bg-purple-500/10 text-purple-700 dark:text-purple-300"
+                  : ""
               }`}
             >
               {capability}
-            </button>
+            </Button>
           ))}
         </div>
       </div>
 
       {/* Deployment Preference */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Deployment Preference <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="deployment">
+          Deployment Preference <span className="text-destructive">*</span>
+        </Label>
         <Select
           value={formData.deployment}
           onValueChange={(value: DeploymentType) =>
@@ -257,33 +257,34 @@ export default function WizardStep2({
 
       {/* Security Certifications */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Security & Compliance Requirements <span className="text-red-500">*</span>
-        </label>
+        <Label>
+          Security & Compliance Requirements <span className="text-destructive">*</span>
+        </Label>
         <p className="text-xs text-muted-foreground">Select all that apply</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {securityOptions.map((cert) => (
-            <button
+            <Button
               key={cert}
               type="button"
+              variant="outline"
               onClick={() => toggleSecurity(cert)}
-              className={`p-2 border-2 rounded-lg text-sm transition-all ${
+              className={`p-2 h-auto text-sm transition-all ${
                 formData.securityCerts?.includes(cert)
-                  ? "border-green-600 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300"
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "border-green-500 bg-green-500/10 text-green-700 dark:text-green-300"
+                  : ""
               }`}
             >
               {cert}
-            </button>
+            </Button>
           ))}
         </div>
       </div>
 
       {/* Implementation Timeline */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Implementation Timeline <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="implementation-timeline">
+          Implementation Timeline <span className="text-destructive">*</span>
+        </Label>
         <Select
           value={formData.implementationTimeline}
           onValueChange={(value: ImplementationTimeline) =>
