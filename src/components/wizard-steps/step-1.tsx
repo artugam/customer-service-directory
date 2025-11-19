@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -78,9 +79,9 @@ export default function WizardStep1({ initialData, onComplete }: Step1Props) {
 
       {/* Company Size */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Company Size (Employees) <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="company-size">
+          Company Size (Employees) <span className="text-destructive">*</span>
+        </Label>
         <Select
           value={formData.companySize}
           onValueChange={(value: CompanySize) =>
@@ -102,9 +103,9 @@ export default function WizardStep1({ initialData, onComplete }: Step1Props) {
 
       {/* Industry */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Industry <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="industry">
+          Industry <span className="text-destructive">*</span>
+        </Label>
         <Select
           value={formData.industry}
           onValueChange={(value: Industry) =>
@@ -134,9 +135,9 @@ export default function WizardStep1({ initialData, onComplete }: Step1Props) {
 
       {/* Support Volume */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Monthly Support Volume (Tickets) <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="support-volume">
+          Monthly Support Volume (Tickets) <span className="text-destructive">*</span>
+        </Label>
         <Select
           value={formData.supportVolume}
           onValueChange={(value: SupportVolume) =>
@@ -157,33 +158,34 @@ export default function WizardStep1({ initialData, onComplete }: Step1Props) {
 
       {/* Support Channels */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Support Channels Needed <span className="text-red-500">*</span>
-        </label>
+        <Label>
+          Support Channels Needed <span className="text-destructive">*</span>
+        </Label>
         <p className="text-xs text-muted-foreground">Select all that apply</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {channelOptions.map((channel) => (
-            <button
+            <Button
               key={channel}
               type="button"
+              variant="outline"
               onClick={() => toggleChannel(channel)}
-              className={`p-3 border-2 rounded-lg text-sm transition-all ${
+              className={`p-3 h-auto text-sm transition-all ${
                 formData.channels?.includes(channel)
-                  ? "border-blue-600 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300"
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "border-primary bg-primary/10 text-primary"
+                  : ""
               }`}
             >
               {channel}
-            </button>
+            </Button>
           ))}
         </div>
       </div>
 
       {/* Team Size */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Support Team Size (Number of Agents) <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="team-size">
+          Support Team Size (Number of Agents) <span className="text-destructive">*</span>
+        </Label>
         <Input
           type="number"
           min="1"
@@ -197,9 +199,9 @@ export default function WizardStep1({ initialData, onComplete }: Step1Props) {
 
       {/* Budget */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Monthly Budget Range <span className="text-red-500">*</span>
-        </label>
+        <Label htmlFor="budget">
+          Monthly Budget Range <span className="text-destructive">*</span>
+        </Label>
         <Select
           value={formData.budget}
           onValueChange={(value: BudgetRange) =>

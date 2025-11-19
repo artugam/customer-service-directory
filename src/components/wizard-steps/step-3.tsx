@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Badge } from "@/components/ui/badge";
 import type { WizardStep3, Priority } from "@/types/wizard";
 
 interface Step3Props {
@@ -111,9 +114,9 @@ export default function WizardStep3({
 
       {/* Priority Selection */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
-          Top Priorities <span className="text-red-500">*</span>
-        </label>
+        <Label>
+          Top Priorities <span className="text-destructive">*</span>
+        </Label>
         <p className="text-xs text-muted-foreground">
           Select up to 3 priorities. The order matters - first selected is most
           important.
@@ -124,18 +127,19 @@ export default function WizardStep3({
             const isSelected = rank > 0;
 
             return (
-              <button
+              <Button
                 key={priority}
                 type="button"
+                variant="outline"
                 onClick={() => togglePriority(priority)}
-                className={`p-4 border-2 rounded-lg text-left transition-all relative ${
+                className={`p-4 h-auto text-left transition-all relative ${
                   isSelected
-                    ? "border-blue-600 bg-blue-50 dark:bg-blue-950"
-                    : "border-gray-300 hover:border-gray-400"
+                    ? "border-primary bg-primary/10"
+                    : ""
                 }`}
               >
                 {isSelected && (
-                  <div className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 bg-blue-600 text-white rounded-full text-xs font-bold">
+                  <div className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded-full text-xs font-bold">
                     {rank}
                   </div>
                 )}
@@ -152,12 +156,12 @@ export default function WizardStep3({
                   {priority === "Support" &&
                     "Quality customer support and documentation"}
                 </div>
-              </button>
+              </Button>
             );
           })}
         </div>
         {formData.priorities && formData.priorities.length > 0 && (
-          <p className="text-sm text-blue-600 dark:text-blue-400">
+          <p className="text-sm text-primary">
             Selected: {formData.priorities.join(" → ")}
           </p>
         )}
@@ -165,26 +169,27 @@ export default function WizardStep3({
 
       {/* Deal Breakers */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">
+        <Label>
           Deal Breakers (Optional)
-        </label>
+        </Label>
         <p className="text-xs text-muted-foreground">
           Select any features or conditions that would disqualify a platform
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {commonDealBreakers.map((dealBreaker) => (
-            <button
+            <Button
               key={dealBreaker}
               type="button"
+              variant="outline"
               onClick={() => toggleDealBreaker(dealBreaker)}
-              className={`p-3 border-2 rounded-lg text-sm text-left transition-all ${
+              className={`p-3 h-auto text-sm text-left transition-all ${
                 formData.dealBreakers?.includes(dealBreaker)
-                  ? "border-red-600 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300"
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "border-destructive bg-destructive/10 text-destructive"
+                  : ""
               }`}
             >
               {dealBreaker}
-            </button>
+            </Button>
           ))}
         </div>
 
@@ -215,35 +220,30 @@ export default function WizardStep3({
         {formData.dealBreakers
           ?.filter((d) => !commonDealBreakers.includes(d))
           .map((dealBreaker) => (
-            <div
+            <Badge
               key={dealBreaker}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-red-100 dark:bg-red-900 rounded-full text-sm mr-2"
+              variant="destructive"
+              className="mr-2 cursor-pointer"
+              onClick={() => toggleDealBreaker(dealBreaker)}
             >
               {dealBreaker}
-              <button
-                type="button"
-                onClick={() => toggleDealBreaker(dealBreaker)}
-                className="text-red-700 dark:text-red-300 hover:text-red-900"
-              >
-                ×
-              </button>
-            </div>
+              <span className="ml-2">×</span>
+            </Badge>
           ))}
       </div>
 
       {/* Show Peer Insights */}
       <div className="space-y-2">
         <label className="flex items-center gap-3 cursor-pointer">
-          <input
-            type="checkbox"
+          <Checkbox
+            id="similar-companies"
             checked={formData.similarCompanies}
-            onChange={(e) =>
+            onCheckedChange={(checked) =>
               setFormData((prev) => ({
                 ...prev,
-                similarCompanies: e.target.checked,
+                similarCompanies: checked === true,
               }))
             }
-            className="w-4 h-4"
           />
           <div>
             <div className="text-sm font-medium">
@@ -261,7 +261,7 @@ export default function WizardStep3({
         <Button type="button" onClick={onBack} variant="outline" size="lg">
           ← Back
         </Button>
-        <Button type="submit" size="lg" className="bg-green-600 hover:bg-green-700">
+        <Button type="submit" size="lg">
           Find My Platform! 🎯
         </Button>
       </div>

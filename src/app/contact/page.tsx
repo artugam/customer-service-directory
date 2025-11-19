@@ -4,22 +4,28 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Mail, MessageSquare, Globe } from "lucide-react";
+import { Mail, MessageSquare, Lightbulb, Building2 } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
     subject: "",
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setSubmitted(true);
+    setTimeout(() => {
+      setFormData({ name: "", email: "", company: "", subject: "", message: "" });
+      setSubmitted(false);
+    }, 3000);
   };
 
   const handleChange = (
@@ -39,10 +45,11 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <Badge variant="secondary" className="mb-4">Contact Us</Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Get in Touch
+              Let's Talk About Your Needs
             </h1>
             <p className="text-xl text-muted-foreground">
-              Have questions, suggestions, or want to submit a platform? We&apos;d love to hear from you.
+              Questions about platforms? Need help choosing? Want to submit a platform?
+              We're here to help.
             </p>
           </div>
         </div>
@@ -51,136 +58,187 @@ export default function ContactPage() {
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-5xl mx-auto">
-          <div className="grid gap-8 md:grid-cols-3 mb-12">
-            <Card>
+          {/* Contact Options */}
+          <div className="grid gap-6 md:grid-cols-3 mb-12">
+            <Card className="border-2">
               <CardHeader>
                 <Mail className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Email Us</CardTitle>
+                <CardTitle>General Inquiries</CardTitle>
                 <CardDescription>
-                  Send us an email anytime
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a
-                  href="mailto:info@konrado.ai"
-                  className="text-primary hover:underline"
-                >
-                  info@konrado.ai
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <MessageSquare className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Feedback</CardTitle>
-                <CardDescription>
-                  Share your thoughts with us
+                  Questions about the directory
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Use the form to send us your feedback or suggestions
+                  Use the form below to send us your questions
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-2">
               <CardHeader>
-                <Globe className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Visit Us</CardTitle>
+                <Building2 className="h-8 w-8 text-primary mb-2" />
+                <CardTitle>Platform Vendors</CardTitle>
                 <CardDescription>
-                  Learn more about our work
+                  Submit or update your platform
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <a
-                  href="https://konrado.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  konrado.ai
-                </a>
+                <p className="text-sm text-muted-foreground">
+                  Contact us to add or update platform information
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardHeader>
+                <Lightbulb className="h-8 w-8 text-primary mb-2" />
+                <CardTitle>Feedback & Ideas</CardTitle>
+                <CardDescription>
+                  Help us improve
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Share suggestions to make our directory better
+                </p>
               </CardContent>
             </Card>
           </div>
 
-          <Card>
+          {/* Contact Form */}
+          <Card className="border-2">
             <CardHeader>
-              <CardTitle>Send Us a Message</CardTitle>
+              <CardTitle className="text-2xl">Send Us a Message</CardTitle>
               <CardDescription>
-                Fill out the form below and we&apos;ll get back to you as soon as possible
+                Fill out the form below and we'll respond within 24-48 hours
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid gap-6 md:grid-cols-2">
+              {submitted ? (
+                <div className="py-12 text-center space-y-4">
+                  <div className="flex justify-center">
+                    <div className="rounded-full bg-green-100 dark:bg-green-900 p-3">
+                      <MessageSquare className="h-8 w-8 text-green-600 dark:text-green-400" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold">Message Sent!</h3>
+                  <p className="text-muted-foreground max-w-md mx-auto">
+                    Thank you for reaching out. We've received your message and will get back to you soon.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Your Name <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        placeholder="John Doe"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="john@company.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Name
+                    <label htmlFor="company" className="text-sm font-medium">
+                      Company (Optional)
                     </label>
                     <Input
-                      id="name"
-                      name="name"
-                      placeholder="Your name"
-                      value={formData.name}
+                      id="company"
+                      name="company"
+                      placeholder="Your Company Name"
+                      value={formData.company}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium">
+                      Subject <span className="text-red-500">*</span>
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      placeholder="What can we help you with?"
+                      value={formData.subject}
                       onChange={handleChange}
                       required
                     />
                   </div>
+
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Message <span className="text-red-500">*</span>
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      value={formData.email}
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={6}
+                      className="flex w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                      placeholder="Tell us more about your inquiry..."
+                      value={formData.message}
                       onChange={handleChange}
                       required
                     />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    placeholder="What is this about?"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="flex w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                    placeholder="Tell us more about your inquiry..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full md:w-auto">
-                  Send Message
-                </Button>
-              </form>
+                  <div className="flex gap-4">
+                    <Button type="submit" size="lg" className="flex-1 md:flex-none">
+                      Send Message
+                    </Button>
+                    <p className="text-sm text-muted-foreground flex items-center">
+                      We typically respond within 24-48 hours
+                    </p>
+                  </div>
+                </form>
+              )}
             </CardContent>
           </Card>
+
+          {/* Quick Help */}
+          <div className="mt-12 p-6 bg-muted rounded-lg">
+            <h3 className="text-lg font-semibold mb-4">Looking for something specific?</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <p className="font-medium mb-2">Need help choosing a platform?</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  Try our Platform Finder Wizard - get personalized recommendations in 2 minutes
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="/find-platform">Start Platform Finder →</a>
+                </Button>
+              </div>
+              <div>
+                <p className="font-medium mb-2">Want to compare platforms?</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  Use our comparison tool to see side-by-side features and pricing
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="/compare">Compare Platforms →</a>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
