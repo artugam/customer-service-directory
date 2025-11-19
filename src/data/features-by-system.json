@@ -1,0 +1,615 @@
+{
+  "features_by_system": [
+    {
+      "company_name": "Zendesk",
+      "last_updated": "2025-11-18",
+      "search_period": "August 2025 - November 2025",
+      "features": [
+        {
+          "feature_name": "AI Agents for Email and Web Forms",
+          "release_date": "2025-08-04",
+          "description": "Zendesk AI agents now generate complete, personalized responses to customer inquiries on email and web form channels, expanding automated support beyond messaging.",
+          "category": "AI",
+          "key_capabilities": [
+            "Generate concise, personalized email responses based on customer questions",
+            "Automatically create web form replies from Help Center content",
+            "Maintain AI agent persona across multiple channels",
+            "Include direct links to help articles for additional context",
+            "Configure channel-specific settings for email and web forms"
+          ],
+          "target_users": "Support agents, team managers, support directors"
+        },
+        {
+          "feature_name": "Department Spaces (Brand-Based Access Control)",
+          "release_date": "2025-09-19",
+          "description": "Department Spaces shifts ticket access control from groups to brands, enabling better multi-brand and internal service team management.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Restrict agent access to tickets by brand membership assignment",
+            "Shift ticket visibility from group-level to brand-level control",
+            "Manage multiple internal departments separately with data isolation",
+            "Assign agents to multiple brands with granular permission controls",
+            "Integrate seamlessly with omnichannel routing for brand-aware ticket distribution"
+          ],
+          "target_users": "Account administrators, enterprise support managers, compliance officers"
+        },
+        {
+          "feature_name": "Unified Navigation Across Zendesk Products",
+          "release_date": "2025-09-10",
+          "description": "Modernized global navigation model providing consistent, simplified product interface across all Zendesk applications.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Consistent side navigation across all Zendesk products",
+            "Unified product tray with new location and improved product switching",
+            "Modernized icons and tooltips used uniformly across products",
+            "Centralized search field placement for improved discoverability",
+            "Enhanced ticket tabs with drag-and-drop reordering and overflow menu"
+          ],
+          "target_users": "All Zendesk users including agents, admins, and managers"
+        },
+        {
+          "feature_name": "Real-Time Monitoring Dashboards",
+          "release_date": "2025-10-28",
+          "description": "New space within Zendesk Analytics combining data across channels providing supervisors with real-time visibility and historical context.",
+          "category": "Reporting",
+          "key_capabilities": [
+            "Three pre-built dashboards: Incoming Tickets, Ticket Progress, Agent Productivity",
+            "Real-time and 7-day historical trend data for informed decision-making",
+            "Multi-channel data aggregation from support, messaging, and voice channels",
+            "Comprehensive drill-in capabilities for detailed performance analysis",
+            "Customizable filtering across multiple dimensions"
+          ],
+          "target_users": "Support supervisors, team leads, contact center managers, operations directors"
+        },
+        {
+          "feature_name": "Zendesk Copilot Agent Productivity Dashboard",
+          "release_date": "2025-07-11",
+          "description": "New command center dashboard for tracking agent adoption and engagement with Copilot AI tools.",
+          "category": "Reporting",
+          "key_capabilities": [
+            "Auto Assist tab tracking usage and acceptance of auto assist suggestions",
+            "AI Suggestions tab measuring engagement with similar tickets",
+            "AI Agent Tools tab tracking writing tool usage",
+            "Weekly monitoring capabilities for trend identification",
+            "Acceptance rate metrics for AI suggestions"
+          ],
+          "target_users": "Support managers, team leads, operations directors, agent trainers"
+        },
+        {
+          "feature_name": "Article Multiplacement",
+          "release_date": "2025-07-18",
+          "description": "Create single Help Center articles and place them in up to 10 different sections across multiple brands.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Place one article in up to 10 different sections across all brands",
+            "Automatic content synchronization across all placements",
+            "Unique article IDs and placement configurations per placement",
+            "Customizable placement-specific settings",
+            "Support for cross-brand article reuse"
+          ],
+          "target_users": "Content managers, knowledge managers, support administrators"
+        },
+        {
+          "feature_name": "IT Asset Management (ITAM) - Early Access",
+          "release_date": "2025-11-05",
+          "description": "Track, monitor, and manage IT assets throughout their lifecycle directly within Zendesk.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Unified asset tracking with device status, assignment, location, warranty information",
+            "Related ticket history and context attached to assets",
+            "Predefined asset types with customizable fields",
+            "Asset location management and classification",
+            "Lifecycle management from procurement through retirement"
+          ],
+          "target_users": "IT service desk agents, IT asset managers, employee services teams"
+        },
+        {
+          "feature_name": "Draft Mode by Default for Ticket Comments",
+          "release_date": "2025-08-15",
+          "description": "Administrators can enable draft mode by default for all ticket comments across the entire account.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Admin-level setting to enable draft mode globally for all agents",
+            "Prevents accidental ticket updates and customer visibility of incomplete responses",
+            "Agents retain ability to disable draft mode per ticket if needed",
+            "Automatic draft mode activation on each new ticket",
+            "Reduces customer-facing errors and improves response quality"
+          ],
+          "target_users": "Support administrators, team leads, account managers"
+        },
+        {
+          "feature_name": "Approval Requests Built Into Tickets",
+          "release_date": "2025-08-20",
+          "description": "Agents can send approval requests directly from within tickets, centralizing approval workflows.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Create and send approval requests directly from ticket context panel",
+            "Centralized approval workflow without platform switching",
+            "Agent and end-user approval authority support",
+            "Email notifications for assigned approvers",
+            "Approval status prevents ticket closure until resolved"
+          ],
+          "target_users": "Approvers, support agents, managers, finance administrators"
+        },
+        {
+          "feature_name": "Side Conversations on Mobile",
+          "release_date": "2025-07-30",
+          "description": "Side conversations are now available on Zendesk mobile app for cross-team collaboration.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Email-based side conversation support on mobile devices",
+            "Cross-team and cross-department collaboration on mobile",
+            "External partner integration via email side conversations",
+            "Seamless context preservation without platform switching",
+            "Full parity with desktop side conversations functionality"
+          ],
+          "target_users": "Mobile app users, field agents, remote support teams"
+        },
+        {
+          "feature_name": "Incremental Export APIs for Custom Objects",
+          "release_date": "2025-09-30",
+          "description": "New APIs enable incremental export of custom object records showing only changes since a defined start time.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Export only changed records since specified start time",
+            "Reduced API usage compared to full data reloads",
+            "Standard API structure matching Zendesk conventions",
+            "30-day deletion record retention for change propagation",
+            "Cursor-based export support for consistent pagination"
+          ],
+          "target_users": "Developers, data engineers, integration specialists, analytics teams"
+        },
+        {
+          "feature_name": "Enhanced Dynamic Filtering for Lookup Relationship Fields",
+          "release_date": "2025-09-15",
+          "description": "New filtering capabilities for lookup relationship fields enable matching and non-matching operators.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Filter data availability in all lookup relationship fields across all objects",
+            "Support for matches and does not match operators",
+            "Enhanced filtering accuracy for relationship data",
+            "Cross-object relationship refinement"
+          ],
+          "target_users": "Administrators, developers, enterprise support managers"
+        }
+      ]
+    },
+    {
+      "company_name": "Freshdesk",
+      "last_updated": "2025-11-18",
+      "search_period": "August 2025 - November 2025",
+      "features": [
+        {
+          "feature_name": "Freshdesk Command Center",
+          "release_date": "2025-11-10",
+          "description": "A centralized dashboard that brings together multi-channel customer conversations and AI-powered insights.",
+          "category": "Reporting",
+          "key_capabilities": [
+            "Real-time monitoring of all customer interactions from email, chat, social, and phone",
+            "Actionable AI insights for ticket prioritization and sentiment analysis",
+            "Single-pane management of tickets and conversations",
+            "Streamlined escalation and collaboration tools",
+            "Customizable widgets for reporting and metrics"
+          ],
+          "target_users": "Support managers, team leads, support agents in multi-channel teams"
+        },
+        {
+          "feature_name": "Enhanced Contact & Company Data Management",
+          "release_date": "2025-10-15",
+          "description": "Revamped contact and company management with an enhanced UI and improved validation.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Inline editing and customizable forms for contacts and companies",
+            "Store up to 10 valid phone numbers per contact",
+            "Direct connections between customers and custom objects",
+            "Collapse or expand contact/company info as widgets on tickets",
+            "Prevent duplicate entries with automatic value renaming"
+          ],
+          "target_users": "Support admins, agents, enterprise account managers, CRM integrators"
+        },
+        {
+          "feature_name": "Freddy Copilot Impact Reporting",
+          "release_date": "2025-09-20",
+          "description": "Advanced dashboards for tracking the tangible impact of Freddy Copilot AI.",
+          "category": "AI",
+          "key_capabilities": [
+            "Agent and team-level reports on AI-driven ticket resolutions",
+            "CSAT correlations and live translation usage breakdown",
+            "Sentiment analytics now available across more views and conversions",
+            "Exportable and customizable impact dashboards"
+          ],
+          "target_users": "Support team managers, CX analysts, AI champions"
+        },
+        {
+          "feature_name": "AI-Powered Sentiment Analysis in New Views",
+          "release_date": "2025-10-05",
+          "description": "Freddy AI's sentiment analysis now expands to show customer tone in more ticket views.",
+          "category": "AI",
+          "key_capabilities": [
+            "Sentiment badges and scores visible in expanded ticket contexts",
+            "Automated ticket prioritization based on emotional tone",
+            "Notifications for negative sentiment or trending issues",
+            "Sentiment tracking integrated with timeline and chat conversion"
+          ],
+          "target_users": "Support agents, team leads, QA and analytics specialists"
+        },
+        {
+          "feature_name": "Round-Robin Ticket Routing with Omniroute Upgrade",
+          "release_date": "2025-11-08",
+          "description": "Upgraded routing automates fair ticket load distribution among agents and teams.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Auto-assignment of tickets to available agents in balanced workloads",
+            "Set rules for skill, availability, channel, and priority",
+            "Advanced SLAs and admin dashboards for real-time routing control",
+            "Integrates holiday, leave, and working hour management"
+          ],
+          "target_users": "Admins, operations leaders, support managers with large teams"
+        }
+      ]
+    },
+    {
+      "company_name": "Zoho Desk",
+      "last_updated": "2025-11-18",
+      "search_period": "August 2025 - November 2025",
+      "features": [
+        {
+          "feature_name": "Zia AI Agents (Support Specialist & Resolution Expert)",
+          "release_date": "2025-10-12",
+          "description": "Pre-built AI agents that autonomously handle repetitive support workflows.",
+          "category": "AI",
+          "key_capabilities": [
+            "Autonomous ticket handling for FAQs and common inquiries",
+            "Support Specialist delivers instant, context-aware responses",
+            "Resolution Expert summarizes closed tickets and auto-populates resolution fields",
+            "Integrated sentiment and contextual analysis for accurate responses",
+            "Auto-routing of tickets based on complexity and confidence levels"
+          ],
+          "target_users": "Support managers, support agents, enterprise teams handling high ticket volumes"
+        },
+        {
+          "feature_name": "Zia Actions for Workflow Automation",
+          "release_date": "2025-09-08",
+          "description": "Advanced AI-powered automation actions integrated directly into workflow rules.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Field Extraction: Automatically extracts key details from unstructured ticket content",
+            "Field Prediction: Auto-populates ticket fields based on historical patterns",
+            "Generate Content: Creates automatic summaries and ticket comments",
+            "Auto Email Reply: Drafts and sends contextual email responses"
+          ],
+          "target_users": "Support operations teams, automation specialists, enterprises with high-volume repetitive ticket patterns"
+        },
+        {
+          "feature_name": "Voice Notes in Instant Messaging",
+          "release_date": "2025-09-22",
+          "description": "Native voice messaging capability in Zoho Desk Instant Messaging module.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Record and send voice notes directly from reply editor in IM channels",
+            "Supports multiple IM channels: WhatsApp, Telegram, Line, Facebook Messenger",
+            "Automatic transcription of voice messages for accessibility",
+            "Inline playback without leaving conversation thread",
+            "Mobile and web support for voice message recording"
+          ],
+          "target_users": "Support agents handling complex issues, accessibility-focused support teams"
+        },
+        {
+          "feature_name": "Turn Tickets into Knowledge Base Articles",
+          "release_date": "2025-10-18",
+          "description": "One-click feature enabling support agents to convert ticket conversations into KB articles.",
+          "category": "AI",
+          "key_capabilities": [
+            "Select specific ticket conversations to convert into articles",
+            "AI-powered extraction of problem, solution, and best practices",
+            "Auto-formatting of articles with proper structure",
+            "Templates for consistency across article types",
+            "Direct publishing to Knowledge Base with optional review workflow"
+          ],
+          "target_users": "Knowledge Base managers, support team leads, technical documentation specialists"
+        },
+        {
+          "feature_name": "Help Center JavaScript Customization",
+          "release_date": "2025-10-08",
+          "description": "Advanced customization capability allowing businesses to inject custom JavaScript code into Help Center portals.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Custom JavaScript execution in Help Center frontend",
+            "Dynamic content manipulation and conditional display",
+            "Integration with external APIs and third-party widgets",
+            "Custom search and filtering logic",
+            "Advanced analytics and tracking implementation"
+          ],
+          "target_users": "Frontend developers, Help Center administrators, enterprises requiring advanced customization"
+        },
+        {
+          "feature_name": "Multilingual AI-Powered Captcha for Help Center",
+          "release_date": "2025-09-05",
+          "description": "Enhanced security feature providing AI-powered captcha verification in multiple languages.",
+          "category": "AI",
+          "key_capabilities": [
+            "Image-based captcha with language-specific text",
+            "Audio-based captcha for accessibility",
+            "Multilingual support for 40+ languages",
+            "Context-aware difficulty levels",
+            "Integration with Help Center ticket submission forms"
+          ],
+          "target_users": "Help Center administrators, security teams, global support operations"
+        },
+        {
+          "feature_name": "Knowledge Base Article Templates",
+          "release_date": "2025-10-22",
+          "description": "Pre-built, customizable templates for creating consistent and structured Knowledge Base articles.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Pre-designed templates for FAQ, How-To, Troubleshooting, and Product Guides",
+            "Customizable sections and fields for organizational branding",
+            "Mandatory field enforcement for consistency",
+            "Version control and template update propagation",
+            "Multi-language template support"
+          ],
+          "target_users": "Knowledge Base managers, content teams, support team leads"
+        },
+        {
+          "feature_name": "Content Analysis Tool for KB Articles",
+          "release_date": "2025-10-25",
+          "description": "AI-powered proofreading and style guidance tool integrated into Knowledge Base article editor.",
+          "category": "AI",
+          "key_capabilities": [
+            "Real-time grammar and spelling checking",
+            "Readability score and suggestions",
+            "Consistency checking across KB",
+            "SEO optimization recommendations",
+            "Accessibility compliance checking"
+          ],
+          "target_users": "KB writers, content editors, technical writers, compliance teams"
+        },
+        {
+          "feature_name": "GitLab Integration for Zoho Desk",
+          "release_date": "2025-10-30",
+          "description": "Native integration connecting Zoho Desk with GitLab for support-to-development workflows.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Convert tickets to GitLab issues with one click",
+            "Link tickets to existing GitLab issues and merge requests",
+            "Real-time sync of issue status updates between platforms",
+            "Automated issue creation for critical support tickets",
+            "Developer context directly available in ticket interface"
+          ],
+          "target_users": "Support managers, developers, product managers at software companies"
+        },
+        {
+          "feature_name": "Apple Intelligence in Radar Mobile App",
+          "release_date": "2025-09-28",
+          "description": "Integration of Apple Intelligence features into the Radar mobile app for Zoho Desk administrators.",
+          "category": "AI",
+          "key_capabilities": [
+            "Smart reply composition for messages and comments",
+            "Context-aware content adaptation and tone adjustment",
+            "Personalized avatar and image generation",
+            "Natural language summaries of key metrics",
+            "On-device processing with privacy preservation"
+          ],
+          "target_users": "iOS/macOS users, support managers and admins using Radar"
+        },
+        {
+          "feature_name": "Zia Reply Assistant & Suggested Replies in Instant Messaging",
+          "release_date": "2025-09-15",
+          "description": "AI-powered reply assistance directly in Instant Messaging inbox.",
+          "category": "AI",
+          "key_capabilities": [
+            "Context-aware reply suggestions in IM conversations",
+            "Multiple reply option variations for agent selection",
+            "KB article suggestions for self-service alternatives",
+            "Sentiment-aware response generation",
+            "One-click reply insertion with optional agent editing"
+          ],
+          "target_users": "Chat support agents, IM support teams, high-volume support centers"
+        },
+        {
+          "feature_name": "Dynamic WhatsApp URLs in Message Templates",
+          "release_date": "2025-08-25",
+          "description": "Enhancement to WhatsApp Business message templates allowing dynamic URL personalization.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Dynamic URL parameter insertion",
+            "Template-level personalization without manual customization",
+            "Recipient-specific tracking and analytics",
+            "A/B testing support with dynamic variations",
+            "Compliance with WhatsApp message template guidelines"
+          ],
+          "target_users": "Marketing teams, customer success managers, sales teams using WhatsApp"
+        }
+      ]
+    },
+    {
+      "company_name": "ServiceNow",
+      "last_updated": "2025-11-18",
+      "search_period": "August 2025 - November 2025",
+      "features": [
+        {
+          "feature_name": "AI Experience (Multimodal AI Interface)",
+          "release_date": "2025-09-12",
+          "description": "A unified, context-aware interface for enterprise AI that integrates voice, text, image, web, and AI agents.",
+          "category": "AI",
+          "key_capabilities": [
+            "Multimodal interaction (voice, text, image, web agents)",
+            "Context-aware AI orchestration across workflows",
+            "Hands-free support through natural dialogue",
+            "Built-in governance and security",
+            "Real-time action execution across departments"
+          ],
+          "target_users": "Support agents, service managers, customer service representatives, IT operators"
+        },
+        {
+          "feature_name": "AI Voice Agents (Q4 General Availability)",
+          "release_date": "2025-11-15",
+          "description": "Enterprise-grade conversational AI agents that understand and respond to natural spoken interactions.",
+          "category": "AI",
+          "key_capabilities": [
+            "Natural language processing with multilingual support",
+            "Enterprise-grade authentication and security",
+            "Integration with leading CCaaS solutions",
+            "Call recording and transcript capture",
+            "Seamless escalation to human agents with full context transfer"
+          ],
+          "target_users": "Support teams handling high call volumes, contact centers using CCaaS platforms"
+        },
+        {
+          "feature_name": "Task Plan Templates",
+          "release_date": "2025-09-18",
+          "description": "Predefined, no-code templates that automatically create sequences of tasks for cases based on specific conditions.",
+          "category": "Automation",
+          "key_capabilities": [
+            "No-code template creation and management",
+            "Condition-based automatic invocation",
+            "Hierarchical parent-child task structures",
+            "Intelligent task assignment",
+            "Audit trail and visibility into task dependencies"
+          ],
+          "target_users": "Process owners, CSM administrators, operations managers"
+        },
+        {
+          "feature_name": "Record Producer in CSM Configurable Workspace",
+          "release_date": "2025-09-22",
+          "description": "Enables record producers to launch directly within CSM Configurable Workspace without iframe overlays.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Service definition integration with service catalog items",
+            "Account criteria filtering for relevant services",
+            "Unified intake experience across portal and workspace",
+            "No-code service definition configuration",
+            "Consistent business rule execution"
+          ],
+          "target_users": "CSM administrators, service portal managers, agents, customers"
+        },
+        {
+          "feature_name": "Customer History Component",
+          "release_date": "2025-08-28",
+          "description": "Comprehensive component providing unified view of customer's complete service journey.",
+          "category": "Reporting",
+          "key_capabilities": [
+            "Complete interaction history timeline",
+            "Previous case references and resolutions",
+            "Related requests and work orders visibility",
+            "Knowledge article linkage and usage tracking",
+            "Account-level relationship mapping"
+          ],
+          "target_users": "Support agents, customer service representatives, managers"
+        },
+        {
+          "feature_name": "CSM Data Classification",
+          "release_date": "2025-08-10",
+          "description": "Out-of-the-box templates leveraging ServiceNow Vault to automatically classify sensitive CSM data fields.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Pre-mapped OOB classification templates for CSM",
+            "Automated PII and sensitive data identification",
+            "Integration with ServiceNow Vault Console",
+            "Compliance framework alignment (GDPR, HIPAA, SOX)",
+            "Admin control over classification mappings"
+          ],
+          "target_users": "CSM administrators, compliance officers, data protection officers"
+        },
+        {
+          "feature_name": "Third-Party Chat Integration Framework",
+          "release_date": "2025-07-25",
+          "description": "Framework enabling contact center platforms to deliver native-like chat and messaging experiences.",
+          "category": "Integration",
+          "key_capabilities": [
+            "Multi-channel message delivery (WhatsApp, SMS, web chat)",
+            "Native workspace experience for third-party chats",
+            "Omnichannel context synchronization",
+            "Agent unified inbox across channels",
+            "Consistent messaging controls and capabilities"
+          ],
+          "target_users": "Contact center agents, support teams, organizations using third-party CCaaS platforms"
+        },
+        {
+          "feature_name": "Omnichannel Callback Integration",
+          "release_date": "2025-07-20",
+          "description": "Enables customers to request callbacks at earliest available time or scheduled future time.",
+          "category": "Automation",
+          "key_capabilities": [
+            "Callback scheduling from multiple channels",
+            "Callback reschedule and cancellation capability",
+            "CCaaS callback parameter display",
+            "Task management for callback handling",
+            "API framework for CCaaS integration"
+          ],
+          "target_users": "Contact center agents, service managers, customers"
+        },
+        {
+          "feature_name": "Now Assist Task Summaries for Approvals",
+          "release_date": "2025-09-25",
+          "description": "AI-powered automatic generation of concise, contextual task summaries for approval workflows.",
+          "category": "AI",
+          "key_capabilities": [
+            "Automatic summary generation for approval tasks",
+            "Contextual and access-controlled information display",
+            "Manual summary generation option",
+            "Structured summary presentation within task view",
+            "Support for HR cases, requests, and RITM approvals"
+          ],
+          "target_users": "Approvers, managers, HR representatives, procurement teams"
+        },
+        {
+          "feature_name": "Now Assist for CSM - Enhanced Capabilities",
+          "release_date": "2025-10-02",
+          "description": "Generative AI-powered assistant features for customer service teams.",
+          "category": "AI",
+          "key_capabilities": [
+            "Instant case and chat summarization",
+            "Content generation for emails and resolutions",
+            "Sentiment analysis for customer emotion tracking",
+            "SLA breach prediction and priority alerts",
+            "Knowledge article recommendations"
+          ],
+          "target_users": "Support agents, customer service teams, supervisors"
+        },
+        {
+          "feature_name": "AI Lens (Visual Automation)",
+          "release_date": "2025-09-30",
+          "description": "Converts visual information from screens, forms, dashboards into automated actions.",
+          "category": "AI",
+          "key_capabilities": [
+            "Screen and form data extraction",
+            "Image analysis and data capture",
+            "Dashboard visualization to action conversion",
+            "Workflow automation trigger capability",
+            "Multimodal data processing"
+          ],
+          "target_users": "Field service technicians, support agents, sales representatives, finance teams"
+        },
+        {
+          "feature_name": "Declarative Framework Enhancements (CSM)",
+          "release_date": "2025-09-28",
+          "description": "Low-code enhancements to CSM's responsibility framework enabling faster access control configuration.",
+          "category": "Automation",
+          "key_capabilities": [
+            "No-code responsibility configuration",
+            "Condition-based declarative actions",
+            "Access level granularity",
+            "Record-level access control",
+            "Custom action configuration"
+          ],
+          "target_users": "CSM administrators, security team"
+        },
+        {
+          "feature_name": "AI Data Explorer",
+          "release_date": "2025-10-20",
+          "description": "Enables users to investigate trends, identify root causes, and document findings from within workflows.",
+          "category": "Reporting",
+          "key_capabilities": [
+            "Multi-source data connectivity",
+            "Trend analysis and visualization",
+            "Root cause identification",
+            "Finding documentation capture",
+            "Workflow Data Fabric integration"
+          ],
+          "target_users": "Managers, analysts, support supervisors, decision-makers"
+        }
+      ]
+    }
+  ]
+}
