@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { Platform } from "@/schemas/platform.schema";
-import { PlatformsList } from "@/components/platforms-list";
+import { FeaturedToolsSection } from "@/components/featured-tools-section";
 import { AIFeaturesSection } from "@/components/ai-features-section";
 import { FAQSection } from "@/components/faq-section";
 import { HeroSearch } from "@/components/hero-search";
@@ -13,18 +12,11 @@ import { ArrowRight, Package, FolderTree, Puzzle, Sparkles } from "lucide-react"
 
 interface HomeClientProps {
     platforms: Platform[];
+    featuredPlatforms: Platform[];
     faqs: Array<{ question: string; answer: string }>;
 }
 
-export function HomeClient({ platforms, faqs }: HomeClientProps) {
-    const [filteredPlatforms, setFilteredPlatforms] = useState<Platform[]>(platforms);
-    const [searchQuery, setSearchQuery] = useState("");
-
-    const handleSearch = (query: string, filtered: Platform[]) => {
-        setSearchQuery(query);
-        setFilteredPlatforms(filtered);
-    };
-
+export function HomeClient({ platforms, featuredPlatforms, faqs }: HomeClientProps) {
     // Calculate stats
     const totalIntegrations = platforms.reduce((sum, p) => {
         const count = typeof p.integrations.total_integrations === 'number'
@@ -42,7 +34,7 @@ export function HomeClient({ platforms, faqs }: HomeClientProps) {
                 {/* Background decoration */}
                 <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25" />
 
-                <div className="container mx-auto px-4 py-16 md:py-20 relative">
+                <div className="container mx-auto px-6 md:px-8 py-16 md:py-20 relative">
                     <div className="max-w-5xl mx-auto text-center space-y-6">
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium">
@@ -59,7 +51,7 @@ export function HomeClient({ platforms, faqs }: HomeClientProps) {
                         </p>
 
                         {/* Prominent Search - Main Focal Point */}
-                        <HeroSearch platforms={platforms} onSearch={handleSearch} />
+                        <HeroSearch />
 
                         {/* Compact Stats - inline display */}
                         <div className="flex items-center justify-center gap-6 pt-4 text-xs text-muted-foreground flex-wrap">
@@ -84,10 +76,8 @@ export function HomeClient({ platforms, faqs }: HomeClientProps) {
                 </div>
             </section>
 
-            {/* Platforms Section */}
-            <section id="platforms" className="container mx-auto px-4 py-16">
-                <PlatformsList platforms={filteredPlatforms} />
-            </section>
+            {/* Featured Tools Section */}
+            <FeaturedToolsSection platforms={featuredPlatforms} />
 
             {/* AI Features Section */}
             <AIFeaturesSection />
@@ -97,7 +87,7 @@ export function HomeClient({ platforms, faqs }: HomeClientProps) {
 
             {/* CTA Section */}
             <section className="border-t bg-muted/30">
-                <div className="container mx-auto px-4 py-16 text-center">
+                <div className="container mx-auto px-6 md:px-8 py-16 text-center">
                     <h2 className="text-3xl font-bold mb-4">
                         Need Help Choosing?
                     </h2>

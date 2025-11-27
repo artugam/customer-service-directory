@@ -1,9 +1,10 @@
-import { getPlatformsServer } from "@/lib/platforms";
+import { getPlatformsServer, getFeaturedPlatforms } from "@/lib/platforms";
 import { generateJSONLD } from "@/lib/metadata";
 import { HomeClient } from "@/components/home-client";
 
 export default async function Home() {
   const platforms = await getPlatformsServer();
+  const featuredPlatforms = await getFeaturedPlatforms();
 
   // FAQs for SEO
   const faqs = [
@@ -72,7 +73,11 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={generateJSONLD(faqJsonLd)}
       />
-      <HomeClient platforms={platforms} faqs={faqs} />
+      <HomeClient
+        platforms={platforms}
+        featuredPlatforms={featuredPlatforms}
+        faqs={faqs}
+      />
     </>
   );
 }

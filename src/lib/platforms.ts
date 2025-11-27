@@ -97,3 +97,52 @@ export async function getPlatformByIdServer(
   const platforms = await getPlatformsServer();
   return platforms.find((p) => generatePlatformId(p.trade_name) === id) || null;
 }
+
+/**
+ * Get featured platforms for homepage display
+ * Selects 5 high-quality platforms with diverse categories
+ * @returns Promise<Platform[]> - Array of 5 featured platforms
+ */
+export async function getFeaturedPlatforms(): Promise<Platform[]> {
+  const platforms = await getPlatformsServer();
+
+  // Sort by G2 rating (highest first) and filter for quality platforms
+  const sortedPlatforms = platforms
+    .filter((p) => p.reputation.g2_rating >= 4.0) // Only high-rated platforms
+    .sort((a, b) => {
+      // Primary sort: G2 rating
+      if (b.reputation.g2_rating !== a.reputation.g2_rating) {
+        return b.reputation.g2_rating - a.reputation.g2_rating;
+      }
+      // Secondary sort: Review count
+      return b.reputation.g2_reviews_count - a.reputation.g2_reviews_count;
+    });
+
+  // Select 5 platforms with diverse categories
+  const featured: Platform[] = [];
+  const usedCategories = new Set<string>();
+
+  for (const platform of sortedPlatforms) {
+    if (featured.length >= 5) break;
+
+    const primaryCategory = platform.category_primary.split("/")[0].trim();
+
+    // Prefer platforms from different categories, but allow duplicates if needed
+    if (!usedCategories.has(primaryCategory) || featured.length < 3) {
+      featured.push(platform);
+      usedCategories.add(primaryCategory);
+    }
+  }
+
+  // If we still need more, add the highest-rated remaining platforms
+  if (featured.length < 5) {
+    for (const platform of sortedPlatforms) {
+      if (featured.length >= 5) break;
+      if (!featured.includes(platform)) {
+        featured.push(platform);
+      }
+    }
+  }
+
+  return featured.slice(0, 5);
+}
