@@ -120,47 +120,7 @@ export function PlatformSearch({
     (searchQuery ? 1 : 0);
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-col lg:flex-row gap-4">
-        {/* Search */}
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search platforms, features, or keywords..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 h-11"
-          />
-        </div>
-
-        {/* Category */}
-        <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-          <SelectTrigger className="w-full lg:w-[200px] h-11">
-            <SelectValue placeholder="All Categories" />
-          </SelectTrigger>
-          <SelectContent>
-            {categories.map((cat) => (
-              <SelectItem key={cat} value={cat}>
-                {cat === "all" ? "All Categories" : cat}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-
-        {/* Price Range */}
-        <Select value={priceRange} onValueChange={setPriceRange}>
-          <SelectTrigger className="w-full lg:w-[160px] h-11">
-            <SelectValue placeholder="Price Range" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Prices</SelectItem>
-            <SelectItem value="free">Free Plan</SelectItem>
-            <SelectItem value="0-50">$0 - $50/mo</SelectItem>
-            <SelectItem value="50-100">$50 - $100/mo</SelectItem>
-            <SelectItem value="100+">$100+/mo</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
+    <div className="space-y-4 flex justify-between">
 
       {/* Additional Filters */}
       <div className="flex flex-wrap gap-2 items-center">
@@ -203,12 +163,34 @@ export function PlatformSearch({
         )}
       </div>
 
-      {/* Results count */}
-      <div className="flex items-center justify-between text-sm">
-        <p className="text-muted-foreground">
-          Showing <span className="font-semibold text-foreground">{filteredPlatforms.length}</span>{" "}
-          of {platforms.length} platforms
-        </p>
+      <div className="flex flex-col lg:flex-row gap-4">
+        {/* Category */}
+        <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+          <SelectTrigger className="w-full lg:w-[200px] h-11">
+            <SelectValue placeholder="All Categories" />
+          </SelectTrigger>
+          <SelectContent>
+            {categories.map((cat) => (
+              <SelectItem key={cat} value={cat}>
+                {cat === "all" ? "All Categories" : cat}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {/* Price Range */}
+        <Select value={priceRange} onValueChange={setPriceRange}>
+          <SelectTrigger className="w-full lg:w-[160px] h-11">
+            <SelectValue placeholder="Price Range" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Prices</SelectItem>
+            <SelectItem value="free">Free Plan</SelectItem>
+            <SelectItem value="0-50">$0 - $50/mo</SelectItem>
+            <SelectItem value="50-100">$50 - $100/mo</SelectItem>
+            <SelectItem value="100+">$100+/mo</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
     </div>
   );

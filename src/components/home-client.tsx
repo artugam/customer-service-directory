@@ -86,21 +86,6 @@ export function HomeClient({ platforms, faqs }: HomeClientProps) {
 
             {/* Platforms Section */}
             <section id="platforms" className="container mx-auto px-4 py-16">
-                <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        {searchQuery ? `Search Results for "${searchQuery}"` : 'Compare Customer Service Platforms'}
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-2">
-                        {searchQuery
-                            ? `Showing ${filteredPlatforms.length} ${filteredPlatforms.length === 1 ? 'result' : 'results'}`
-                            : 'Find the perfect AI-powered help desk, live chat, and ticketing solution for your business'
-                        }
-                    </p>
-                    <div className="text-xs text-muted-foreground">
-                        Last updated: {new Date().toLocaleDateString()} • {platforms.length} verified platforms
-                    </div>
-                </div>
-
                 <PlatformsList platforms={filteredPlatforms} />
             </section>
 
