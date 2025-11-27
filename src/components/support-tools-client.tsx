@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Platform } from "@/schemas/platform.schema";
 import { PlatformCard } from "@/components/platform-card";
@@ -15,7 +15,8 @@ interface SupportToolsClientProps {
     initialQuery: string;
 }
 
-export function SupportToolsClient({
+// Internal component that uses useSearchParams
+function SupportToolsContent({
     platforms,
     initialQuery,
 }: SupportToolsClientProps) {
@@ -201,5 +202,29 @@ export function SupportToolsClient({
                 )}
             </main>
         </div>
+    );
+}
+
+// Main export with Suspense boundary
+export function SupportToolsClient(props: SupportToolsClientProps) {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-background">
+                <header className="border-b bg-muted/20">
+                    <div className="container mx-auto px-6 md:px-8 py-8">
+                        <div className="mb-6">
+                            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+                                Support Tools Directory
+                            </h1>
+                            <p className="text-lg text-muted-foreground">
+                                Loading...
+                            </p>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        }>
+            <SupportToolsContent {...props} />
+        </Suspense>
     );
 }
