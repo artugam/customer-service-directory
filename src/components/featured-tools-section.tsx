@@ -24,7 +24,7 @@ export function FeaturedToolsSection({ platforms }: FeaturedToolsSectionProps) {
                             <Sparkles className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-bold">Featured Support Tools</h2>
+                            <h2 className="text-2xl font-bold">Customer Service Tools</h2>
                             <p className="text-sm text-muted-foreground mt-1">
                                 Top-rated customer service platforms trusted by thousands
                             </p>
@@ -40,7 +40,7 @@ export function FeaturedToolsSection({ platforms }: FeaturedToolsSectionProps) {
                     </Button>
                 </div>
 
-                {/* Featured Tools Grid */}
+                {/* Customer Service Tools Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-6">
                     {platforms.map((platform) => (
                         <FeaturedToolCard key={platform.trade_name} platform={platform} />

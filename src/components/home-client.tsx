@@ -76,7 +76,7 @@ export function HomeClient({ platforms, featuredPlatforms, faqs }: HomeClientPro
                 </div>
             </section>
 
-            {/* Featured Tools Section */}
+            {/* Customer Service Tools Section */}
             <FeaturedToolsSection platforms={featuredPlatforms} />
 
             {/* AI Features Section */}
