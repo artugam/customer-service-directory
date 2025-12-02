@@ -5,32 +5,32 @@
         {
             "id": "refund_request",
             "name": "Refund Request",
-            "description": "Prompty do obsługi żądań zwrotów i refundacji",
+            "description": "Prompts for handling refund and return requests",
             "icon": "💰",
             "promptCount": 35,
             "popularity": "high",
             "subcategories": [
                 {
                     "id": "standard_acceptance",
-                    "name": "Standardowa akceptacja refundu",
-                    "description": "Szybkie, bezkonfliktowe potwierdzenie zwrotu",
+                    "name": "Standard Refund Acceptance",
+                    "description": "Quick, conflict-free refund confirmation",
                     "promptCount": 5,
                     "prompts": [
                         {
                             "id": "acceptance_within_policy_period",
-                            "title": "Akceptacja refundu w ramach regulaminowego okresu",
-                            "description": "Szybkie, bezkonfliktowe potwierdzenie zwrotu dla żądań w ramach polityki zwrotów",
+                            "title": "Refund Acceptance Within Policy Period",
+                            "description": "Quick, conflict-free refund confirmation for requests within return policy",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "refund_window_days",
                                     "type": "number",
-                                    "description": "Liczba dni na złożenie reklamacji zgodnie z polityką",
+                                    "description": "Number of days allowed for refund requests according to policy",
                                     "placeholder": "e.g., 30",
                                     "default": 30
                                 }
@@ -45,19 +45,19 @@
                         },
                         {
                             "id": "acceptance_defect_product",
-                            "title": "Akceptacja refundu z powodu wady/usterki",
-                            "description": "Potwierdzenie zwrotu gdy produkt jest wadliwy lub uszkodzony",
+                            "title": "Refund Acceptance for Defect/Malfunction",
+                            "description": "Refund confirmation when product is defective or damaged",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "product_type",
                                     "type": "text",
-                                    "description": "Typ lub nazwa produktu objętego reklamacją",
+                                    "description": "Type or name of the product being claimed",
                                     "placeholder": "e.g., laptop, smartphone, clothing item"
                                 }
                             ],
@@ -71,19 +71,19 @@
                         },
                         {
                             "id": "acceptance_partial_refund",
-                            "title": "Akceptacja częściowego refundu (np. bez kosztów dostawy)",
-                            "description": "Potwierdzenie częściowego zwrotu środków z wyjaśnieniem zakresu refundacji",
+                            "title": "Partial Refund Acceptance (e.g., excluding shipping)",
+                            "description": "Confirmation of partial refund with explanation of scope",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "refunded_amount_or_rule",
                                     "type": "text",
-                                    "description": "Kwota lub zasada częściowego zwrotu",
+                                    "description": "Amount or rule for partial refund",
                                     "placeholder": "e.g., product price only (shipping excluded), 80% of total"
                                 }
                             ],
@@ -97,19 +97,19 @@
                         },
                         {
                             "id": "acceptance_with_exchange_offer",
-                            "title": "Akceptacja refundu z propozycją wymiany zamiast zwrotu",
-                            "description": "Potwierdzenie możliwości zwrotu z dodatkową propozycją wymiany produktu",
+                            "title": "Refund Acceptance with Exchange Offer",
+                            "description": "Refund confirmation with additional product exchange proposal",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "exchange_option_description",
                                     "type": "text",
-                                    "description": "Opis dostępnej opcji wymiany",
+                                    "description": "Description of available exchange option",
                                     "placeholder": "e.g., same product in different size/color, upgraded model"
                                 }
                             ],
@@ -123,19 +123,19 @@
                         },
                         {
                             "id": "acceptance_with_timeline",
-                            "title": "Akceptacja refundu z informacją o czasie przelewu",
-                            "description": "Potwierdzenie zwrotu z precyzyjnym wskazaniem czasu realizacji",
+                            "title": "Refund Acceptance with Transfer Timeline",
+                            "description": "Refund confirmation with precise processing time indication",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "refund_processing_time_days",
                                     "type": "number",
-                                    "description": "Liczba dni roboczych potrzebnych do realizacji zwrotu",
+                                    "description": "Number of business days needed to process refund",
                                     "placeholder": "e.g., 5-7",
                                     "default": 7
                                 }
@@ -152,25 +152,25 @@
                 },
                 {
                     "id": "formal_rejection",
-                    "name": "Odmowa refundu – formalne powody",
-                    "description": "Grzeczna, ale jasna odmowa z podaniem powodu",
+                    "name": "Refund Rejection - Formal Reasons",
+                    "description": "Polite but clear rejection with stated reason",
                     "promptCount": 5,
                     "prompts": [
                         {
                             "id": "rejection_time_exceeded",
-                            "title": "Odmowa refundu z powodu przekroczenia czasu na zgłoszenie",
-                            "description": "Odmowa zwrotu gdy minął termin określony w polityce",
+                            "title": "Refund Rejection Due to Exceeded Time Window",
+                            "description": "Refund denial when policy deadline has passed",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "refund_window_days",
                                     "type": "number",
-                                    "description": "Liczba dni na złożenie reklamacji zgodnie z polityką",
+                                    "description": "Number of days allowed for refund requests according to policy",
                                     "placeholder": "e.g., 30",
                                     "default": 30
                                 }
@@ -185,19 +185,19 @@
                         },
                         {
                             "id": "rejection_product_misuse",
-                            "title": "Odmowa refundu z powodu użycia/zużycia produktu niezgodnie z polityką",
-                            "description": "Odmowa zwrotu gdy produkt został niewłaściwie użyty lub jest zużyty",
+                            "title": "Refund Rejection Due to Product Misuse/Wear",
+                            "description": "Refund denial when product was improperly used or is worn",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "product_type_or_policy_name",
                                     "type": "text",
-                                    "description": "Typ produktu lub nazwa polityki, która została naruszona",
+                                    "description": "Product type or policy name that was violated",
                                     "placeholder": "e.g., electronics with broken seal, cosmetics opened and used"
                                 }
                             ],
@@ -211,19 +211,19 @@
                         },
                         {
                             "id": "rejection_missing_proof",
-                            "title": "Odmowa refundu z powodu braku dowodu zakupu / danych zamówienia",
-                            "description": "Odmowa zwrotu gdy brakuje dokumentacji zakupu",
+                            "title": "Refund Rejection Due to Missing Proof of Purchase",
+                            "description": "Refund denial when purchase documentation is missing",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "required_proof_type",
                                     "type": "text",
-                                    "description": "Typ wymaganego dowodu zakupu",
+                                    "description": "Type of required proof of purchase",
                                     "placeholder": "e.g., order number, purchase receipt, transaction ID"
                                 }
                             ],
@@ -237,19 +237,19 @@
                         },
                         {
                             "id": "rejection_excluded_products",
-                            "title": "Odmowa refundu dla produktów wyłączonych z prawa odstąpienia",
-                            "description": "Odmowa zwrotu dla produktów cyfrowych, personalizowanych itp.",
+                            "title": "Refund Rejection for Products Excluded from Right of Withdrawal",
+                            "description": "Refund denial for digital products, personalized items, etc.",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "exclusion_reason",
                                     "type": "text",
-                                    "description": "Powód wyłączenia produktu z prawa do zwrotu",
+                                    "description": "Reason for product exclusion from return rights",
                                     "placeholder": "e.g., digital content, personalized/custom-made item, perishable goods"
                                 }
                             ],
@@ -263,19 +263,19 @@
                         },
                         {
                             "id": "rejection_service_consumed",
-                            "title": "Odmowa refundu po wykorzystaniu pełnej usługi",
-                            "description": "Odmowa zwrotu dla w pełni wykorzystanych usług SaaS/subskrypcji",
+                            "title": "Refund Rejection After Full Service Consumption",
+                            "description": "Refund denial for fully consumed SaaS/subscription services",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "service_type_or_billing_period",
                                     "type": "text",
-                                    "description": "Typ usługi lub okres rozliczeniowy",
+                                    "description": "Service type or billing period",
                                     "placeholder": "e.g., monthly SaaS subscription, annual membership"
                                 }
                             ],
@@ -291,25 +291,25 @@
                 },
                 {
                     "id": "rejection_with_alternative",
-                    "name": "Odmowa refundu + propozycja alternatywy",
-                    "description": "Chronić przychód, zmniejszyć eskalacje",
+                    "name": "Refund Rejection + Alternative Proposal",
+                    "description": "Protect revenue, reduce escalations",
                     "promptCount": 5,
                     "prompts": [
                         {
                             "id": "rejection_extended_trial",
-                            "title": "Odmowa refundu z propozycją wydłużenia okresu testowego",
-                            "description": "Odmowa zwrotu z ofertą dłuższego testowania produktu/usługi",
+                            "title": "Refund Rejection with Extended Trial Period Offer",
+                            "description": "Refund denial with offer of longer product/service testing",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "extended_trial_days",
                                     "type": "number",
-                                    "description": "Liczba dodatkowych dni okresu próbnego",
+                                    "description": "Number of additional trial days",
                                     "placeholder": "e.g., 14",
                                     "default": 14
                                 }
@@ -324,19 +324,19 @@
                         },
                         {
                             "id": "rejection_product_exchange",
-                            "title": "Odmowa refundu z propozycją wymiany lub innego wariantu produktu",
-                            "description": "Odmowa zwrotu pieniędzy z ofertą wymiany na inny produkt",
+                            "title": "Refund Rejection with Product Exchange Offer",
+                            "description": "Money refund denial with offer to exchange for another product",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "alternative_product_type",
                                     "type": "text",
-                                    "description": "Typ alternatywnego produktu do wymiany",
+                                    "description": "Type of alternative product for exchange",
                                     "placeholder": "e.g., different size, different model, upgraded version"
                                 }
                             ],
@@ -350,19 +350,19 @@
                         },
                         {
                             "id": "rejection_discount_code",
-                            "title": "Odmowa refundu z propozycją kodu rabatowego na kolejne zakupy",
-                            "description": "Odmowa zwrotu z ofertą zniżki na przyszłe zamówienia",
+                            "title": "Refund Rejection with Discount Code for Future Purchases",
+                            "description": "Refund denial with discount offer for future orders",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "discount_value_or_type",
                                     "type": "text",
-                                    "description": "Wartość lub typ oferowanego rabatu",
+                                    "description": "Value or type of discount offered",
                                     "placeholder": "e.g., 20% off next purchase, $10 discount code"
                                 }
                             ],
@@ -376,19 +376,19 @@
                         },
                         {
                             "id": "rejection_store_credit",
-                            "title": "Odmowa refundu z propozycją częściowego kredytu w formie „store credit",
-                            "description": "Odmowa zwrotu gotówki z ofertą kredytu sklepowego",
+                            "title": "Refund Rejection with Partial Store Credit Offer",
+                            "description": "Cash refund denial with store credit offer",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "store_credit_value_or_percent",
                                     "type": "text",
-                                    "description": "Wartość lub procent kredytu sklepowego",
+                                    "description": "Store credit value or percentage",
                                     "placeholder": "e.g., full purchase value, 150% of purchase value"
                                 }
                             ],
@@ -402,19 +402,19 @@
                         },
                         {
                             "id": "rejection_support_offer",
-                            "title": "Odmowa refundu z propozycją darmowej konsultacji/wsparcia",
-                            "description": "Odmowa zwrotu z ofertą wsparcia technicznego lub onboardingu",
+                            "title": "Refund Rejection with Free Consultation/Support Offer",
+                            "description": "Refund denial with technical support or onboarding offer",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "support_type",
                                     "type": "text",
-                                    "description": "Typ oferowanego wsparcia",
+                                    "description": "Type of support offered",
                                     "placeholder": "e.g., 1-on-1 onboarding call, technical consultation, training session"
                                 }
                             ],
@@ -430,25 +430,25 @@
                 },
                 {
                     "id": "information_request",
-                    "name": "Doprecyzowanie informacji przed decyzją",
-                    "description": "Wyciągnąć od klienta brakujące dane bez przerzucania problemu",
+                    "name": "Information Clarification Before Decision",
+                    "description": "Extract missing data from customer without deflecting the problem",
                     "promptCount": 5,
                     "prompts": [
                         {
                             "id": "request_damage_documentation",
-                            "title": "Prośba o dodatkowe zdjęcia / dokumentację uszkodzenia",
-                            "description": "Prośba o wizualną dokumentację problemu przed podjęciem decyzji",
+                            "title": "Request for Additional Photos/Damage Documentation",
+                            "description": "Request for visual documentation of problem before making decision",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "required_evidence_type",
                                     "type": "text",
-                                    "description": "Typ wymaganej dokumentacji",
+                                    "description": "Type of documentation required",
                                     "placeholder": "e.g., photos of damage, video showing malfunction, packaging condition"
                                 }
                             ],
@@ -462,19 +462,19 @@
                         },
                         {
                             "id": "request_order_details",
-                            "title": "Prośba o numer zamówienia / dane płatności",
-                            "description": "Prośba o dane identyfikujące transakcję",
+                            "title": "Request for Order Number/Payment Details",
+                            "description": "Request for transaction identification data",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "order_identifier_type",
                                     "type": "text",
-                                    "description": "Typ identyfikatora zamówienia",
+                                    "description": "Type of order identifier",
                                     "placeholder": "e.g., order number, email address used for purchase, transaction ID"
                                 }
                             ],
@@ -488,19 +488,19 @@
                         },
                         {
                             "id": "request_purchase_date",
-                            "title": "Prośba o potwierdzenie daty zakupu / otrzymania produktu",
-                            "description": "Prośba o weryfikację daty w celu sprawdzenia okresu zwrotu",
+                            "title": "Request for Purchase/Receipt Date Confirmation",
+                            "description": "Request for date verification to check return period",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "allowed_refund_window_days",
                                     "type": "number",
-                                    "description": "Dopuszczalny okres zwrotu w dniach",
+                                    "description": "Allowed return period in days",
                                     "placeholder": "e.g., 30",
                                     "default": 30
                                 }
@@ -515,19 +515,19 @@
                         },
                         {
                             "id": "request_problem_clarification",
-                            "title": "Prośba o wyjaśnienie problemu funkcjonalnego",
-                            "description": "Prośba o szczegóły problemu technicznego przed zwrotem",
+                            "title": "Request for Functional Problem Explanation",
+                            "description": "Request for technical issue details before refund",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "product_or_feature_name",
                                     "type": "text",
-                                    "description": "Nazwa produktu lub funkcji, której dotyczy problem",
+                                    "description": "Name of product or feature with the issue",
                                     "placeholder": "e.g., login feature, payment processing, specific software module"
                                 }
                             ],
@@ -541,19 +541,19 @@
                         },
                         {
                             "id": "request_preferred_resolution",
-                            "title": "Prośba o wskazanie preferowanej formy rozliczenia",
-                            "description": "Prośba o wybór między refundem, wymianą lub kredytem",
+                            "title": "Request for Preferred Resolution Method",
+                            "description": "Request to choose between refund, exchange, or credit",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "available_resolution_options",
                                     "type": "text",
-                                    "description": "Dostępne opcje rozwiązania sprawy",
+                                    "description": "Available resolution options",
                                     "placeholder": "e.g., full refund, product exchange, store credit"
                                 }
                             ],
@@ -569,25 +569,25 @@
                 },
                 {
                     "id": "partial_custom_refund",
-                    "name": "Refund częściowy / niestandardowy",
-                    "description": "Ograniczyć straty przy zachowaniu gestu dobrej woli",
+                    "name": "Partial/Custom Refund",
+                    "description": "Limit losses while maintaining goodwill gesture",
                     "promptCount": 5,
                     "prompts": [
                         {
                             "id": "partial_usage_refund",
-                            "title": "Częściowy refund z powodu częściowego użycia produktu",
-                            "description": "Proporcjonalny zwrot środków za niewykorzystaną część",
+                            "title": "Partial Refund Due to Partial Product Usage",
+                            "description": "Proportional refund for unused portion",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "partial_refund_rule_or_percent",
                                     "type": "text",
-                                    "description": "Zasada lub procent częściowego zwrotu",
+                                    "description": "Partial refund rule or percentage",
                                     "placeholder": "e.g., 50% for half-used subscription, prorated based on days remaining"
                                 }
                             ],
@@ -601,19 +601,19 @@
                         },
                         {
                             "id": "product_only_refund",
-                            "title": "Refund tylko kosztu produktu bez zwrotu kosztów wysyłki",
-                            "description": "Zwrot wartości produktu z wyłączeniem kosztów dostawy",
+                            "title": "Product Cost Refund Only (Excluding Shipping)",
+                            "description": "Product value refund excluding delivery costs",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "shipping_refund_policy_short",
                                     "type": "text",
-                                    "description": "Krótki opis polityki zwrotu kosztów wysyłki",
+                                    "description": "Brief shipping refund policy description",
                                     "placeholder": "e.g., shipping costs non-refundable, return shipping covered by customer"
                                 }
                             ],
@@ -627,19 +627,19 @@
                         },
                         {
                             "id": "single_item_refund",
-                            "title": "Refund za część zamówienia (1 z wielu produktów)",
-                            "description": "Zwrot środków za wybrany produkt z większego zamówienia",
+                            "title": "Refund for Part of Order (1 of Multiple Products)",
+                            "description": "Refund for selected product from larger order",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "refunded_item_description",
                                     "type": "text",
-                                    "description": "Opis produktu objętego zwrotem",
+                                    "description": "Description of product being refunded",
                                     "placeholder": "e.g., blue t-shirt (item #3 of 5), damaged component from bundle"
                                 }
                             ],
@@ -653,19 +653,19 @@
                         },
                         {
                             "id": "conditional_return_refund",
-                            "title": "Refund warunkowy po odesłaniu towaru w określonym czasie",
-                            "description": "Zwrot uzależniony od terminowego odesłania produktu",
+                            "title": "Conditional Refund After Product Return Within Timeframe",
+                            "description": "Refund contingent on timely product return",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "return_deadline_days",
                                     "type": "number",
-                                    "description": "Liczba dni na odesłanie produktu",
+                                    "description": "Number of days to return product",
                                     "placeholder": "e.g., 14",
                                     "default": 14
                                 }
@@ -680,19 +680,19 @@
                         },
                         {
                             "id": "goodwill_exception_refund",
-                            "title": "Refund jako wyjątek jednorazowy",
-                            "description": "Zwrot z gestu dobrej woli poza standardową polityką",
+                            "title": "Refund as One-Time Exception (Goodwill)",
+                            "description": "Goodwill refund outside standard policy",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "goodwill_condition_description",
                                     "type": "text",
-                                    "description": "Opis warunków wyjątku goodwill",
+                                    "description": "Description of goodwill exception conditions",
                                     "placeholder": "e.g., one-time exception for loyal customer, special circumstances considered"
                                 }
                             ],
@@ -708,25 +708,25 @@
                 },
                 {
                     "id": "fraud_prevention",
-                    "name": "Fraud / nadużycia refundowe",
-                    "description": "Chronić firmę, ale nie eskalować bez dowodów",
+                    "name": "Fraud/Refund Abuse",
+                    "description": "Protect company without escalating without evidence",
                     "promptCount": 5,
                     "prompts": [
                         {
                             "id": "suspected_abuse_soft",
-                            "title": "Odpowiedź przy podejrzeniu nadużycia (miękka, bez oskarżeń)",
-                            "description": "Ostrożna komunikacja przy wielokrotnych zwrotach bez bezpośrednich oskarżeń",
+                            "title": "Response to Suspected Abuse (Soft, No Accusations)",
+                            "description": "Cautious communication for multiple returns without direct accusations",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "internal_policy_reference",
                                     "type": "text",
-                                    "description": "Odniesienie do wewnętrznej polityki (bez szczegółów)",
+                                    "description": "Internal policy reference (without details)",
                                     "placeholder": "e.g., standard verification process, account review procedure"
                                 }
                             ],
@@ -740,19 +740,19 @@
                         },
                         {
                             "id": "missing_return_item",
-                            "title": "Odmowa refundu przy braku zwróconego towaru w magazynie",
-                            "description": "Odpowiedź gdy deklarowany zwrot nie dotarł do magazynu",
+                            "title": "Refund Rejection When Returned Item Not Received at Warehouse",
+                            "description": "Response when declared return hasn't arrived at warehouse",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "expected_return_deadline_days",
                                     "type": "number",
-                                    "description": "Oczekiwany termin dotarcia zwrotu (dni od wysłania)",
+                                    "description": "Expected return arrival deadline (days from shipping)",
                                     "placeholder": "e.g., 10",
                                     "default": 10
                                 }
@@ -767,19 +767,19 @@
                         },
                         {
                             "id": "return_condition_mismatch",
-                            "title": "Odpowiedź przy rozbieżności między zgłoszeniem a stanem zwrotu",
-                            "description": "Komunikat gdy stan fizyczny zwrotu nie odpowiada opisowi klienta",
+                            "title": "Response to Discrepancy Between Claim and Return Condition",
+                            "description": "Message when physical return condition doesn't match customer description",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "condition_issue_short",
                                     "type": "text",
-                                    "description": "Krótki opis rozbieżności",
+                                    "description": "Brief description of discrepancy",
                                     "placeholder": "e.g., item shows signs of use, missing accessories, different item returned"
                                 }
                             ],
@@ -793,19 +793,19 @@
                         },
                         {
                             "id": "escalation_to_verification",
-                            "title": "Komunikat o przekazaniu sprawy do dalszej weryfikacji",
-                            "description": "Informacja o przekazaniu do zespołu weryfikacyjnego (chargeback/dispute)",
+                            "title": "Notice of Escalation to Further Verification",
+                            "description": "Information about escalation to verification team (chargeback/dispute)",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "verification_process_description",
                                     "type": "text",
-                                    "description": "Opis procesu weryfikacji",
+                                    "description": "Description of verification process",
                                     "placeholder": "e.g., fraud prevention team review, payment dispute investigation"
                                 }
                             ],
@@ -819,19 +819,19 @@
                         },
                         {
                             "id": "chargeback_threat_response",
-                            "title": "Odpowiedź na groźby chargeback/negatywne opinie przy braku podstaw",
-                            "description": "Profesjonalna odpowiedź na groźby przy uzasadnionej odmowie zwrotu",
+                            "title": "Response to Chargeback/Negative Review Threats Without Grounds",
+                            "description": "Professional response to threats when refund denial is justified",
                             "requiredFields": [
                                 {
                                     "name": "customer_message",
                                     "type": "text",
-                                    "description": "Treść wiadomości klienta z żądaniem refundu",
+                                    "description": "Customer's refund request message content",
                                     "placeholder": "Paste the customer's refund request message here"
                                 },
                                 {
                                     "name": "policy_key_point",
                                     "type": "text",
-                                    "description": "Kluczowy punkt polityki uzasadniający odmowę",
+                                    "description": "Key policy point justifying rejection",
                                     "placeholder": "e.g., exceeded return window, product exclusion, terms of service section"
                                 }
                             ],
