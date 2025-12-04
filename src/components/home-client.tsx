@@ -1,7 +1,9 @@
 "use client";
 
 import { Platform } from "@/schemas/platform.schema";
+import { Prompt } from "@/schemas/prompts.schema";
 import { FeaturedToolsSection } from "@/components/featured-tools-section";
+import { PromptsPreviewSection } from "@/components/prompts-preview-section";
 import { AIFeaturesSection } from "@/components/ai-features-section";
 import { FAQSection } from "@/components/faq-section";
 import { HeroSearch } from "@/components/hero-search";
@@ -13,10 +15,11 @@ import { ArrowRight, Package, FolderTree, Puzzle, Sparkles } from "lucide-react"
 interface HomeClientProps {
     platforms: Platform[];
     featuredPlatforms: Platform[];
+    previewPrompts: Prompt[];
     faqs: Array<{ question: string; answer: string }>;
 }
 
-export function HomeClient({ platforms, featuredPlatforms, faqs }: HomeClientProps) {
+export function HomeClient({ platforms, featuredPlatforms, previewPrompts, faqs }: HomeClientProps) {
     // Calculate stats
     const totalIntegrations = platforms.reduce((sum, p) => {
         const count = typeof p.integrations.total_integrations === 'number'
@@ -78,6 +81,9 @@ export function HomeClient({ platforms, featuredPlatforms, faqs }: HomeClientPro
 
             {/* Customer Service Tools Section */}
             <FeaturedToolsSection platforms={featuredPlatforms} />
+
+            {/* Prompts Preview Section */}
+            <PromptsPreviewSection prompts={previewPrompts} />
 
             {/* AI Features Section */}
             <AIFeaturesSection />

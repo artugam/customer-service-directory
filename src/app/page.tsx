@@ -1,10 +1,12 @@
 import { getPlatformsServer, getFeaturedPlatforms } from "@/lib/platforms";
+import { getOnePromptPerSubcategory } from "@/lib/prompts";
 import { generateJSONLD } from "@/lib/metadata";
 import { HomeClient } from "@/components/home-client";
 
 export default async function Home() {
   const platforms = await getPlatformsServer();
   const featuredPlatforms = await getFeaturedPlatforms();
+  const previewPrompts = getOnePromptPerSubcategory("refund_request");
 
   // FAQs for SEO
   const faqs = [
@@ -76,6 +78,7 @@ export default async function Home() {
       <HomeClient
         platforms={platforms}
         featuredPlatforms={featuredPlatforms}
+        previewPrompts={previewPrompts}
         faqs={faqs}
       />
     </>
