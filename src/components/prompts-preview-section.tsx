@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Prompt } from "@/schemas/prompts.schema";
 import { PromptCard } from "@/components/prompt-card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 interface PromptsPreviewSectionProps {
     prompts: Prompt[];
@@ -24,7 +24,7 @@ export function PromptsPreviewSection({ prompts }: PromptsPreviewSectionProps) {
                 <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center gap-3">
                         <div className="p-2 rounded-lg bg-primary/10">
-                            <MessageSquare className="h-5 w-5 text-primary" />
+                            <Sparkles className="h-5 w-5 text-primary" />
                         </div>
                         <div>
                             <h2 className="text-2xl font-bold">Customer Service Prompts</h2>
