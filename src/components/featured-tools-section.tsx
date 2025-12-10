@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Platform } from "@/schemas/platform.schema";
 import { FeaturedToolCard } from "@/components/featured-tool-card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Wrench } from "lucide-react";
 
 interface FeaturedToolsSectionProps {
     platforms: Platform[];
@@ -21,7 +21,7 @@ export function FeaturedToolsSection({ platforms }: FeaturedToolsSectionProps) {
                 <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center gap-3">
                         <div className="p-2 rounded-lg bg-primary/10">
-                            <Sparkles className="h-5 w-5 text-primary" />
+                            <Wrench className="h-5 w-5 text-primary" />
                         </div>
                         <div>
                             <h2 className="text-2xl font-bold">Customer Service Tools</h2>
