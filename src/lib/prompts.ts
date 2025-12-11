@@ -107,3 +107,45 @@ export function getAllCategories(): PromptCategory[] {
     const data = getPromptsData();
     return data.categories;
 }
+
+/**
+ * Get sample prompts for homepage preview
+ * Returns 10 prompts with at least 1 from each category/subcategory
+ */
+export function getSamplePromptsForPreview(targetCount: number = 10): Prompt[] {
+    const data = getPromptsData();
+    const selectedPrompts: Prompt[] = [];
+    const allSubcategories: { category: PromptCategory; subcategory: PromptSubcategory }[] = [];
+
+    // Collect all subcategories from all categories
+    data.categories.forEach((category) => {
+        category.subcategories.forEach((subcategory) => {
+            allSubcategories.push({ category, subcategory });
+        });
+    });
+
+    // First pass: Get one prompt from each subcategory
+    allSubcategories.forEach(({ subcategory }) => {
+        if (subcategory.prompts.length > 0 && selectedPrompts.length < targetCount) {
+            selectedPrompts.push(subcategory.prompts[0]);
+        }
+    });
+
+    // Second pass: Fill remaining slots with additional prompts
+    if (selectedPrompts.length < targetCount) {
+        let currentIndex = 0;
+        while (selectedPrompts.length < targetCount && currentIndex < allSubcategories.length) {
+            const { subcategory } = allSubcategories[currentIndex];
+            // Get the second prompt if available
+            if (subcategory.prompts.length > 1) {
+                const secondPrompt = subcategory.prompts[1];
+                if (!selectedPrompts.find(p => p.id === secondPrompt.id)) {
+                    selectedPrompts.push(secondPrompt);
+                }
+            }
+            currentIndex++;
+        }
+    }
+
+    return selectedPrompts.slice(0, targetCount);
+}

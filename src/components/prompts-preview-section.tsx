@@ -44,7 +44,7 @@ export function PromptsPreviewSection({ prompts }: PromptsPreviewSectionProps) {
                 </div>
 
                 {/* Prompts Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 mb-6">
                     {prompts.map((prompt) => (
                         <PromptCard key={prompt.id} prompt={prompt} />
                     ))}
