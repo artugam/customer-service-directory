@@ -31,11 +31,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-1.5">
                             <FileText className="h-4 w-4" />
-                            <span>{prompt.requiredFields.length} fields</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                            <Tag className="h-4 w-4" />
-                            <span>{prompt.tags.length} tags</span>
+                            <span>{prompt.requiredFields.length} inputs</span>
                         </div>
                     </div>
 
