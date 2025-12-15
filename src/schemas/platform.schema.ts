@@ -141,10 +141,10 @@ export const fundingHistorySchema = z.object({
 export const companyInfoSchema = z.object({
   headquarters: z.string(),
   original_headquarters: z.string().nullable(),
-  founding_location: z.string().nullable(),
+  founding_location: z.string().nullable().optional(),
   founders: z.array(z.string()).nullable(),
   employees: z.union([z.number(), z.string()]).nullable(),
-  employee_count: z.string().nullable(),
+  employee_count: z.string().nullable().optional(),
   nasdaq_listing: z.string().nullable(),
   company_mission: z.string().nullable(),
 });
@@ -160,7 +160,7 @@ export const marketPresenceSchema = z.object({
 // Additional Info Schema
 export const additionalInfoSchema = z.object({
   headquarters: z.string(),
-  founding_location: z.string().nullable(),
+  founding_location: z.string().nullable().optional(),
   employee_count: z.string(),
   global_presence: z.string(),
   acquisition_history: z.array(z.string()),

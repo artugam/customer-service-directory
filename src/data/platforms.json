@@ -24,19 +24,27 @@
         "market_share": "~28% in customer support space; 16.35% market share in customer experience software market",
         "market_share_source": "https://sqmagazine.co.uk/zendesk-statistics-2025/",
         "annual_resolutions": "5 billion issues resolved annually",
-        "industries_served": "SaaS, E-commerce, Finance, Healthcare, Education, Technology"
+        "industries_served": "SaaS, E-commerce, Finance, Healthcare, Education, Technology",
+        "notable_customers": null,
+        "market_position": null
       },
       "pricing": {
         "model": "Per-agent per-month subscription model with annual or monthly billing options",
         "free_trial": true,
         "free_trial_duration": "14 days (access to Suite Professional plan)",
         "free_plan": false,
+        "currency": "USD",
+        "billing_period": "Monthly or Annual",
         "plans": [
           {
             "name": "Support Team",
+            "price": null,
             "price_annual": "$19",
             "price_monthly": "$25",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Email, X, and Facebook ticketing",
               "Custom business rules",
@@ -46,9 +54,13 @@
           },
           {
             "name": "Support Professional",
+            "price": null,
             "price_annual": "$55",
             "price_monthly": "$69",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Team features",
               "Multilingual support",
@@ -59,9 +71,13 @@
           },
           {
             "name": "Support Enterprise",
+            "price": null,
             "price_annual": "$115",
             "price_monthly": "$149",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Professional features",
               "Skills-based routing",
@@ -72,9 +88,13 @@
           },
           {
             "name": "Suite Team",
+            "price": null,
             "price_annual": "$55",
             "price_monthly": "$69",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Ticketing, messaging, chat, voice, social channels",
               "One help center included",
@@ -85,9 +105,13 @@
           },
           {
             "name": "Suite Growth",
+            "price": null,
             "price_annual": "$89",
             "price_monthly": "$115",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Team features",
               "Self-service customer portal",
@@ -98,9 +122,13 @@
           },
           {
             "name": "Suite Professional",
+            "price": null,
             "price_annual": "$115",
             "price_monthly": "$149",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Growth features",
               "Integrated community forums",
@@ -111,9 +139,13 @@
           },
           {
             "name": "Suite Enterprise",
+            "price": null,
             "price_annual": "$169",
             "price_monthly": "$219",
+            "billing_period": null,
             "billing_unit": "per agent/month",
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Professional features",
               "Custom agent roles",
@@ -124,6 +156,8 @@
             ]
           }
         ],
+        "add_ons": null,
+        "additional_costs": null,
         "enterprise_custom": true,
         "contact_sales_for_enterprise": true,
         "hidden_costs": {
@@ -171,7 +205,8 @@
             "Suite Growth",
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Multi-Channel Support",
@@ -181,7 +216,8 @@
             "Suite Growth",
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Zendesk AI Copilot & AI Agents",
@@ -191,7 +227,8 @@
             "Suite Growth",
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Knowledge Base & Self-Service",
@@ -201,7 +238,8 @@
             "Suite Growth",
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Advanced Analytics & Reporting (Zendesk Explore)",
@@ -212,7 +250,8 @@
             "Suite Growth",
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Automations & Workflow Builder",
@@ -222,7 +261,8 @@
             "Suite Growth",
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Workforce Engagement Management",
@@ -230,7 +270,8 @@
           "available_in_plans": [
             "Suite Professional",
             "Suite Enterprise"
-          ]
+          ],
+          "category": null
         }
       ],
       "integrations": {
@@ -239,6 +280,7 @@
         "api_type": "REST API with JSON support",
         "total_integrations": 1503,
         "total_integrations_source": "https://userpilot.com/blog/zendesk-integrations/",
+        "app_store_topics": null,
         "top_integrations": [
           "Salesforce",
           "Slack",
@@ -257,7 +299,8 @@
           "Collaboration (328 apps)",
           "Analytics & reporting (313 apps)",
           "IT & Project management (303 apps)"
-        ]
+        ],
+        "api_capabilities": null
       },
       "unique_selling_points": [
         "AI-First Resolution Platform: Purpose-built for AI-powered automation with advanced AI Agents that handle complex issues autonomously, backed by 5 billion annual resolutions - the largest operational base for AI training in service.",
@@ -277,17 +320,20 @@
       ],
       "reputation": {
         "g2_rating": 4.3,
-        "g2_rating_max": 5.0,
+        "g2_rating_max": 5,
         "g2_reviews_count": 6200,
         "g2_url": "https://www.g2.com/products/zendesk/",
         "g2_source": "https://blog.9cv9.com/top-10-best-customer-support-software-to-use-in-2025/",
+        "g2_rating_details": null,
+        "g2_leader_status": null,
         "capterra_rating": 4.4,
-        "capterra_rating_max": 5.0,
+        "capterra_rating_max": 5,
         "capterra_reviews_count": 4000,
         "capterra_url": "https://www.capterra.com/p/13486-zendesk/",
         "capterra_source": "https://clearfeed.ai/blog/zendesk-pros-cons/",
+        "capterra_value_rating": null,
         "trustradius_rating": 8.7,
-        "trustradius_rating_max": 10.0,
+        "trustradius_rating_max": 10,
         "trustradius_reviews_count": 1000,
         "trustradius_url": "https://www.trustradius.com/products/zendesk-suite/",
         "trustradius_source": "https://clearfeed.ai/blog/zendesk-pros-cons/",
@@ -303,6 +349,7 @@
           "HIPAA Compliance Support Available"
         ]
       },
+      "security_compliance": null,
       "seo_metadata": {
         "alternative_names": [
           "Zendesk Support",
@@ -336,6 +383,10 @@
           "service automation"
         ]
       },
+      "founder_information": null,
+      "funding_history": null,
+      "company_info": null,
+      "market_presence": null,
       "additional_info": {
         "headquarters": "San Francisco, California, USA",
         "founding_location": "Copenhagen, Denmark",
@@ -350,6 +401,7 @@
         ],
         "mission": "Power exceptional service for every person on the planet"
       },
+      "data_sources": null,
       "suitability": {
         "company_size": [
           "51-200",
@@ -430,19 +482,30 @@
       "statistics": {
         "customer_count": "75,000+ businesses worldwide",
         "customer_count_source": "https://freshworks.com",
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": null,
         "notable_customers": "HP, Bridgestone, Honda, Toshiba, Cisco, University of Pennsylvania, Hugo Boss",
         "market_position": "Top 10 customer service software globally; 7th most used ticketing system globally"
       },
       "pricing": {
         "model": "Per-agent per-month subscription model with optional annual billing (approximately 17% discount)",
         "free_trial": true,
+        "free_trial_duration": null,
         "free_plan": true,
+        "currency": null,
+        "billing_period": null,
         "plans": [
           {
             "name": "Free",
             "price": "$0/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "N/A",
+            "billing_unit": null,
             "agents_included": "Up to 2 agents",
+            "lite_seats": null,
             "key_features": [
               "Email & Social ticketing",
               "Knowledge base",
@@ -454,7 +517,12 @@
           {
             "name": "Growth",
             "price": "$15/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Billed annually",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Everything in Free",
               "Multi-channel support (chat, phone, social)",
@@ -466,7 +534,12 @@
           {
             "name": "Pro",
             "price": "$49/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Billed annually",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Everything in Growth",
               "Custom roles and permissions",
@@ -480,7 +553,12 @@
           {
             "name": "Pro + AI Copilot",
             "price": "$78/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Billed annually",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Everything in Pro",
               "Freddy AI Copilot for agents",
@@ -492,7 +570,12 @@
           {
             "name": "Enterprise",
             "price": "$79/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Billed annually",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Everything in Pro",
               "Skill-based routing",
@@ -508,6 +591,9 @@
           "freddy_ai_agent": "Starting at $49 per 100 sessions (first 500 sessions included in Enterprise)",
           "note": "First 500 AI agent resolution sessions included with Enterprise plan"
         },
+        "additional_costs": null,
+        "enterprise_custom": null,
+        "contact_sales_for_enterprise": null,
         "hidden_costs": {
           "implementation_fee": {
             "min": 0,
@@ -549,7 +635,8 @@
             "Growth",
             "Pro",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Advanced Ticketing & Case Management",
@@ -559,7 +646,8 @@
             "Growth",
             "Pro",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Freddy AI Agent (Automation)",
@@ -567,7 +655,8 @@
           "available_in_plans": [
             "Enterprise",
             "All (with add-on)"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Freddy AI Copilot (Agent Assistance)",
@@ -575,7 +664,8 @@
           "available_in_plans": [
             "Pro",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Knowledge Base & Self-Service",
@@ -585,7 +675,8 @@
             "Growth",
             "Pro",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Workflow Automation & Routing",
@@ -594,7 +685,8 @@
             "Growth",
             "Pro",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Advanced Analytics & Reporting",
@@ -602,13 +694,17 @@
           "available_in_plans": [
             "Pro",
             "Enterprise"
-          ]
+          ],
+          "category": null
         }
       ],
       "integrations": {
         "has_api": true,
         "api_docs_url": "https://developers.freshdesk.com",
+        "api_type": null,
         "total_integrations": "1,000+ ready-to-install integrations in Freshworks Marketplace",
+        "total_integrations_source": null,
+        "app_store_topics": null,
         "top_integrations": [
           "Slack",
           "Zapier",
@@ -621,6 +717,7 @@
           "Stripe",
           "WooCommerce"
         ],
+        "integration_categories": null,
         "api_capabilities": "REST API with JSON over HTTP for ticket management, contact management, custom objects, and custom integrations with authentication via API key"
       },
       "unique_selling_points": [
@@ -640,15 +737,23 @@
       ],
       "reputation": {
         "g2_rating": 4.4,
+        "g2_rating_max": null,
         "g2_reviews_count": 3219,
         "g2_url": "https://www.g2.com/products/freshdesk/",
+        "g2_source": null,
         "g2_rating_details": "Ease of Use: 8.8/10 | Strong reviews emphasizing user-friendly interface",
+        "g2_leader_status": null,
         "capterra_rating": 4.5,
+        "capterra_rating_max": null,
         "capterra_reviews_count": 3404,
         "capterra_url": "https://www.capterra.com/p/121114-Freshdesk/",
+        "capterra_source": null,
+        "capterra_value_rating": null,
         "trustradius_rating": 8.6,
+        "trustradius_rating_max": null,
         "trustradius_reviews_count": 565,
         "trustradius_url": "https://www.trustradius.com/products/freshdesk",
+        "trustradius_source": null,
         "awards": [
           "G2 Leader - Customer Service Software (multiple years)",
           "G2 Best Software Award 2024",
@@ -703,6 +808,8 @@
           "contact center solution"
         ]
       },
+      "founder_information": null,
+      "funding_history": null,
       "company_info": {
         "headquarters": "San Mateo, California, USA",
         "original_headquarters": "Chennai, India (founded 2010)",
@@ -720,6 +827,8 @@
         "traffic_source": "69.48% direct traffic (strong brand recognition), 17.12% organic search, 10.87% referrals",
         "global_ranking": "8th most used ticketing system globally; 7th in 100K+ sites category"
       },
+      "additional_info": null,
+      "data_sources": null,
       "suitability": {
         "company_size": [
           "1-10",
@@ -803,17 +912,31 @@
       "founded_year": 1996,
       "statistics": {
         "customer_count": "Over 100,000 businesses; Part of Zoho's 700,000+ total business customers",
-        "customer_count_source": "https://www.zoho.com/desk/ and https://blog.datacaptive.com/zoho-customers/"
+        "customer_count_source": "https://www.zoho.com/desk/ and https://blog.datacaptive.com/zoho-customers/",
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": null,
+        "notable_customers": null,
+        "market_position": null
       },
       "pricing": {
         "model": "Per agent/user per month",
         "free_trial": true,
+        "free_trial_duration": null,
         "free_plan": true,
+        "currency": null,
+        "billing_period": null,
         "plans": [
           {
             "name": "Free Plan",
             "price": "$0/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Monthly",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Email ticketing",
               "Customer management",
@@ -825,7 +948,12 @@
           {
             "name": "Standard Plan",
             "price": "$14-20/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Annual: $14/agent/month; Monthly: $20/agent/month",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Free Plan features",
               "Social and community channels",
@@ -838,7 +966,12 @@
           {
             "name": "Professional Plan",
             "price": "$23-35/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Annual: $23/agent/month; Monthly: $35/agent/month",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Standard Plan features",
               "Multi-department ticketing",
@@ -852,7 +985,12 @@
           {
             "name": "Enterprise Plan",
             "price": "$40-50/agent/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "Annual: $40/agent/month; Monthly: $50/agent/month",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Professional Plan features",
               "Multi-brand help center",
@@ -865,7 +1003,12 @@
               "Guided conversations"
             ]
           }
-        ]
+        ],
+        "add_ons": null,
+        "additional_costs": null,
+        "enterprise_custom": null,
+        "contact_sales_for_enterprise": null,
+        "hidden_costs": null
       },
       "features": [
         {
@@ -876,7 +1019,8 @@
             "Standard",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Zia AI Assistant",
@@ -884,7 +1028,8 @@
           "available_in_plans": [
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Blueprint Process Automation",
@@ -892,7 +1037,8 @@
           "available_in_plans": [
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Multilingual Support",
@@ -901,7 +1047,8 @@
             "Standard",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Knowledge Base & Self-Service",
@@ -911,7 +1058,8 @@
             "Standard",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Advanced Analytics & Reporting",
@@ -919,20 +1067,25 @@
           "available_in_plans": [
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Live Chat & Engagement",
           "description": "Real-time visitor engagement with Zoho SalesIQ live chat, visitor classification, bot automation, and seamless conversion from chat to support tickets.",
           "available_in_plans": [
             "Enterprise"
-          ]
+          ],
+          "category": null
         }
       ],
       "integrations": {
         "has_api": true,
         "api_docs_url": "https://www.zoho.com/desk/extensions/",
+        "api_type": null,
         "total_integrations": 200,
+        "total_integrations_source": null,
+        "app_store_topics": null,
         "top_integrations": [
           "Zoho CRM",
           "Salesforce",
@@ -944,7 +1097,9 @@
           "Shopify",
           "HubSpot",
           "WhatsApp Business"
-        ]
+        ],
+        "integration_categories": null,
+        "api_capabilities": null
       },
       "unique_selling_points": [
         "50% faster implementation compared to competitors, with a shallow learning curve and dedicated training programs",
@@ -962,12 +1117,23 @@
       ],
       "reputation": {
         "g2_rating": 4.4,
+        "g2_rating_max": null,
         "g2_reviews_count": 6508,
         "g2_url": "https://www.g2.com/products/zoho-desk/",
+        "g2_source": null,
+        "g2_rating_details": null,
+        "g2_leader_status": null,
         "capterra_rating": 4.5,
+        "capterra_rating_max": null,
         "capterra_reviews_count": 2204,
         "capterra_url": "https://www.capterra.com/p/104635/Zoho-Desk/",
+        "capterra_source": null,
+        "capterra_value_rating": null,
         "trustradius_rating": 7.9,
+        "trustradius_rating_max": null,
+        "trustradius_reviews_count": null,
+        "trustradius_url": null,
+        "trustradius_source": null,
         "awards": [
           "Gartner Magic Quadrant for CRM Customer Engagement Center (Niche Player, 2025)",
           "G2 #1 Leader in Help Desk Software (Small Business, Mid-Market, Enterprise)",
@@ -977,6 +1143,7 @@
           "#1 Help Desk Software of 2024 (Multiple award bodies)"
         ]
       },
+      "security_compliance": null,
       "seo_metadata": {
         "alternative_names": [
           "Zoho Help Desk",
@@ -1005,6 +1172,14 @@
           "multilingual customer support"
         ]
       },
+      "founder_information": null,
+      "funding_history": null,
+      "company_info": null,
+      "market_presence": null,
+      "additional_info": null,
+      "data_sources": null,
+      "suitability": null,
+      "risk_assessment": null,
       "last_verified": "2025-11-17"
     },
     {
@@ -1022,26 +1197,174 @@
         "Workflow Automation",
         "AI-Powered Support"
       ],
-      "founded_year": 2004,
+      "logo_url": "https://www.servicenow.com/content/dam/servicenow-assets/images/meganav/servicenow-header-logo.svg",
       "website_url": "https://www.servicenow.com",
       "pricing_url": "https://www.servicenow.com/en-us/customer-service-management.html",
+      "founded_year": 2004,
       "statistics": {
         "customer_count": "Over 8,400 organizations worldwide, including 85% of Fortune 500 companies; 2,109 customers with average ACV of $5 million as of Q4 2024",
-        "customer_count_source": "https://www.cyntexa.com/servicenow-statistics/"
+        "customer_count_source": "https://www.cyntexa.com/servicenow-statistics/",
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": null,
+        "notable_customers": null,
+        "market_position": null
       },
-      "reputation": {
-        "g2_rating": 4.4,
-        "g2_reviews_count": 2100,
-        "g2_url": "https://www.g2.com/products/servicenow",
-        "capterra_rating": 4.5,
-        "capterra_reviews_count": 334,
-        "awards": []
+      "pricing": {
+        "model": "Custom enterprise pricing based on user count and modules",
+        "free_trial": true,
+        "free_trial_duration": "30 days (contact sales)",
+        "free_plan": false,
+        "currency": null,
+        "billing_period": null,
+        "plans": [
+          {
+            "name": "Professional",
+            "price": "Contact Sales",
+            "price_annual": null,
+            "price_monthly": null,
+            "billing_period": null,
+            "billing_unit": "per user/month",
+            "agents_included": null,
+            "lite_seats": null,
+            "key_features": [
+              "Case Management",
+              "Knowledge Management",
+              "Omnichannel Routing",
+              "Service Catalog",
+              "Mobile App",
+              "Basic Analytics & Reporting"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "price": "Contact Sales",
+            "price_annual": null,
+            "price_monthly": null,
+            "billing_period": null,
+            "billing_unit": "per user/month",
+            "agents_included": null,
+            "lite_seats": null,
+            "key_features": [
+              "All Professional features",
+              "Advanced Work Assignment",
+              "Predictive Intelligence",
+              "Field Service Management",
+              "Proactive Customer Service Operations",
+              "Advanced Analytics with Performance Analytics"
+            ]
+          },
+          {
+            "name": "Ultimate",
+            "price": "Contact Sales",
+            "price_annual": null,
+            "price_monthly": null,
+            "billing_period": null,
+            "billing_unit": "per user/month",
+            "agents_included": null,
+            "lite_seats": null,
+            "key_features": [
+              "All Enterprise features",
+              "Playbooks for CSM",
+              "Walk-up Experience",
+              "Advanced AI and ML capabilities",
+              "Customer Asset Management",
+              "Industry Solutions"
+            ]
+          }
+        ],
+        "add_ons": null,
+        "additional_costs": null,
+        "enterprise_custom": true,
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": null
       },
-      "logo_url": "https://www.servicenow.com/content/dam/servicenow-assets/images/meganav/servicenow-header-logo.svg",
+      "features": [
+        {
+          "name": "Unified Case Management",
+          "description": "Centralized platform for managing all customer interactions across channels with automated case routing, prioritization, and escalation workflows that ensure consistent service delivery.",
+          "available_in_plans": [
+            "Professional",
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "Omnichannel Support",
+          "description": "Seamless customer engagement across email, phone, chat, social media, and self-service portals with unified agent workspace that consolidates all interactions and customer context.",
+          "available_in_plans": [
+            "Professional",
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "AI-Powered Predictive Intelligence",
+          "description": "Machine learning models that predict case resolution times, suggest solutions, automate categorization, and provide intelligent recommendations to improve agent productivity and customer satisfaction.",
+          "available_in_plans": [
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "Advanced Work Assignment",
+          "description": "Intelligent routing engine that matches cases to the best-qualified agents based on skills, workload, availability, and priority using configurable assignment rules and AI-driven optimization.",
+          "available_in_plans": [
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "Knowledge Management",
+          "description": "Comprehensive knowledge base with AI-powered search, automated article suggestions, content lifecycle management, and integration with case management for seamless knowledge sharing.",
+          "available_in_plans": [
+            "Professional",
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "Customer Service Operations (CSO)",
+          "description": "Proactive service delivery through health monitoring, performance analytics, and automated workflows that identify and resolve issues before they impact customers.",
+          "available_in_plans": [
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "Workflow Automation & Playbooks",
+          "description": "No-code/low-code automation builder with pre-built playbooks for common service scenarios, enabling teams to standardize processes and reduce manual work.",
+          "available_in_plans": [
+            "Professional",
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        },
+        {
+          "name": "Advanced Analytics & Performance Analytics",
+          "description": "Real-time dashboards, customizable reports, predictive analytics, and KPI tracking with drill-down capabilities for data-driven decision making and continuous improvement.",
+          "available_in_plans": [
+            "Enterprise",
+            "Ultimate"
+          ],
+          "category": null
+        }
+      ],
       "integrations": {
         "has_api": true,
         "api_docs_url": "https://docs.servicenow.com/bundle/xanadu-api-reference/page/integrate-applications/rest-api-reference/concept/c_RESTAPIReference.html",
+        "api_type": null,
         "total_integrations": 1400,
+        "total_integrations_source": null,
+        "app_store_topics": null,
         "top_integrations": [
           "Salesforce",
           "Microsoft Teams",
@@ -1061,127 +1384,9 @@
           "ERP Systems",
           "HR Platforms",
           "Development Tools"
-        ]
-      },
-      "pricing": {
-        "model": "Custom enterprise pricing based on user count and modules",
-        "free_trial": true,
-        "free_trial_duration": "30 days (contact sales)",
-        "free_plan": false,
-        "plans": [
-          {
-            "name": "Professional",
-            "price": "Contact Sales",
-            "billing_unit": "per user/month",
-            "key_features": [
-              "Case Management",
-              "Knowledge Management",
-              "Omnichannel Routing",
-              "Service Catalog",
-              "Mobile App",
-              "Basic Analytics & Reporting"
-            ]
-          },
-          {
-            "name": "Enterprise",
-            "price": "Contact Sales",
-            "billing_unit": "per user/month",
-            "key_features": [
-              "All Professional features",
-              "Advanced Work Assignment",
-              "Predictive Intelligence",
-              "Field Service Management",
-              "Proactive Customer Service Operations",
-              "Advanced Analytics with Performance Analytics"
-            ]
-          },
-          {
-            "name": "Ultimate",
-            "price": "Contact Sales",
-            "billing_unit": "per user/month",
-            "key_features": [
-              "All Enterprise features",
-              "Playbooks for CSM",
-              "Walk-up Experience",
-              "Advanced AI and ML capabilities",
-              "Customer Asset Management",
-              "Industry Solutions"
-            ]
-          }
         ],
-        "enterprise_custom": true,
-        "contact_sales_for_enterprise": true
+        "api_capabilities": null
       },
-      "features": [
-        {
-          "name": "Unified Case Management",
-          "description": "Centralized platform for managing all customer interactions across channels with automated case routing, prioritization, and escalation workflows that ensure consistent service delivery.",
-          "available_in_plans": [
-            "Professional",
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "Omnichannel Support",
-          "description": "Seamless customer engagement across email, phone, chat, social media, and self-service portals with unified agent workspace that consolidates all interactions and customer context.",
-          "available_in_plans": [
-            "Professional",
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "AI-Powered Predictive Intelligence",
-          "description": "Machine learning models that predict case resolution times, suggest solutions, automate categorization, and provide intelligent recommendations to improve agent productivity and customer satisfaction.",
-          "available_in_plans": [
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "Advanced Work Assignment",
-          "description": "Intelligent routing engine that matches cases to the best-qualified agents based on skills, workload, availability, and priority using configurable assignment rules and AI-driven optimization.",
-          "available_in_plans": [
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "Knowledge Management",
-          "description": "Comprehensive knowledge base with AI-powered search, automated article suggestions, content lifecycle management, and integration with case management for seamless knowledge sharing.",
-          "available_in_plans": [
-            "Professional",
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "Customer Service Operations (CSO)",
-          "description": "Proactive service delivery through health monitoring, performance analytics, and automated workflows that identify and resolve issues before they impact customers.",
-          "available_in_plans": [
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "Workflow Automation & Playbooks",
-          "description": "No-code/low-code automation builder with pre-built playbooks for common service scenarios, enabling teams to standardize processes and reduce manual work.",
-          "available_in_plans": [
-            "Professional",
-            "Enterprise",
-            "Ultimate"
-          ]
-        },
-        {
-          "name": "Advanced Analytics & Performance Analytics",
-          "description": "Real-time dashboards, customizable reports, predictive analytics, and KPI tracking with drill-down capabilities for data-driven decision making and continuous improvement.",
-          "available_in_plans": [
-            "Enterprise",
-            "Ultimate"
-          ]
-        }
-      ],
       "unique_selling_points": [
         "Enterprise Platform Integration: Native integration with IT Service Management (ITSM), HR, Operations, and Security modules on a single platform, enabling seamless cross-functional workflows and unified customer data.",
         "Workflow Orchestration at Scale: Industry-leading workflow automation capable of handling complex, multi-department processes across entire organizations with enterprise-grade reliability and performance.",
@@ -1198,6 +1403,28 @@
         "Companies with existing ServiceNow ITSM looking to extend to customer service",
         "Industries: Technology, Financial Services, Healthcare, Manufacturing, Telecommunications"
       ],
+      "reputation": {
+        "g2_rating": 4.4,
+        "g2_rating_max": null,
+        "g2_reviews_count": 2100,
+        "g2_url": "https://www.g2.com/products/servicenow",
+        "g2_source": null,
+        "g2_rating_details": null,
+        "g2_leader_status": null,
+        "capterra_rating": 4.5,
+        "capterra_rating_max": null,
+        "capterra_reviews_count": 334,
+        "capterra_url": null,
+        "capterra_source": null,
+        "capterra_value_rating": null,
+        "trustradius_rating": null,
+        "trustradius_rating_max": null,
+        "trustradius_reviews_count": null,
+        "trustradius_url": null,
+        "trustradius_source": null,
+        "awards": []
+      },
+      "security_compliance": null,
       "seo_metadata": {
         "alternative_names": [
           "ServiceNow CSM",
@@ -1226,6 +1453,10 @@
           "service operations management"
         ]
       },
+      "founder_information": null,
+      "funding_history": null,
+      "company_info": null,
+      "market_presence": null,
       "additional_info": {
         "headquarters": "Santa Clara, California, USA",
         "employee_count": "25,000+",
@@ -1240,6 +1471,9 @@
         ],
         "mission": "Make the world work better for everyone"
       },
+      "data_sources": null,
+      "suitability": null,
+      "risk_assessment": null,
       "last_verified": "2025-11-17"
     },
     {
@@ -1264,18 +1498,30 @@
       "statistics": {
         "customer_count": "247,939+ customers worldwide (as of Q4 2024)",
         "customer_count_source": "https://www.hubspot.com",
-        "active_users": "1.4+ million active users globally",
-        "countries_presence": "135+ countries"
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": null,
+        "notable_customers": null,
+        "market_position": null
       },
       "pricing": {
         "model": "Per-seat based pricing (Service Seat model)",
         "free_trial": true,
+        "free_trial_duration": null,
         "free_plan": true,
+        "currency": null,
+        "billing_period": null,
         "plans": [
           {
             "name": "Free",
             "price": "$0/month",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "month",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Up to 2 users",
               "Basic ticketing system",
@@ -1289,7 +1535,12 @@
           {
             "name": "Starter",
             "price": "$15/month per seat",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "month or annual",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Unlimited users (pay per seat)",
               "Advanced ticketing with automation",
@@ -1304,7 +1555,12 @@
           {
             "name": "Professional",
             "price": "$100/month per seat",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "annual (requires 1-year commitment)",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Starter features plus:",
               "Advanced ticket automation workflows",
@@ -1322,7 +1578,12 @@
           {
             "name": "Enterprise",
             "price": "$150/month per seat",
+            "price_annual": null,
+            "price_monthly": null,
             "billing_period": "annual (paid upfront)",
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "All Professional features plus:",
               "Unlimited custom ticket pipelines",
@@ -1335,7 +1596,12 @@
               "One-time onboarding fee: $3,500"
             ]
           }
-        ]
+        ],
+        "add_ons": null,
+        "additional_costs": null,
+        "enterprise_custom": null,
+        "contact_sales_for_enterprise": null,
+        "hidden_costs": null
       },
       "features": [
         {
@@ -1346,7 +1612,8 @@
             "Starter",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Omnichannel Communication",
@@ -1356,7 +1623,8 @@
             "Starter",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Breeze AI Agents (Customer & Knowledge Base)",
@@ -1364,7 +1632,8 @@
           "available_in_plans": [
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Knowledge Base with SEO Optimization",
@@ -1374,7 +1643,8 @@
             "Starter",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Workflow Automation & Ticket Routing",
@@ -1383,7 +1653,8 @@
             "Starter",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Customer Feedback & Surveys",
@@ -1393,7 +1664,8 @@
             "Starter",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         },
         {
           "name": "Reporting, Analytics & SLA Management",
@@ -1402,13 +1674,17 @@
             "Starter",
             "Professional",
             "Enterprise"
-          ]
+          ],
+          "category": null
         }
       ],
       "integrations": {
         "has_api": true,
         "api_docs_url": "https://developers.hubspot.com/docs/api/overview",
+        "api_type": null,
         "total_integrations": 1500,
+        "total_integrations_source": null,
+        "app_store_topics": null,
         "top_integrations": [
           "Zapier",
           "Slack",
@@ -1425,7 +1701,9 @@
           "Jira",
           "Facebook Messenger",
           "WhatsApp"
-        ]
+        ],
+        "integration_categories": null,
+        "api_capabilities": null
       },
       "unique_selling_points": [
         "Native CRM Integration: Unified customer view combining support tickets with complete sales, marketing, and customer history—providing context that competing standalone help desks lack",
@@ -1444,10 +1722,23 @@
       ],
       "reputation": {
         "g2_rating": 4.4,
+        "g2_rating_max": null,
         "g2_reviews_count": 2129,
         "g2_url": "https://www.g2.com/products/hubspot-service-hub/reviews",
+        "g2_source": null,
+        "g2_rating_details": null,
+        "g2_leader_status": null,
         "capterra_rating": 4.4,
+        "capterra_rating_max": null,
+        "capterra_reviews_count": null,
         "capterra_url": "https://www.capterra.com/p/12847/HubSpot-Service-Hub/",
+        "capterra_source": null,
+        "capterra_value_rating": null,
+        "trustradius_rating": null,
+        "trustradius_rating_max": null,
+        "trustradius_reviews_count": null,
+        "trustradius_url": null,
+        "trustradius_source": null,
         "awards": [
           "G2 Leader - Customer Service Software",
           "G2 High Performer - Help Desk Software",
@@ -1455,6 +1746,7 @@
           "Leader in Gartner Magic Quadrant for CRM"
         ]
       },
+      "security_compliance": null,
       "seo_metadata": {
         "alternative_names": [
           "HubSpot Customer Service Platform",
@@ -1491,6 +1783,14 @@
           "customer satisfaction tracking"
         ]
       },
+      "founder_information": null,
+      "funding_history": null,
+      "company_info": null,
+      "market_presence": null,
+      "additional_info": null,
+      "data_sources": null,
+      "suitability": null,
+      "risk_assessment": null,
       "last_verified": "2025-11-17T13:45:40.908018"
     },
     {
@@ -1515,23 +1815,30 @@
       "statistics": {
         "customer_count": "25,000+ paying customers",
         "customer_count_source": "https://www.intercom.com/about",
-        "monthly_active_users": "600 million monthly active users",
-        "company_valuation": "$1.3 billion",
-        "employees": "600+"
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": null,
+        "notable_customers": null,
+        "market_position": null
       },
       "pricing": {
         "model": "Per-seat (base) + Usage-based (AI resolutions)",
         "free_trial": true,
+        "free_trial_duration": null,
         "free_plan": false,
         "currency": "USD",
         "billing_period": "Monthly or Annual",
         "plans": [
           {
             "name": "Essential",
-            "price_monthly": "$39/seat",
+            "price": null,
             "price_annual": "$29/seat",
+            "price_monthly": "$39/seat",
             "billing_period": "Monthly/Annual",
-            "lite_seats": 0,
+            "billing_unit": null,
+            "agents_included": null,
+            "lite_seats": null,
             "key_features": [
               "Messenger & Live Chat",
               "Fin AI Agent ($0.99 per resolution)",
@@ -1543,9 +1850,12 @@
           },
           {
             "name": "Advanced",
-            "price_monthly": "$99/seat",
+            "price": null,
             "price_annual": "$85/seat",
+            "price_monthly": "$99/seat",
             "billing_period": "Monthly/Annual",
+            "billing_unit": null,
+            "agents_included": null,
             "lite_seats": 20,
             "key_features": [
               "All Essential features",
@@ -1559,9 +1869,12 @@
           },
           {
             "name": "Expert",
-            "price_monthly": "$139/seat",
+            "price": null,
             "price_annual": "$132/seat",
+            "price_monthly": "$139/seat",
             "billing_period": "Monthly/Annual",
+            "billing_unit": null,
+            "agents_included": null,
             "lite_seats": 50,
             "key_features": [
               "All Advanced features",
@@ -1574,14 +1887,19 @@
             ]
           }
         ],
+        "add_ons": null,
         "additional_costs": [
           {
             "name": "Fin AI Resolutions",
             "cost": "$0.99 per successful resolution",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
             "applies_to": "All plans"
           },
           {
             "name": "Phone Support",
+            "cost": null,
             "cost_inbound": "$1.00/month per number",
             "cost_call_recording": "$0.012 per minute",
             "cost_outbound_us": "$0.022 per minute",
@@ -1590,9 +1908,15 @@
           {
             "name": "SMS & Messaging Channels",
             "cost": "Usage-based pricing",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
             "applies_to": "All plans"
           }
-        ]
+        ],
+        "enterprise_custom": null,
+        "contact_sales_for_enterprise": null,
+        "hidden_costs": null
       },
       "features": [
         {
@@ -1667,7 +1991,9 @@
       "integrations": {
         "has_api": true,
         "api_docs_url": "https://developers.intercom.com",
+        "api_type": null,
         "total_integrations": "300+",
+        "total_integrations_source": null,
         "app_store_topics": 571,
         "top_integrations": [
           "Salesforce",
@@ -1684,7 +2010,9 @@
           "Front",
           "Zoho CRM",
           "Amazon Connect"
-        ]
+        ],
+        "integration_categories": null,
+        "api_capabilities": null
       },
       "unique_selling_points": [
         "Fin AI Engine - Proprietary AI agent specifically built for customer service, achieving highest resolution rates (65%+ average) with monthly improvement track record",
@@ -1707,15 +2035,23 @@
       ],
       "reputation": {
         "g2_rating": 4.5,
+        "g2_rating_max": null,
         "g2_reviews_count": 3644,
         "g2_url": "https://www.g2.com/products/intercom",
+        "g2_source": null,
+        "g2_rating_details": null,
         "g2_leader_status": "Leader on G2 Grid",
         "capterra_rating": 4.5,
+        "capterra_rating_max": null,
         "capterra_reviews_count": 1125,
         "capterra_url": "https://www.capterra.com/p/90207/Intercom",
+        "capterra_source": null,
         "capterra_value_rating": 3.95,
         "trustradius_rating": 8.8,
+        "trustradius_rating_max": null,
         "trustradius_reviews_count": 600,
+        "trustradius_url": null,
+        "trustradius_source": null,
         "awards": [
           "G2 Leader - AI Customer Service",
           "G2 #1 AI Agent for Customer Service",
@@ -1726,6 +2062,7 @@
           "ISO 42001 Certified"
         ]
       },
+      "security_compliance": null,
       "seo_metadata": {
         "alternative_names": [
           "Intercom Customer Service Suite",
@@ -1783,7 +2120,9 @@
           "Series D: $125M (2018) - Kleiner Perkins"
         ]
       },
-      "last_verified": "2025-11-17",
+      "company_info": null,
+      "market_presence": null,
+      "additional_info": null,
       "data_sources": {
         "official_website": "https://www.intercom.com",
         "g2_reviews": "https://www.g2.com/products/intercom",
@@ -1791,444 +2130,10 @@
         "api_documentation": "https://developers.intercom.com",
         "pricing_page": "https://www.intercom.com/pricing",
         "wikipedia": "https://en.wikipedia.org/wiki/Intercom,_Inc."
-      }
-    },
-    {
-      "company_name": "Atlassian Corporation",
-      "trade_name": "Jira Service Management",
-      "tagline": "Empower teams to deliver exceptional service experiences through collaborative, AI-driven IT service management",
-      "description": "Jira Service Management is a modern ITSM and service delivery platform that enables IT, HR, and operations teams to manage service requests, incidents, changes, and assets from intake to resolution. Built on a collaborative foundation with AI-powered capabilities, it helps organizations deliver faster service delivery, reduce operational costs, and improve employee and customer satisfaction at a fraction of traditional ITSM solutions.",
-      "category_primary": "IT Service Management (ITSM)",
-      "categories_secondary": [
-        "Help Desk",
-        "Ticketing System",
-        "Incident Management",
-        "Change Management",
-        "Asset Management",
-        "Service Desk",
-        "Request Management"
-      ],
-      "logo_url": "https://atlassian.design/resources/logo-library/",
-      "website_url": "https://www.atlassian.com/software/jira/service-management",
-      "pricing_url": "https://www.atlassian.com/software/jira/service-management/pricing",
-      "founded_year": 2020,
-      "statistics": {
-        "customer_count": "65,000+ customers, including 50% of the Fortune 500",
-        "customer_count_source": "https://www.atlassian.com/blog/announcements/shareholder-letter-q1fy26",
-        "market_share": "Over 80% of Fortune 500 companies use Atlassian products",
-        "market_share_source": "https://www.linkedin.com/company/atlassian",
-        "annual_resolutions": null,
-        "industries_served": "Financial services, healthcare, technology, retail, energy, software development, HR, facilities management"
       },
-      "pricing": {
-        "model": "Per agent/user per month (monthly or annual billing)",
-        "free_trial": true,
-        "free_trial_duration": "7 days (extendable to 30 days)",
-        "free_plan": true,
-        "plans": [
-          {
-            "name": "Free",
-            "price_annual": "$0",
-            "price_monthly": "$0",
-            "billing_unit": "Up to 3 agents",
-            "key_features": [
-              "Up to 3 agents, unlimited customers",
-              "Templates for ITSM, customer service, HR, incident management",
-              "Alerts and on-call schedules",
-              "Multi-channel support (email, chat, customer portal, embedded widget)",
-              "Customizable forms, workflows, and queues",
-              "Embedded knowledge base",
-              "2 GB file storage",
-              "500 rule runs per month (automations)",
-              "100 emails per day",
-              "Basic reporting"
-            ]
-          },
-          {
-            "name": "Standard",
-            "price_annual": "Tiered pricing (approximately $19.04 per agent/month when billed monthly)",
-            "price_monthly": "$20 per agent/month",
-            "billing_unit": "Up to 20,000 agents",
-            "key_features": [
-              "Everything in Free plus:",
-              "Up to 20,000 agents, unlimited customers",
-              "Rovo Search, Chat, and Rovo Agents access",
-              "Custom-branded help center",
-              "Unlimited email notifications",
-              "250 GB file storage",
-              "5,000 rule runs per month",
-              "Unlimited service portals with custom branding",
-              "AI-powered service and operations",
-              "Request management with omnichannel support",
-              "HR, service, legal, facilities, marketing templates",
-              "24 supported language options",
-              "9/5 regional support",
-              "25 Rovo credits per user per month",
-              "100 indexed objects per user"
-            ]
-          },
-          {
-            "name": "Premium",
-            "price_annual": "Tiered pricing (approximately $47.82 per agent/month when billed monthly)",
-            "price_monthly": "$51.42 per agent/month",
-            "billing_unit": "Up to 20,000 agents",
-            "key_features": [
-              "Everything in Standard plus:",
-              "AI-powered virtual service agent (1,000 assisted conversations/month included)",
-              "Asset and configuration management (50,000 Assets objects included)",
-              "Advanced incident management with alert grouping",
-              "AI-driven incident creation and PIR generation",
-              "Service & infrastructure health analysis",
-              "Change management with approvals and risk assessment",
-              "Change gating for CI/CD tools (Bitbucket, Jenkins, GitLab)",
-              "Unlimited file storage",
-              "1,000 rules per user per month",
-              "Unlimited alerts, emails, SMS, and voice notifications",
-              "Advanced escalation and routing",
-              "3-year alert data retention",
-              "ChatOps and monitoring integrations",
-              "Incident command center",
-              "Unlimited postmortems and major incidents",
-              "24/7 support for critical issues",
-              "99.9% uptime SLA",
-              "70 Rovo credits per user per month",
-              "250 indexed objects per user"
-            ]
-          },
-          {
-            "name": "Enterprise",
-            "price_annual": "Custom pricing (contact sales)",
-            "price_monthly": "Contact sales",
-            "billing_unit": "Unlimited agents",
-            "key_features": [
-              "Everything in Premium plus:",
-              "Multiple instances (up to 150 sites)",
-              "Advanced analytics and data connectors",
-              "Atlassian Analytics and Data Lake",
-              "Custom query of external data sources",
-              "500,000 Assets objects included",
-              "Advanced governance and security controls",
-              "SSO, SCIM, Active Directory sync included (Atlassian Guard Standard)",
-              "IP allowlisting",
-              "Data residency and multi-region support",
-              "Sandbox environment for testing",
-              "Release tracks for controlled rollouts",
-              "Unlimited file storage",
-              "Unlimited automation rules",
-              "99.95% uptime SLA",
-              "24/7 dedicated senior support",
-              "Customer-managed encryption (AWS KMS)",
-              "Admin insights and usage tracking",
-              "150 Rovo credits per user per month",
-              "625 indexed objects per user"
-            ]
-          }
-        ],
-        "enterprise_custom": true,
-        "contact_sales_for_enterprise": true,
-        "hidden_costs": {
-          "implementation_fee": {
-            "min": null,
-            "max": null
-          },
-          "training_hours_estimate": null,
-          "training_cost_per_hour": null,
-          "premium_integrations": [
-            {
-              "name": "Extra Assets objects",
-              "cost": 0.02,
-              "per": "object/month (above included limit)"
-            },
-            {
-              "name": "Extra virtual service agent conversations",
-              "cost": 0.3,
-              "per": "assisted conversation/month (above 1,000/month)"
-            }
-          ],
-          "api_limits": {
-            "included_calls": null,
-            "overage_per_10k": null
-          },
-          "data_storage_limits": {
-            "included_gb": "2 GB (Free), 250 GB (Standard), Unlimited (Premium/Enterprise)",
-            "overage_per_gb": null
-          },
-          "migration_estimate": {
-            "min": null,
-            "max": null
-          }
-        }
-      },
-      "features": [
-        {
-          "name": "Ticketing and Request Management",
-          "description": "Manage service requests from multiple channels (email, Slack, Microsoft Teams, customer portal, embedded widgets) with customizable workflows, queues, SLA management, and priority-based routing to ensure every request reaches the right team quickly.",
-          "available_in_plans": [
-            "Free",
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "Multi-Channel Support",
-          "description": "Accept and manage customer requests across email, chat applications, web portals, and embedded widgets, enabling customers to reach support through their preferred communication channel while maintaining centralized ticket tracking.",
-          "available_in_plans": [
-            "Free",
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "AI-Powered Automation and Intelligence",
-          "description": "Leverage Atlassian Intelligence and Rovo AI agents to automatically triage tickets, suggest knowledge articles, generate ticket summaries and draft responses, detect intent and sentiment, and resolve common issues without agent intervention, increasing resolution speed and consistency.",
-          "available_in_plans": [
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "Knowledge Base and Self-Service Portal",
-          "description": "Create, organize, and maintain a searchable knowledge base with AI-powered article recommendations displayed during ticket creation, enabling customers to find answers independently and reducing incoming ticket volume through effective self-service.",
-          "available_in_plans": [
-            "Free",
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "Advanced Incident and Problem Management",
-          "description": "Detect and resolve incidents faster with alert grouping, AI-driven incident creation, service health monitoring, dependency mapping, post-incident review generation, and root cause analysis capabilities that reduce MTTR and prevent recurring issues.",
-          "available_in_plans": [
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "Asset and Configuration Management",
-          "description": "Track and manage IT assets, configuration items, and their relationships to services, providing visibility into dependencies for impact assessment during incidents and enabling accurate change tracking across your IT environment.",
-          "available_in_plans": [
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "Change and Release Management",
-          "description": "Implement structured change management with multi-user approvals, risk assessment automation, deployment tracking via CI/CD integration (Bitbucket, Jenkins, GitLab), and change gating to prevent problematic deployments from reaching production.",
-          "available_in_plans": [
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "Comprehensive Analytics and Reporting",
-          "description": "Generate default or customized reports with metrics on ticket resolution times, SLA performance, team workload, customer satisfaction, and operational trends; Enterprise plans include advanced analytics with data connectors for deeper insights.",
-          "available_in_plans": [
-            "Free",
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        },
-        {
-          "name": "API-Driven Integrations",
-          "description": "Connect Jira Service Management to 1,000+ applications through REST APIs, webhooks, and pre-built integrations with monitoring tools, communication platforms, and business systems to automate workflows and synchronize data across your tech stack.",
-          "available_in_plans": [
-            "Free",
-            "Standard",
-            "Premium",
-            "Enterprise"
-          ]
-        }
-      ],
-      "integrations": {
-        "has_api": true,
-        "api_docs_url": "https://support.atlassian.com/jira-service-management-cloud/docs/",
-        "api_type": "REST API, Webhooks, OAuth 2.0, SCIM provisioning",
-        "total_integrations": 1000,
-        "total_integrations_source": "https://www.atlassian.com/software/jira/service-management/features",
-        "top_integrations": [
-          "Slack",
-          "Microsoft Teams",
-          "Zoom",
-          "Confluence",
-          "Bitbucket",
-          "Jenkins",
-          "GitHub",
-          "GitLab",
-          "Opsgenie",
-          "Salesforce",
-          "ServiceNow",
-          "New Relic",
-          "Datadog",
-          "PagerDuty",
-          "Asana"
-        ],
-        "integration_categories": [
-          "Communication and Chat",
-          "Monitoring and Alerting",
-          "CI/CD and DevOps",
-          "Incident Management",
-          "Knowledge Management",
-          "Identity and Access Management",
-          "CRM and Sales",
-          "Project Management",
-          "Version Control",
-          "Custom Integrations"
-        ]
-      },
-      "unique_selling_points": [
-        "Built on proven Jira platform foundation enabling seamless integration between development, operations, and service teams on a single platform",
-        "AI-native architecture with Atlassian Intelligence and Rovo agents for intelligent automation, significantly reducing manual effort and improving agent productivity",
-        "Significantly lower total cost of ownership compared to legacy ITSM platforms like ServiceNow, Ivanti, and BMC, with faster implementation (14x faster according to case studies)",
-        "Modern, intuitive, drag-and-drop interface and no-code customization that reduces training needs and enables faster time-to-value without requiring deep technical expertise",
-        "Recognized as a Leader in Forrester Wave Enterprise Service Management (Q4 2025) and G2 Top 50 IT Management Products, trusted by 50% of Fortune 500 companies"
-      ],
-      "target_audience": [
-        "Small to mid-sized businesses (SMB) starting their ITSM journey",
-        "Enterprises transitioning from legacy ITSM platforms (ServiceNow, BMC Remedy, Cherwell)",
-        "Technology-forward organizations prioritizing DevOps and collaboration between Dev/Ops/IT teams",
-        "Organizations seeking cost-effective ITSM without sacrificing capability",
-        "Multi-functional service teams (IT, HR, Facilities, Legal, Customer Support)",
-        "Companies already using Jira and Confluence (integrated ecosystem value)",
-        "Organizations with globally distributed teams requiring real-time collaboration"
-      ],
-      "reputation": {
-        "g2_rating": 4.3,
-        "g2_rating_max": 5,
-        "g2_reviews_count": 949,
-        "g2_url": "https://www.g2.com/products/jira-service-management/reviews",
-        "g2_source": "https://www.g2.com/products/jira-service-management/reviews",
-        "capterra_rating": 4.5,
-        "capterra_rating_max": 5,
-        "capterra_reviews_count": 737,
-        "capterra_url": "https://www.capterra.com/p/227102/JIRA-Service-Management/",
-        "capterra_source": "https://www.capterra.com/p/227102/JIRA-Service-Management/reviews/",
-        "trustradius_rating": null,
-        "trustradius_rating_max": null,
-        "trustradius_reviews_count": null,
-        "trustradius_url": null,
-        "trustradius_source": null,
-        "awards": [
-          "G2 Leader in Enterprise Service Management",
-          "G2 Top 50 IT Management Products (2023, 2025)",
-          "Forrester Wave Leader: Enterprise Service Management Platforms (Q4 2025)",
-          "IDC MarketScape Leader for Worldwide ITSM Software (2024)",
-          "G2 Best Software Awards 2025 - Top 50 Best IT Management Products"
-        ]
-      },
-      "seo_metadata": {
-        "alternative_names": [
-          "JSM",
-          "Jira Service Desk (former name)",
-          "JIRA Service Management",
-          "Atlassian Service Management",
-          "Jira IT Service Management"
-        ],
-        "main_competitors": [
-          "ServiceNow",
-          "Freshservice",
-          "Zendesk",
-          "Ivanti Service Manager",
-          "BMC Remedy ITSM",
-          "TOPdesk",
-          "ManageEngine ServiceDesk Plus",
-          "Cherwell",
-          "SolarWinds Service Desk"
-        ],
-        "keywords": [
-          "ITSM software",
-          "IT service management platform",
-          "Service desk software",
-          "Ticketing system",
-          "Incident management",
-          "Change management",
-          "Asset management",
-          "Help desk software",
-          "Request management",
-          "IT service management solution",
-          "ServiceNow alternative",
-          "Cloud ITSM",
-          "AI-powered service management"
-        ]
-      },
-      "additional_info": {
-        "headquarters": "Level 6, 341 George Street, Sydney, NSW 2000, Australia",
-        "founding_location": "Sydney, Australia",
-        "employee_count": "12,000+ employees",
-        "global_presence": "190+ countries, with major offices in San Francisco (US), London (UK), and Amsterdam (Netherlands)",
-        "acquisition_history": [
-          "Trello (2017)",
-          "Bitbucket (2010)",
-          "Halp (conversational ticketing capabilities)",
-          "Mindville Insight (asset and configuration management powered by)"
-        ],
-        "mission": "Unleash the potential of every team by providing collaborative tools that enable teams to accomplish what would otherwise be impossible alone"
-      },
-      "suitability": {
-        "company_size": [
-          "Small Business (1-50 employees)",
-          "Mid-Market (51-1,000 employees)",
-          "Enterprise (1,000+ employees)"
-        ],
-        "industries": [
-          "Software Development",
-          "Financial Services",
-          "Healthcare",
-          "Retail",
-          "Energy",
-          "Technology",
-          "Manufacturing",
-          "Telecommunications"
-        ],
-        "support_volume": [
-          "Low volume (up to 100 requests/day)",
-          "Medium volume (100-1,000 requests/day)",
-          "High volume (1,000+ requests/day)"
-        ],
-        "complexity_score": 7,
-        "implementation_time_days": 30,
-        "best_for": [
-          "Organizations already using Jira/Confluence ecosystem",
-          "Teams seeking modern, intuitive ITSM without legacy complexity",
-          "DevOps-focused organizations needing Dev/Ops/IT collaboration",
-          "Multi-functional service teams (IT, HR, Facilities)",
-          "Cost-conscious enterprises migrating from expensive legacy platforms",
-          "Companies prioritizing AI-powered automation",
-          "Organizations requiring faster implementation (14x faster than legacy ITSM)"
-        ],
-        "not_ideal_for": [
-          "Organizations requiring deep vertical customization in core ITSM workflows",
-          "Companies with on-premises-only deployment requirements (Cloud-first solution)",
-          "Large enterprises requiring complete air-gap compliance",
-          "Organizations heavily invested in ServiceNow's ecosystem"
-        ]
-      },
-      "risk_assessment": {
-        "switching_difficulty": "Moderate - Straightforward migration from most platforms; data can be exported and integrated; significant learning curve reduction vs. legacy ITSM due to intuitive UI",
-        "lock_in_risk": "Low - Atlassian follows open standards; data portability through APIs; no long-term contracts required for cloud plans; annual billing available",
-        "contract_flexibility": "High - Monthly or annual billing options; 7-day free trial extendable to 30 days; refunds available within 30 days of payment; no early termination penalties",
-        "data_export": "Supported - Full data export capabilities via REST APIs and standard export formats; integration with migration tools available",
-        "common_complaints": [
-          "Steep learning curve for complex ITSM workflows despite intuitive basic UI",
-          "Limited customization compared to some legacy ITSM solutions",
-          "Pricing can escalate quickly with large agent counts and add-ons",
-          "Some users report slower premium support response times (9/5 regional) on Standard plan",
-          "Analytics less mature than enterprise-focused ITSM alternatives"
-        ],
-        "mitigation": [
-          "Leverage pre-built templates and no-code automation to reduce customization needs",
-          "Start with Standard plan and upgrade to Premium/Enterprise if advanced features needed",
-          "Use Rovo AI capabilities to reduce manual administration",
-          "Utilize Atlassian Community resources and documentation",
-          "Plan budget for Atlassian Guard subscription if advanced security needed"
-        ]
-      },
-      "last_verified": "2025-12-15T10:16:29.370535"
+      "suitability": null,
+      "risk_assessment": null,
+      "last_verified": "2025-11-17"
     }
   ]
 }
