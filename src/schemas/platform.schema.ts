@@ -8,23 +8,23 @@ import { z } from "zod";
 // Pricing Plan Schema
 export const pricingPlanSchema = z.object({
   name: z.string(),
-  price: z.string().optional(),
-  price_annual: z.string().optional(),
-  price_monthly: z.string().optional(),
-  billing_period: z.string().optional(),
-  billing_unit: z.string().optional(),
-  agents_included: z.string().optional(),
-  lite_seats: z.number().optional(),
+  price: z.string().nullable(),
+  price_annual: z.string().nullable(),
+  price_monthly: z.string().nullable(),
+  billing_period: z.string().nullable(),
+  billing_unit: z.string().nullable(),
+  agents_included: z.string().nullable(),
+  lite_seats: z.number().nullable(),
   key_features: z.array(z.string()),
 });
 
 // Additional Pricing Costs Schema
 export const additionalCostSchema = z.object({
   name: z.string(),
-  cost: z.string().optional(),
-  cost_inbound: z.string().optional(),
-  cost_call_recording: z.string().optional(),
-  cost_outbound_us: z.string().optional(),
+  cost: z.string().nullable(),
+  cost_inbound: z.string().nullable(),
+  cost_call_recording: z.string().nullable(),
+  cost_outbound_us: z.string().nullable(),
   applies_to: z.string(),
 });
 
@@ -32,33 +32,37 @@ export const additionalCostSchema = z.object({
 export const pricingSchema = z.object({
   model: z.string(),
   free_trial: z.boolean(),
-  free_trial_duration: z.string().optional(),
+  free_trial_duration: z.string().nullable(),
   free_plan: z.boolean(),
-  currency: z.string().optional(),
-  billing_period: z.string().optional(),
+  currency: z.string().nullable(),
+  billing_period: z.string().nullable(),
   plans: z.array(pricingPlanSchema),
   add_ons: z
     .object({
-      freddy_ai_agent: z.string().optional(),
-      note: z.string().optional(),
+      freddy_ai_agent: z.string().nullable(),
+      note: z.string().nullable(),
     })
-    .optional(),
-  additional_costs: z.array(additionalCostSchema).optional(),
-  enterprise_custom: z.boolean().optional(),
-  contact_sales_for_enterprise: z.boolean().optional(),
-  hidden_costs: z.lazy(() => hiddenCostsSchema).optional(), // Forward reference
+    .nullable(),
+  additional_costs: z.array(additionalCostSchema).nullable(),
+  enterprise_custom: z.boolean().nullable(),
+  contact_sales_for_enterprise: z.boolean().nullable(),
+  hidden_costs: z.lazy(() => hiddenCostsSchema).nullable(), // Forward reference
 });
+
+interface ManualPricing {
+  manual?: string | null;
+}
 
 // Statistics Schema
 export const statisticsSchema = z.object({
   customer_count: z.string(),
-  customer_count_source: z.string().optional(),
-  market_share: z.string().optional(),
-  market_share_source: z.string().optional(),
-  annual_resolutions: z.string().optional(),
-  industries_served: z.string().optional(),
-  notable_customers: z.string().optional(),
-  market_position: z.string().optional(),
+  customer_count_source: z.string().nullable(),
+  market_share: z.string().nullable(),
+  market_share_source: z.string().nullable(),
+  annual_resolutions: z.string().nullable(),
+  industries_served: z.string().nullable(),
+  notable_customers: z.string().nullable(),
+  market_position: z.string().nullable(),
 });
 
 // Feature Schema
@@ -66,42 +70,42 @@ export const featureSchema = z.object({
   name: z.string(),
   description: z.string(),
   available_in_plans: z.array(z.string()),
-  category: z.string().optional(),
+  category: z.string().nullable(),
 });
 
 // Integrations Schema
 export const integrationsSchema = z.object({
   has_api: z.boolean(),
-  api_docs_url: z.string().url().optional(),
-  api_type: z.string().optional(),
+  api_docs_url: z.string().url().nullable(),
+  api_type: z.string().nullable(),
   total_integrations: z.union([z.number(), z.string()]),
-  total_integrations_source: z.string().optional(),
-  app_store_topics: z.number().optional(),
+  total_integrations_source: z.string().nullable(),
+  app_store_topics: z.number().nullable(),
   top_integrations: z.array(z.string()),
-  integration_categories: z.array(z.string()).optional(),
-  api_capabilities: z.string().optional(),
+  integration_categories: z.array(z.string()).nullable(),
+  api_capabilities: z.string().nullable(),
 });
 
 // Reputation Schema
 export const reputationSchema = z.object({
   g2_rating: z.number().min(0).max(5),
-  g2_rating_max: z.number().optional(),
+  g2_rating_max: z.number().nullable(),
   g2_reviews_count: z.number(),
-  g2_url: z.string().url().optional(),
-  g2_source: z.string().optional(),
-  g2_rating_details: z.string().optional(),
-  g2_leader_status: z.string().optional(),
-  capterra_rating: z.number().min(0).max(5).optional(),
-  capterra_rating_max: z.number().optional(),
-  capterra_reviews_count: z.number().optional(),
-  capterra_url: z.string().url().optional(),
-  capterra_source: z.string().optional(),
-  capterra_value_rating: z.number().optional(),
-  trustradius_rating: z.number().optional(),
-  trustradius_rating_max: z.number().optional(),
-  trustradius_reviews_count: z.number().optional(),
-  trustradius_url: z.string().url().optional(),
-  trustradius_source: z.string().optional(),
+  g2_url: z.string().url().nullable(),
+  g2_source: z.string().nullable(),
+  g2_rating_details: z.string().nullable(),
+  g2_leader_status: z.string().nullable(),
+  capterra_rating: z.number().min(0).max(5).nullable(),
+  capterra_rating_max: z.number().nullable(),
+  capterra_reviews_count: z.number().nullable(),
+  capterra_url: z.string().url().nullable(),
+  capterra_source: z.string().nullable(),
+  capterra_value_rating: z.number().nullable(),
+  trustradius_rating: z.number().nullable(),
+  trustradius_rating_max: z.number().nullable(),
+  trustradius_reviews_count: z.number().nullable(),
+  trustradius_url: z.string().url().nullable(),
+  trustradius_source: z.string().nullable(),
   awards: z.array(z.string()),
 });
 
@@ -121,9 +125,9 @@ export const seoMetadataSchema = z.object({
 // Founder Information Schema
 export const founderInformationSchema = z.object({
   founders: z.array(z.string()),
-  origin_story: z.string().optional(),
+  origin_story: z.string().nullable(),
   headquarters: z.string(),
-  offices: z.array(z.string()).optional(),
+  offices: z.array(z.string()).nullable(),
 });
 
 // Funding History Schema
@@ -136,27 +140,27 @@ export const fundingHistorySchema = z.object({
 // Company Info Schema
 export const companyInfoSchema = z.object({
   headquarters: z.string(),
-  original_headquarters: z.string().optional(),
-  founding_location: z.string().optional(),
-  founders: z.array(z.string()).optional(),
-  employees: z.union([z.number(), z.string()]).optional(),
-  employee_count: z.string().optional(),
-  nasdaq_listing: z.string().optional(),
-  company_mission: z.string().optional(),
+  original_headquarters: z.string().nullable(),
+  founding_location: z.string().nullable(),
+  founders: z.array(z.string()).nullable(),
+  employees: z.union([z.number(), z.string()]).nullable(),
+  employee_count: z.string().nullable(),
+  nasdaq_listing: z.string().nullable(),
+  company_mission: z.string().nullable(),
 });
 
 // Market Presence Schema
 export const marketPresenceSchema = z.object({
-  global_coverage: z.string().optional(),
-  primary_market: z.string().optional(),
-  traffic_source: z.string().optional(),
-  global_ranking: z.string().optional(),
+  global_coverage: z.string().nullable(),
+  primary_market: z.string().nullable(),
+  traffic_source: z.string().nullable(),
+  global_ranking: z.string().nullable(),
 });
 
 // Additional Info Schema
 export const additionalInfoSchema = z.object({
   headquarters: z.string(),
-  founding_location: z.string().optional(),
+  founding_location: z.string().nullable(),
   employee_count: z.string(),
   global_presence: z.string(),
   acquisition_history: z.array(z.string()),
@@ -166,11 +170,11 @@ export const additionalInfoSchema = z.object({
 // Data Sources Schema
 export const dataSourcesSchema = z.object({
   official_website: z.string().url(),
-  g2_reviews: z.string().url().optional(),
-  capterra_reviews: z.string().url().optional(),
-  api_documentation: z.string().url().optional(),
-  pricing_page: z.string().url().optional(),
-  wikipedia: z.string().url().optional(),
+  g2_reviews: z.string().url().nullable(),
+  capterra_reviews: z.string().url().nullable(),
+  api_documentation: z.string().url().nullable(),
+  pricing_page: z.string().url().nullable(),
+  wikipedia: z.string().url().nullable(),
 });
 
 // Suitability Schema (for Platform Finder Wizard)
@@ -191,20 +195,20 @@ export const hiddenCostsSchema = z.object({
     max: z.number(),
   }),
   training_hours_estimate: z.number(), // estimated hours needed for training
-  training_cost_per_hour: z.number().optional(), // if platform offers paid training
+  training_cost_per_hour: z.number().nullable(), // if platform offers paid training
   premium_integrations: z.array(z.object({
     name: z.string(),
     cost: z.number(),
     per: z.enum(["month", "year", "one-time"]),
-  })).optional(),
+  })).nullable(),
   api_limits: z.object({
     included_calls: z.number(),
     overage_per_10k: z.number(), // cost per 10k additional API calls
-  }).optional(),
+  }).nullable(),
   data_storage_limits: z.object({
     included_gb: z.number(),
     overage_per_gb: z.number(),
-  }).optional(),
+  }).nullable(),
   migration_estimate: z.object({
     min: z.number(),
     max: z.number(),
@@ -229,9 +233,9 @@ export const platformSchema = z.object({
   description: z.string(),
   category_primary: z.string(),
   categories_secondary: z.array(z.string()),
-  logo_url: z.string().url().optional(),
+  logo_url: z.string().url().nullable(),
   website_url: z.string().url(),
-  pricing_url: z.string().url().optional(),
+  pricing_url: z.string().url().nullable(),
   founded_year: z.number().min(1900).max(new Date().getFullYear()),
   statistics: statisticsSchema,
   pricing: pricingSchema,
@@ -240,16 +244,16 @@ export const platformSchema = z.object({
   unique_selling_points: z.array(z.string()),
   target_audience: z.array(z.string()),
   reputation: reputationSchema,
-  security_compliance: securityComplianceSchema.optional(),
+  security_compliance: securityComplianceSchema.nullable(),
   seo_metadata: seoMetadataSchema,
-  founder_information: founderInformationSchema.optional(),
-  funding_history: fundingHistorySchema.optional(),
-  company_info: companyInfoSchema.optional(),
-  market_presence: marketPresenceSchema.optional(),
-  additional_info: additionalInfoSchema.optional(),
-  data_sources: dataSourcesSchema.optional(),
-  suitability: suitabilitySchema.optional(), // NEW: For Platform Finder Wizard
-  risk_assessment: riskAssessmentSchema.optional(), // NEW: For decision confidence
+  founder_information: founderInformationSchema.nullable(),
+  funding_history: fundingHistorySchema.nullable(),
+  company_info: companyInfoSchema.nullable(),
+  market_presence: marketPresenceSchema.nullable(),
+  additional_info: additionalInfoSchema.nullable(),
+  data_sources: dataSourcesSchema.nullable(),
+  suitability: suitabilitySchema.nullable(), // NEW: For Platform Finder Wizard
+  risk_assessment: riskAssessmentSchema.nullable(), // NEW: For decision confidence
   last_verified: z.string(),
 });
 
