@@ -149,7 +149,7 @@ function SupportToolsContent({
                             Support Tools Directory
                         </h1>
                         <p className="text-lg text-muted-foreground">
-                            Browse and compare {platforms.length} customer service platforms. Find the perfect solution for your business.
+                            Browse and compare customer service platforms. Find the perfect solution for your business.
                         </p>
                     </div>
 
