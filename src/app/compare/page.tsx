@@ -191,7 +191,7 @@ function ComparePageContent() {
                             {platform.reputation.g2_rating}/5.0
                           </span>
                           <span className="text-sm text-muted-foreground">
-                            ({platform.reputation.g2_reviews_count.toLocaleString()} reviews)
+                            ({platform.reputation.g2_reviews_count} reviews)
                           </span>
                         </div>
                       </CardHeader>

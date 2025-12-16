@@ -2134,6 +2134,2826 @@
       "suitability": null,
       "risk_assessment": null,
       "last_verified": "2025-11-17"
+    },
+    {
+      "company_name": "Atlassian Corporation",
+      "trade_name": "Jira Service Management",
+      "tagline": "Unlock high-velocity service management",
+      "description": "Jira Service Management is an AI-powered IT Service Management (ITSM) platform designed to help teams deliver exceptional service experiences at scale. Built on the Jira platform by Atlassian, it enables organizations to manage service requests, incidents, changes, and problems while providing automated workflows, intelligent routing, and comprehensive visibility across IT operations and customer support functions.",
+      "category_primary": "IT Service Management (ITSM)",
+      "categories_secondary": [
+        "Help Desk Software",
+        "Ticketing System",
+        "Incident Management",
+        "Knowledge Management",
+        "Change Management",
+        "Service Desk"
+      ],
+      "logo_url": "https://commons.wikimedia.org/wiki/File:Jira_Logo.svg",
+      "website_url": "https://www.atlassian.com/software/jira/service-management",
+      "pricing_url": "https://www.atlassian.com/software/jira/service-management/pricing",
+      "founded_year": 2002,
+      "statistics": {
+        "customer_count": "60,000+ customers globally, with 50% part of Fortune 500",
+        "customer_count_source": "https://www.atlassian.com/blog/announcements/team25-europe-service-collection",
+        "market_share": "Recognized as #5 in IT Operations category and Leader in Gartner Magic Quadrant for ITSM",
+        "market_share_source": "https://almarise.com/en/gartner-magic-quadrant-for-it-service-management-platforms/",
+        "annual_resolutions": null,
+        "industries_served": "IT Operations, HR Service, Facilities Management, Employee Support, Engineering Support, Customer Service",
+        "notable_customers": "Ford, Dominos, Fanduel, 24 Hour Fitness, Breville, and other Fortune 500 companies",
+        "market_position": "Leader - Fastest growing ITSM solution for two consecutive years"
+      },
+      "pricing": {
+        "model": "Per agent/month (licensed users), unlimited customers (unlicensed users)",
+        "free_trial": true,
+        "free_trial_duration": "7 days for Standard/Premium plans (extensible to 30 days)",
+        "free_plan": true,
+        "currency": "USD",
+        "billing_period": "Monthly or Annual",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "price_annual": "$0",
+            "price_monthly": "$0",
+            "billing_period": "Forever",
+            "billing_unit": "Fixed (up to 3 agents)",
+            "agents_included": "3 agents, unlimited customers",
+            "lite_seats": 3,
+            "key_features": [
+              "Request management with templates",
+              "On-call scheduling and alerts",
+              "Multi-channel requests (email, Teams, Slack, widget)",
+              "Custom forms and workflows",
+              "Knowledge base integration",
+              "500 automation rule runs/month",
+              "2 GB storage",
+              "Community support"
+            ]
+          },
+          {
+            "name": "Standard",
+            "price": "$20",
+            "price_annual": "$19.04",
+            "price_monthly": "$20",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per agent per month",
+            "agents_included": "Up to 20,000 agents",
+            "lite_seats": null,
+            "key_features": [
+              "Everything from Free plus:",
+              "AI-powered Rovo Search, Chat, and Rovo Agents",
+              "Custom-branded help center",
+              "Unlimited email notifications",
+              "5,000 automation rule runs/month",
+              "250 GB file storage",
+              "Audit logs and data residency",
+              "Business-hours support (9/5 regional)"
+            ]
+          },
+          {
+            "name": "Premium",
+            "price": "$51.42",
+            "price_annual": "$47.82",
+            "price_monthly": "$51.42",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per agent per month",
+            "agents_included": "Up to 20,000 agents",
+            "lite_seats": null,
+            "key_features": [
+              "Everything from Standard plus:",
+              "AI virtual service agent (1,000 assisted conversations/month)",
+              "Asset and configuration management (50,000 objects)",
+              "Advanced incident management with alert grouping",
+              "Post-incident review (PIR) automation",
+              "Change management automation",
+              "1,000 automation rules per user/month",
+              "Unlimited file storage",
+              "99.9% uptime SLA",
+              "24/7 Premium Support (1-hour critical response)",
+              "IP allowlisting and advanced security"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "price": "Custom",
+            "price_annual": "Custom (starting ~$157,000/year)",
+            "price_monthly": "Custom",
+            "billing_period": "Annual",
+            "billing_unit": "Per agent/custom",
+            "agents_included": "Up to 20,000 agents per instance, multiple instances",
+            "lite_seats": null,
+            "key_features": [
+              "Everything from Premium plus:",
+              "Atlassian Analytics and Data Lake",
+              "500,000 asset objects",
+              "Multiple instances (up to 150)",
+              "Unlimited automation rule runs",
+              "99.95% uptime SLA",
+              "24/7 dedicated senior support",
+              "Advanced analytics and cross-product insights",
+              "Atlassian Guard Standard included",
+              "Advanced encryption controls",
+              "Shadow IT controls"
+            ]
+          }
+        ],
+        "add_ons": {
+          "freddy_ai_agent": "Virtual Service Agent: $0.30 per assisted conversation above 1,000/month",
+          "note": "Assets overages: $0.02 per object/month above plan limits (with volume discounts). Annual billing provides additional cost savings."
+        },
+        "additional_costs": [
+          {
+            "name": "Extra Asset Objects",
+            "cost": "$0.02 per object/month",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
+            "applies_to": "Premium: above 50,000 objects; Enterprise: above 500,000 objects"
+          },
+          {
+            "name": "Extra Virtual Agent Conversations",
+            "cost": "$0.30 per assisted conversation",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
+            "applies_to": "Premium/Enterprise: above 1,000/month (12,000/year)"
+          },
+          {
+            "name": "Atlassian Guard Standard",
+            "cost": "Separate subscription required",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
+            "applies_to": "Free, Standard, Premium (included in Enterprise)"
+          },
+          {
+            "name": "Atlassian Guard Premium",
+            "cost": "Separate subscription required",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
+            "applies_to": "All plans"
+          }
+        ],
+        "enterprise_custom": true,
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": 0,
+            "max": 0
+          },
+          "training_hours_estimate": 40,
+          "training_cost_per_hour": null,
+          "premium_integrations": [
+            {
+              "name": "Marketplace apps for advanced reporting",
+              "cost": null,
+              "per": "month"
+            },
+            {
+              "name": "Custom integrations development",
+              "cost": null,
+              "per": "one-time"
+            }
+          ],
+          "api_limits": {
+            "included_calls": null,
+            "overage_per_10k": null
+          },
+          "data_storage_limits": {
+            "included_gb": 250,
+            "overage_per_gb": null
+          },
+          "migration_estimate": {
+            "min": 5000,
+            "max": 25000
+          }
+        }
+      },
+      "features": [
+        {
+          "name": "Request Management",
+          "description": "Centralized platform for collecting, prioritizing, and managing service requests through customizable forms, multi-channel intake (email, chat, portal), automated workflows, and queues with SLA tracking for consistent response times.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Core ITSM"
+        },
+        {
+          "name": "Incident Management",
+          "description": "AI-powered incident detection and resolution with alert aggregation, intelligent grouping, automatic escalation, on-call scheduling, post-incident reviews (PIR), and incident timeline tracking to minimize downtime and service disruption.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Core ITSM"
+        },
+        {
+          "name": "Change Management",
+          "description": "Structured change request process with multi-user approvals, risk assessment automation, change scheduling to prevent conflicts, CI/CD integration for deployment approval workflows, and deployment gates for infrastructure changes.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Core ITSM"
+        },
+        {
+          "name": "Knowledge Base Management",
+          "description": "Integrated Confluence-powered knowledge base enabling self-service support through intelligent article recommendations, full-text search, article creation from tickets, analytics on knowledge utilization, and community-contributed content.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Self-Service"
+        },
+        {
+          "name": "Asset and Configuration Management (Assets)",
+          "description": "Track hardware, software, and service inventory with custom asset types, dependency mapping to visualize infrastructure relationships, lifecycle management from procurement to retirement, and integration with incident/change processes.",
+          "available_in_plans": [
+            "Premium (50k objects)",
+            "Enterprise (500k objects)"
+          ],
+          "category": "ITSM Infrastructure"
+        },
+        {
+          "name": "AI Virtual Service Agent",
+          "description": "Conversational AI agent that handles routine support queries, answers questions using knowledge base content, suggests intent-based resolutions, escalates complex issues to human agents, and continuously learns from interactions to improve service delivery.",
+          "available_in_plans": [
+            "Standard (limited)",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Automation & AI"
+        },
+        {
+          "name": "Multi-Channel Support",
+          "description": "Accept customer requests through email, Slack, Microsoft Teams, embedded web widgets, and customer portals; unified queue management; synchronized communication across all channels within single ticket view.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Customer Experience"
+        },
+        {
+          "name": "Advanced Automation",
+          "description": "Low-code/no-code automation rules with triggers, conditions, and actions; auto-assignment based on rules; automatic notifications; workflow state transitions; Jira Query Language (JQL) for complex logic; Rovo AI suggestions for automation creation.",
+          "available_in_plans": [
+            "Free (500 runs/month)",
+            "Standard (5k runs/month)",
+            "Premium (1k/user/month)",
+            "Enterprise (unlimited)"
+          ],
+          "category": "Automation & AI"
+        },
+        {
+          "name": "Reporting and Analytics",
+          "description": "Pre-built dashboards for request management, incidents, changes, assets, and operations; customizable reports; Atlassian Analytics with SQL builder (Enterprise); real-time KPI tracking; SLA compliance visualization; agent performance analytics.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Analytics"
+        },
+        {
+          "name": "On-Call Scheduling & Operations",
+          "description": "Manage on-call rotations, escalation policies, routing rules for alert assignments; multiple notification channels (SMS, email, voice, push); incident timeline generation; post-incident reporting; integration with monitoring systems.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Operations"
+        },
+        {
+          "name": "Service Catalog",
+          "description": "Pre-built templates for IT, HR, facilities, and customer service; customizable request types; dynamic forms that adjust based on user selections; standardized service offerings; branded service portals.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Configuration"
+        },
+        {
+          "name": "Security and Compliance",
+          "description": "SAML SSO, SCIM user provisioning, IP allowlisting, Atlassian Guard integration, audit logging, encryption (AES-256 at rest, TLS 1.2+ in transit), SOC 2, ISO 27001, PCI DSS, GDPR compliance, data residency controls.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Security"
+        },
+        {
+          "name": "Problem Management",
+          "description": "Root cause analysis capabilities; link recurring incidents to problems; problem tracking and resolution; prevents duplicate issue handling; integration with change management for permanent fixes.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Premium",
+            "Enterprise"
+          ],
+          "category": "Core ITSM"
+        }
+      ],
+      "integrations": {
+        "has_api": true,
+        "api_docs_url": "https://support.atlassian.com/jira-service-management-cloud/docs/set-up-an-api-integration/",
+        "api_type": "REST API, GraphQL API, webhooks",
+        "total_integrations": "1000+",
+        "total_integrations_source": "Atlassian Marketplace",
+        "app_store_topics": null,
+        "top_integrations": [
+          "Slack (ChatOps, notifications, incident management, ticket creation)",
+          "Microsoft Teams (channels, notifications, incident collaboration)",
+          "Zoom (video conferencing for incident response)",
+          "Confluence (knowledge base, documentation)",
+          "Jira Software (development team integration, linked issues)",
+          "OpsGenie (alert aggregation, on-call management)",
+          "ServiceNow (data sync, ticketing)",
+          "Datadog (monitoring, alert ingestion)",
+          "PagerDuty (incident orchestration)",
+          "AWS CloudWatch (monitoring, alert integration)"
+        ],
+        "integration_categories": [
+          "Communication & Chat",
+          "Monitoring & Alerting",
+          "Incident Response",
+          "Development Tools",
+          "Ticketing Systems",
+          "Analytics & BI",
+          "IT Operations",
+          "ITSM Platforms",
+          "Security Tools",
+          "Workflow Automation"
+        ],
+        "api_capabilities": "Create/read/update/delete tickets, manage users, configure alerts, read reports, retrieve analytics, bi-directional sync (Premium+)"
+      },
+      "unique_selling_points": [
+        "Only AI-powered ITSM platform that seamlessly connects development, IT operations, and business teams on a single platform - enabling rapid incident response without context switching",
+        "Fastest-growing ITSM solution for two consecutive years with 60,000+ customers including 50% of Fortune 500 - proven scalability from startups to global enterprises",
+        "Native asset and configuration management (Assets) built directly into platform - eliminates need for separate tools while providing rich dependency mapping for incident root-cause analysis",
+        "Lowest total cost of ownership model with per-agent pricing and no licensing required for unlimited customers - SMBs can start free with 3 agents, enterprise can scale without per-user seats",
+        "AI virtual agents that learn from organizational knowledge base and historical tickets - reduces support volume by automatically handling routine requests 24/7 with continuous improvement"
+      ],
+      "target_audience": [
+        "Small to mid-market IT teams (11-500 employees)",
+        "Enterprise IT operations departments",
+        "DevOps and SRE teams",
+        "HR service delivery teams",
+        "Facilities management teams",
+        "Customer service organizations using ITSM practices",
+        "Organizations already invested in Atlassian ecosystem (Jira, Confluence)",
+        "Companies requiring multi-tenancy and advanced governance",
+        "Highly regulated industries (finance, healthcare, government)"
+      ],
+      "reputation": {
+        "g2_rating": 4.3,
+        "g2_rating_max": 5,
+        "g2_reviews_count": 950,
+        "g2_url": "https://www.g2.com/products/jira-service-management/reviews",
+        "g2_source": "G2.com",
+        "g2_rating_details": "4.3/5 stars from 950+ verified user reviews; Users praise speed, ticket management, SLA tracking, and Jira integration; Common concerns include learning curve and limited out-of-box reporting",
+        "g2_leader_status": "Leader in G2 Grid for Help Desk",
+        "capterra_rating": 4.5,
+        "capterra_rating_max": 5,
+        "capterra_reviews_count": 737,
+        "capterra_url": "https://www.capterra.com/p/227102/JIRA-Service-Management/",
+        "capterra_source": "Capterra",
+        "capterra_value_rating": 4.4,
+        "trustradius_rating": null,
+        "trustradius_rating_max": null,
+        "trustradius_reviews_count": null,
+        "trustradius_url": null,
+        "trustradius_source": null,
+        "awards": [
+          "Leader in 2025 Gartner Magic Quadrant for ITSM",
+          "Leader in 2022 Gartner Magic Quadrant for ITSM (first entry as Visionary in 2021)",
+          "#5 ranked in IT Operations category",
+          "Fastest-growing ITSM solution (two consecutive years)"
+        ]
+      },
+      "security_compliance": {
+        "certifications": [
+          "SOC 2 Type II",
+          "ISO/IEC 27001",
+          "ISO/IEC 27018",
+          "PCI DSS 3.2.1",
+          "GDPR"
+        ],
+        "security_features": [
+          "End-to-end encryption (TLS 1.2+ in transit, AES-256 at rest)",
+          "SAML SSO and multi-IdP support",
+          "SCIM user provisioning",
+          "Atlassian Guard Standard (included in Enterprise)",
+          "Atlassian Guard Premium (available separately)",
+          "IP allowlisting",
+          "Audit logging and compliance dashboards",
+          "Data residency controls",
+          "Session timeout policies",
+          "Role-based access control (RBAC)",
+          "Mobile app security enforcement",
+          "Disaster recovery program",
+          "Customer-managed encryption keys (AWS KMS)"
+        ]
+      },
+      "seo_metadata": {
+        "alternative_names": [
+          "Jira Service Desk (legacy name)",
+          "ITSM by Atlassian",
+          "Service Management Cloud",
+          "Atlassian Service Management"
+        ],
+        "main_competitors": [
+          "ServiceNow ITSM",
+          "Freshservice",
+          "ManageEngine ServiceDesk Plus",
+          "BMC Remedy",
+          "Ivanti Service Manager"
+        ],
+        "keywords": [
+          "ITSM software",
+          "IT service management",
+          "Ticketing system",
+          "Help desk software",
+          "Incident management",
+          "Service desk",
+          "Change management",
+          "Problem management",
+          "SLA tracking",
+          "IT operations",
+          "Asset management",
+          "Knowledge base",
+          "AI service agent",
+          "Jira integration"
+        ]
+      },
+      "founder_information": {
+        "founders": [
+          "Mike Cannon-Brookes",
+          "Scott Farquhar"
+        ],
+        "origin_story": "Founded in 2002 in Sydney, Australia by Mike Cannon-Brookes and Scott Farquhar following a conversation at the University of New South Wales. The name was inspired by the Greek mythological figure Atlas. The company bootstrapped itself with $10,000 credit card debt in its early years.",
+        "headquarters": "Sydney, Australia",
+        "offices": [
+          "San Francisco, USA (US headquarters)",
+          "Sydney, Australia (Global headquarters)",
+          "London, UK",
+          "Amsterdam, Netherlands",
+          "14+ countries globally"
+        ]
+      },
+      "funding_history": {
+        "total_raised": "$1.64 billion (including secondaries and venture rounds)",
+        "valuation": "$71 billion (as of December 2025)",
+        "funding_rounds": [
+          "2010: $60 million Series B from Accel Partners",
+          "2015: IPO - NASDAQ (TEAM) - 22 million shares at $21/share",
+          "Multiple secondary funding rounds and strategic investments"
+        ]
+      },
+      "company_info": {
+        "headquarters": "341 George Street, Sydney, NSW 2000, Australia",
+        "original_headquarters": "Sydney, Australia",
+        "founding_location": "Sydney, Australia",
+        "founders": [
+          "Mike Cannon-Brookes",
+          "Scott Farquhar"
+        ],
+        "employees": "12,000+",
+        "employee_count": "12,000+ distributed across 14 countries",
+        "nasdaq_listing": "TEAM (listed December 2015)",
+        "company_mission": "Unlock the potential of every team"
+      },
+      "market_presence": {
+        "global_coverage": "300,000+ customers across 190+ countries; 50% of revenue from outside US",
+        "primary_market": "Enterprise and mid-market IT operations in North America, Europe, and Asia-Pacific",
+        "traffic_source": "Primarily B2B (IT teams, DevOps, SRE); growing customer service adoption",
+        "global_ranking": "Top 10 software companies by market cap; #70 among 4,127 software companies"
+      },
+      "additional_info": {
+        "headquarters": "Sydney, Australia (primary); San Francisco, USA (US)",
+        "founding_location": "Sydney, Australia",
+        "employee_count": "12,000+ employees",
+        "global_presence": "300,000+ customers in 190+ countries",
+        "acquisition_history": [
+          "2017: Acquired Hipchat (team chat platform)",
+          "2019: Acquired Jira Align (portfolio management)",
+          "Multiple Marketplace app acquisitions"
+        ],
+        "mission": "Enable high-velocity service delivery by connecting teams across development, IT operations, and business functions"
+      },
+      "data_sources": {
+        "official_website": "https://www.atlassian.com/software/jira/service-management",
+        "g2_reviews": "https://www.g2.com/products/jira-service-management/reviews",
+        "capterra_reviews": "https://www.capterra.com/p/227102/JIRA-Service-Management/",
+        "api_documentation": "https://support.atlassian.com/jira-service-management-cloud/docs/set-up-an-api-integration/",
+        "pricing_page": "https://www.atlassian.com/software/jira/service-management/pricing",
+        "wikipedia": "https://en.wikipedia.org/wiki/Atlassian"
+      },
+      "suitability": {
+        "company_size": [
+          "1-10",
+          "11-50",
+          "51-200",
+          "201-1000",
+          "1001+"
+        ],
+        "industries": [
+          "Technology",
+          "Finance",
+          "Healthcare",
+          "Telecommunications",
+          "Retail",
+          "Manufacturing",
+          "Government",
+          "Education",
+          "Professional Services"
+        ],
+        "support_volume": [
+          "100-1K",
+          "1K-10K",
+          "10K+"
+        ],
+        "complexity_score": 7,
+        "implementation_time_days": 30,
+        "best_for": [
+          "IT teams already using Jira/Confluence ecosystem",
+          "DevOps and SRE-focused organizations",
+          "Companies needing to link development and operations",
+          "Organizations requiring multi-channel support",
+          "Enterprise companies with complex ITSM workflows",
+          "Highly regulated industries requiring audit trails"
+        ],
+        "not_ideal_for": [
+          "Small teams with <5 support agents (better alternatives exist)",
+          "Organizations not already using Atlassian products",
+          "Companies requiring industry-specific vertical solutions",
+          "Teams needing simple ticketing without ITSM complexity",
+          "Organizations with minimal technical skills"
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "High",
+        "lock_in_risk": "Medium",
+        "contract_flexibility": "Monthly subscriptions available; annual billing provides cost savings; 30-day refund policy for annual subscriptions",
+        "data_export": "API-accessible; data export possible but no native bulk export tool; migration typically requires consulting engagement",
+        "common_complaints": [
+          "Steep learning curve for non-technical users",
+          "Complex configuration and setup process (typically 2-4 weeks for mature implementation)",
+          "Limited out-of-the-box reporting; advanced analytics requires custom configuration",
+          "Performance issues with large datasets or complex queries",
+          "Inconsistent customer support response times",
+          "Requires marketplace apps for features other tools include natively",
+          "Page load times slower than newer competitors",
+          "Dependency on Confluence for knowledge base adds cost",
+          "Fragmented admin settings across multiple locations"
+        ],
+        "mitigation": [
+          "Invest in professional implementation and training",
+          "Start with Standard plan and scale up as needs mature",
+          "Budget for Marketplace app subscriptions and integrations",
+          "Ensure team has dedicated Jira administrators",
+          "Use Atlassian's professional services for complex deployments",
+          "Leverage active Atlassian community for support",
+          "Plan 2-3 month implementation timeline for enterprise deployments",
+          "Consider multi-instance setup for large organizations"
+        ]
+      },
+      "last_verified": "2025-12-16"
+    },
+    {
+      "company_name": "Quality Unit s.r.o.",
+      "trade_name": "LiveAgent",
+      "tagline": "Simple Customer Support Software for Teams",
+      "description": "LiveAgent is an omnichannel help desk platform that centralizes customer communications from email, live chat, social media, and phone calls into one unified interface. The software enables support teams to manage tickets, automate workflows, and deliver personalized service across multiple channels while maintaining fast response times and improving customer satisfaction.",
+      "category_primary": "Help Desk Software",
+      "categories_secondary": [
+        "Live Chat Software",
+        "Ticketing System",
+        "Contact Center",
+        "Customer Service Platform",
+        "CRM",
+        "Knowledge Base Software",
+        "Call Center Software"
+      ],
+      "logo_url": null,
+      "website_url": "https://www.liveagent.com",
+      "pricing_url": "https://www.liveagent.com/pricing",
+      "founded_year": 2011,
+      "statistics": {
+        "customer_count": "Over 40,000 businesses worldwide serving 150+ million users",
+        "customer_count_source": "https://www.liveagent.com/about/about-liveagent/",
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": "E-commerce, SaaS, Agencies, Retail, Technology, Financial Services, Healthcare, Hospitality, Recruitment",
+        "notable_customers": "Shopify (mentioned as using omnichannel support with LiveAgent)",
+        "market_position": "Mid-market and SMB leader in affordable omnichannel help desk solutions"
+      },
+      "pricing": {
+        "model": "Per-agent per month (SaaS)",
+        "free_trial": true,
+        "free_trial_duration": "30 days (no credit card required)",
+        "free_plan": true,
+        "currency": "USD",
+        "billing_period": "Monthly or Annual (20-40% discount on annual)",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "price_annual": "$0",
+            "price_monthly": "$0",
+            "billing_period": "Monthly",
+            "billing_unit": "per agent",
+            "agents_included": "Unlimited",
+            "lite_seats": null,
+            "key_features": [
+              "Customer Portal",
+              "1 Contact Form",
+              "1 Contact Button",
+              "2 Email Accounts",
+              "1 Live Chat Button"
+            ]
+          },
+          {
+            "name": "Small",
+            "price": "$9",
+            "price_annual": "$9 per agent/month (annual billing)",
+            "price_monthly": "$15 per agent/month",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "per agent",
+            "agents_included": "Unlimited",
+            "lite_seats": null,
+            "key_features": [
+              "3 Email Accounts",
+              "3 Contact Forms",
+              "2 Live Chat Buttons",
+              "10 Departments",
+              "1 Knowledge Base",
+              "50 Event Rules",
+              "Automation Rules",
+              "Customer Portal",
+              "White Glove Setup",
+              "Slack Notifications",
+              "Facebook Integration"
+            ]
+          },
+          {
+            "name": "Medium",
+            "price": "$24",
+            "price_annual": "$24 per agent/month (annual billing)",
+            "price_monthly": "$29 per agent/month",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "per agent",
+            "agents_included": "Unlimited",
+            "lite_seats": null,
+            "key_features": [
+              "10 Email Accounts",
+              "10 Contact Forms",
+              "5 Live Chat Buttons with Proactive Chat",
+              "Call Center & Voice Support",
+              "Agent Ratings",
+              "SLAs",
+              "Performance Reporting",
+              "All Small Plan Features",
+              "Social Media (Add-on: $39/month)"
+            ]
+          },
+          {
+            "name": "Large",
+            "price": "$39",
+            "price_annual": "$39 per agent/month (annual billing)",
+            "price_monthly": "$49 per agent/month",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "per agent",
+            "agents_included": "Unlimited",
+            "lite_seats": null,
+            "key_features": [
+              "150 Email Accounts",
+              "50 Contact Forms",
+              "50 Live Chat Buttons",
+              "Facebook, Instagram, Twitter, Viber, WhatsApp Integration",
+              "SSO (Single Sign-On)",
+              "Role Management",
+              "Time Tracking",
+              "Audit Logs",
+              "Advanced Reporting",
+              "Call Center with Recording",
+              "All Medium Plan Features"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "price": "$59",
+            "price_annual": "$59 per agent/month (annual billing)",
+            "price_monthly": "$69 per agent/month",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "per agent",
+            "agents_included": "Unlimited",
+            "lite_seats": null,
+            "key_features": [
+              "500 Email Accounts",
+              "200 Contact Forms",
+              "100 Chat Buttons",
+              "Dedicated Account Manager",
+              "Priority Support",
+              "White-Labeling Options",
+              "Custom Integration Support",
+              "Advanced SLA Management",
+              "Unlimited Automation Rules",
+              "Advanced Analytics Dashboard",
+              "All Large Plan Features"
+            ]
+          }
+        ],
+        "add_ons": {
+          "freddy_ai_agent": "Rule-based AI chatbot for automating customer responses (included in plans, costs apply for advanced usage)",
+          "note": "Social media channels available as add-on ($39/month) for Small and Medium plans; included in Large and Enterprise. Call center features included from Medium plan onwards."
+        },
+        "additional_costs": [
+          {
+            "name": "Social Media Integration",
+            "cost": "$39 per month",
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
+            "applies_to": "Small and Medium plans (included in Large and Enterprise)"
+          },
+          {
+            "name": "Call Center Premium Features",
+            "cost": null,
+            "cost_inbound": "Included from Medium plan onwards",
+            "cost_call_recording": "Included",
+            "cost_outbound_us": "No per-minute charges",
+            "applies_to": "Medium, Large, Enterprise plans"
+          }
+        ],
+        "enterprise_custom": true,
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": 0,
+            "max": 0
+          },
+          "training_hours_estimate": null,
+          "training_cost_per_hour": null,
+          "premium_integrations": null,
+          "api_limits": null,
+          "data_storage_limits": null,
+          "migration_estimate": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "features": [
+        {
+          "name": "Ticketing System",
+          "description": "Centralized ticket management with automated distribution, prioritization, time tracking, and status workflow management to ensure no customer inquiry falls through the cracks.",
+          "available_in_plans": [
+            "Free",
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Core Ticketing"
+        },
+        {
+          "name": "Omnichannel Communication",
+          "description": "Unified inbox consolidating customer interactions from email, live chat, social media (Facebook, Instagram, Twitter, WhatsApp, Viber), phone calls, and web forms into a single workspace.",
+          "available_in_plans": [
+            "Free",
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Multi-Channel Support"
+        },
+        {
+          "name": "Live Chat Widget",
+          "description": "Customizable real-time chat interface with proactive chat invitations, visitor tracking, and pre-chat forms to engage website visitors instantly and increase sales.",
+          "available_in_plans": [
+            "Free",
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Live Chat"
+        },
+        {
+          "name": "Call Center & Voice Support",
+          "description": "Browser-based call center with IVR trees, call recording, automatic call logging as tickets, and support for unlimited phone numbers and devices without per-minute charges.",
+          "available_in_plans": [
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Voice & Calling"
+        },
+        {
+          "name": "AI Chatbot & Automation",
+          "description": "Rule-based AI chatbot that automates responses to common questions using knowledge base triggers, action rules, time-triggered rules, and SLA-based rules to reduce repetitive tasks and improve response times.",
+          "available_in_plans": [
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "AI & Automation"
+        },
+        {
+          "name": "Knowledge Base & Self-Service Portal",
+          "description": "Create comprehensive customer portals with searchable knowledge bases, FAQs, how-to articles, forums, and feedback boxes to empower customers with 24/7 self-service support.",
+          "available_in_plans": [
+            "Free",
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Self-Service"
+        },
+        {
+          "name": "Advanced Reporting & Analytics",
+          "description": "Real-time performance dashboards tracking ticket volumes, agent activity, SLA compliance, chat metrics, call recordings, and custom reports for data-driven decision making.",
+          "available_in_plans": [
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Analytics & Reporting"
+        },
+        {
+          "name": "Automation Rules & Workflows",
+          "description": "Customizable automation rules for ticket routing, tagging, spam detection, priority changes, and automated responses based on triggers like keywords, sender information, or ticket status changes.",
+          "available_in_plans": [
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Automation"
+        },
+        {
+          "name": "SLA Management",
+          "description": "Service Level Agreement configuration with automatic priority escalation, violation tracking, and time-based rules to ensure response and resolution targets are met.",
+          "available_in_plans": [
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Workflow Management"
+        },
+        {
+          "name": "Team Collaboration & Canned Messages",
+          "description": "Internal notes, agent ratings, collision detection, unlimited predefined responses (canned messages), and team chat features to enhance internal communication and consistency.",
+          "available_in_plans": [
+            "Free",
+            "Small",
+            "Medium",
+            "Large",
+            "Enterprise"
+          ],
+          "category": "Team Management"
+        }
+      ],
+      "integrations": {
+        "has_api": true,
+        "api_docs_url": "https://support.liveagent.com/840770-Complete-API-reference",
+        "api_type": "REST API with XML and JSON support",
+        "total_integrations": "200+",
+        "total_integrations_source": "https://www.liveagent.com/integrations/zapier/",
+        "app_store_topics": null,
+        "top_integrations": [
+          "Zapier (200+ integrations via Zapier)",
+          "Slack",
+          "Facebook",
+          "Instagram",
+          "Twitter",
+          "WhatsApp",
+          "Viber",
+          "Mailchimp",
+          "Highrise",
+          "AWeber",
+          "Google Analytics",
+          "Stripe",
+          "CloudTalk (VoIP)",
+          "WordPress"
+        ],
+        "integration_categories": [
+          "CRM Systems",
+          "Communication Platforms",
+          "Payment Processors",
+          "Email Marketing",
+          "Analytics Tools",
+          "Social Media",
+          "Accounting Software",
+          "Help Desk Tools"
+        ],
+        "api_capabilities": "Create, retrieve, update, and delete tickets; manage agents and companies; customize conversations; automate workflows; retrieve chat and call logs"
+      },
+      "unique_selling_points": [
+        "Fastest Setup: Claims fastest and easiest implementation with setup possible in minutes, not days, with multiple setup awards",
+        "Affordable Omnichannel: Among the most cost-effective omnichannel solutions starting at $9/agent/month with significant annual discounts",
+        "AI Chatbot Effectiveness: Demonstrates 75% chat resolution rate via AI chatbot on their own support pages, with 40% of interactions handled automatically",
+        "Truly Omnichannel: Unified handling of email, chat, voice, video, and social media (WhatsApp, Viber, Facebook, Instagram, Twitter) from single workspace",
+        "24/7 Support: Responsive 24/7 customer support team without FAQs or queues, direct access to support representatives",
+        "Self-hosted & White-label Options: Available as both cloud SaaS and self-hosted on-premise installation for compliance and customization needs"
+      ],
+      "target_audience": [
+        "Small businesses (1-50 employees)",
+        "Mid-market companies (51-200 employees)",
+        "E-commerce businesses and online retailers",
+        "SaaS companies with high customer support needs",
+        "Digital agencies managing multiple clients",
+        "Customer service teams with limited budgets",
+        "Businesses requiring omnichannel support",
+        "Startups looking for affordable scalable solutions",
+        "Teams requiring fast implementation",
+        "Organizations seeking easy-to-use interfaces"
+      ],
+      "reputation": {
+        "g2_rating": 4.5,
+        "g2_rating_max": 5,
+        "g2_reviews_count": 1535,
+        "g2_url": "https://www.g2.com/products/liveagent/reviews",
+        "g2_source": "G2.com (as of December 2025)",
+        "g2_rating_details": "Leader in G2 Grid for help desk and live chat categories; recognized for best ROI in social customer service",
+        "g2_leader_status": "G2 Leader (multiple categories)",
+        "capterra_rating": 4.7,
+        "capterra_rating_max": 5,
+        "capterra_reviews_count": 1735,
+        "capterra_url": "https://www.capterra.com/p/102188/LiveAgent/",
+        "capterra_source": "Capterra (as of August 2025)",
+        "capterra_value_rating": 4.7,
+        "trustradius_rating": 8.6,
+        "trustradius_rating_max": 10,
+        "trustradius_reviews_count": 140,
+        "trustradius_url": "https://www.trustradius.com/products/liveagent/reviews",
+        "trustradius_source": "TrustRadius (verified reviews)",
+        "awards": [
+          "G2 Leader - Help Desk Software (2025)",
+          "G2 Leader - Live Chat (2025)",
+          "Capterra Best Value - Multiple categories 2023 (Call Recording, Customer Engagement, Customer Success, Complaint Management, Contact Center QA, Customer Communications)",
+          "G2 Best ROI in Social Customer Service (July 2025)",
+          "GetApp Best App (July 2025)",
+          "Software Advice Highest Rated (April 2025)",
+          "SourceForge Community Choice (July 2025)",
+          "SMB Guide Rating: 7.6/10"
+        ]
+      },
+      "security_compliance": {
+        "certifications": [
+          "GDPR Compliant (since May 2018)",
+          "Two-Factor Authentication (2FA) with Google Authenticator",
+          "Data Encryption"
+        ],
+        "security_features": [
+          "End-to-end encryption",
+          "Two-factor authentication",
+          "Role-based access control",
+          "Audit logs for compliance tracking",
+          "Data backup and recovery",
+          "Privacy protection for customer data"
+        ]
+      },
+      "seo_metadata": {
+        "alternative_names": [
+          "LiveAgent help desk",
+          "LiveAgent live chat",
+          "LiveAgent ticketing system",
+          "LiveAgent omnichannel support",
+          "LiveAgent customer support software"
+        ],
+        "main_competitors": [
+          "Zendesk Support",
+          "Freshdesk",
+          "Intercom",
+          "HubSpot Service Hub",
+          "Kayako"
+        ],
+        "keywords": [
+          "help desk software",
+          "live chat software",
+          "ticketing system",
+          "customer support platform",
+          "omnichannel helpdesk",
+          "call center software",
+          "customer service software",
+          "contact center solution",
+          "affordable helpdesk",
+          "SMB helpdesk solution",
+          "team collaboration",
+          "customer portal"
+        ]
+      },
+      "founder_information": {
+        "founders": [
+          "Viktor",
+          "Andrej"
+        ],
+        "origin_story": "Founded in 2004 as Quality Unit software development company. Viktor and Andrej needed real-time customer support for their own business and couldn't find suitable software, so they decided to develop LiveAgent—a multi-channel customer support platform with live chat, ticketing, and help desk capabilities. The product officially became known as LiveAgent starting in 2011.",
+        "headquarters": "Bratislava, Slovakia",
+        "offices": [
+          "Bratislava, Slovakia (HQ at Vajnorska 100/A, 83104)",
+          "Kyiv, Ukraine",
+          "New York City, United States"
+        ]
+      },
+      "funding_history": {
+        "total_raised": null,
+        "valuation": null,
+        "funding_rounds": []
+      },
+      "company_info": {
+        "headquarters": "Bratislava, Slovakia",
+        "original_headquarters": "Bratislava, Slovakia",
+        "founding_location": "Bratislava, Slovakia",
+        "founders": [
+          "Viktor",
+          "Andrej"
+        ],
+        "employees": "100+",
+        "employee_count": "Over 100 employees",
+        "nasdaq_listing": null,
+        "company_mission": "To provide efficient, affordable, and easy-to-use customer support solutions that help businesses deliver exceptional customer service across all communication channels"
+      },
+      "market_presence": {
+        "global_coverage": "Global - serves customers in 175+ countries",
+        "primary_market": "Europe and North America",
+        "traffic_source": "Primarily SMB and mid-market segments in developed markets",
+        "global_ranking": null
+      },
+      "additional_info": {
+        "headquarters": "Bratislava, Slovakia",
+        "founding_location": "Bratislava, Slovakia",
+        "employee_count": "100+ employees",
+        "global_presence": "3 offices across Europe and North America serving 40,000+ businesses and 150+ million users",
+        "acquisition_history": [],
+        "mission": "Making customer support efficient, affordable, and accessible for businesses of all sizes"
+      },
+      "data_sources": {
+        "official_website": "https://www.liveagent.com",
+        "g2_reviews": "https://www.g2.com/products/liveagent/reviews",
+        "capterra_reviews": "https://www.capterra.com/p/102188/LiveAgent/",
+        "api_documentation": "https://support.liveagent.com/840770-Complete-API-reference",
+        "pricing_page": "https://www.liveagent.com/pricing",
+        "wikipedia": null
+      },
+      "suitability": {
+        "company_size": [
+          "1-10",
+          "11-50",
+          "51-200",
+          "201-1000"
+        ],
+        "industries": [
+          "E-commerce",
+          "SaaS",
+          "Digital Agencies",
+          "Retail",
+          "Technology",
+          "Financial Services",
+          "Healthcare",
+          "Hospitality",
+          "Recruitment",
+          "Education"
+        ],
+        "support_volume": [
+          "100-1K",
+          "1K-10K",
+          "10K+"
+        ],
+        "complexity_score": 6,
+        "implementation_time_days": 1,
+        "best_for": [
+          "Budget-conscious teams needing multi-channel support",
+          "E-commerce businesses with high chat volume",
+          "Agencies managing multiple client accounts",
+          "Teams requiring fast setup and deployment",
+          "Organizations wanting unified communication hub",
+          "SaaS companies with growing customer bases",
+          "Businesses requiring self-hosted options"
+        ],
+        "not_ideal_for": [
+          "Complex enterprise workflows requiring heavy customization",
+          "Organizations requiring advanced AI features beyond rule-based automation",
+          "Teams needing screen sharing during video calls",
+          "Businesses requiring video call capabilities as primary feature",
+          "Large enterprises with extensive legacy system integrations"
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "Low",
+        "lock_in_risk": "Low",
+        "contract_flexibility": "Month-to-month billing available; no long-term contracts required",
+        "data_export": "API available for data extraction; support for data portability",
+        "common_complaints": [
+          "Mobile app interface could be more modern and responsive",
+          "Screen sharing not available during video calls (limitation noted by users)",
+          "Initial learning curve for complex automation setup",
+          "Steep per-agent costs at enterprise scale compared to flat-fee models",
+          "Some advanced features require higher-tier plans",
+          "Social media integration costs extra on lower plans",
+          "Limited sophisticated AI beyond rule-based triggers"
+        ],
+        "mitigation": [
+          "Compare total cost of ownership across all tiers before scaling",
+          "Start with 30-day free trial to assess fit and complexity",
+          "Evaluate automation requirements before committing to higher plans",
+          "Consider implementing gradual channel integration to manage costs",
+          "Leverage 24/7 support for configuration and optimization assistance",
+          "Review feature availability in your tier before purchase"
+        ]
+      },
+      "last_verified": "2025-12-16"
+    },
+    {
+      "company_name": "Help Scout PBC",
+      "trade_name": "Help Scout",
+      "tagline": "Shared Inbox, Help Center, & Live Chat Software",
+      "description": "Help Scout is an all-in-one customer support platform that unifies email, live chat, and social media conversations in a shared inbox. Built for growing businesses, it combines intuitive collaboration tools, AI-powered assistance, and self-service knowledge bases to help support teams deliver exceptional customer experiences without the complexity of enterprise systems.",
+      "category_primary": "Help Desk / Ticketing System",
+      "categories_secondary": [
+        "Live Chat Software",
+        "Knowledge Base / Self-Service",
+        "Omnichannel Support Platform",
+        "Customer Service Software",
+        "SaaS"
+      ],
+      "logo_url": "https://brandeps.com/logo-download/H/Help-Scout-logo-vector-01.svg",
+      "website_url": "https://www.helpscout.com",
+      "pricing_url": "https://www.helpscout.com/pricing/",
+      "founded_year": 2011,
+      "statistics": {
+        "customer_count": "12,000+",
+        "customer_count_source": "https://articles.helpscout.com/blog/help-scout-td-synnex-partnership/",
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": "SaaS, ecommerce, online services, healthcare, technology, veterinary, professional services",
+        "notable_customers": "Buffer, Basecamp, Trello, Reddit, AngelList",
+        "market_position": "Best value customer support platform for small to mid-market businesses"
+      },
+      "pricing": {
+        "model": "Per user per month (SaaS subscription)",
+        "free_trial": true,
+        "free_trial_duration": "15 days (no credit card required for Standard and Plus plans); 3 months free for AI Answers",
+        "free_plan": true,
+        "currency": "USD",
+        "billing_period": "Monthly or Annual (save up to 20% with annual billing)",
+        "plans": [
+          {
+            "name": "Free",
+            "price": null,
+            "price_annual": null,
+            "price_monthly": "$0",
+            "billing_period": "Forever free",
+            "billing_unit": "Account (not per user)",
+            "agents_included": "Up to 5 users",
+            "lite_seats": null,
+            "key_features": [
+              "1 Mailbox",
+              "1 Docs site",
+              "Basic workflows",
+              "Email and basic features",
+              "Up to 100 contacts",
+              "10 saved replies",
+              "10 tags",
+              "1 embeddable support hub",
+              "Basic reporting"
+            ]
+          },
+          {
+            "name": "Standard",
+            "price": "$25",
+            "price_annual": "$20 per user/month when billed annually",
+            "price_monthly": "$25 per user/month",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per user per month",
+            "agents_included": "Up to 25 users",
+            "lite_seats": null,
+            "key_features": [
+              "2 Mailboxes",
+              "Multiple knowledge bases (Docs sites)",
+              "Basic workflows",
+              "Unlimited tags and saved replies",
+              "Email and live chat",
+              "In-app messaging (up to 2,000 unique viewers)",
+              "AI Inbox assistant",
+              "Reporting and analytics",
+              "Company management",
+              "Snooze and send later features"
+            ]
+          },
+          {
+            "name": "Plus",
+            "price": "$45",
+            "price_annual": "$40 per user/month when billed annually",
+            "price_monthly": "$45 per user/month",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per user per month",
+            "agents_included": "Up to 50 users",
+            "lite_seats": null,
+            "key_features": [
+              "Everything in Standard plus:",
+              "Advanced workflows",
+              "Unlimited AI Drafts",
+              "Round robin routing",
+              "Salesforce, Jira, and HubSpot integrations",
+              "Internal teams for collaboration",
+              "Group conversations by company",
+              "Advanced reporting",
+              "Omnichannel support (email, chat, social)",
+              "Multiple inboxes per department"
+            ]
+          },
+          {
+            "name": "Pro",
+            "price": "$75",
+            "price_annual": "Custom pricing (annual only)",
+            "price_monthly": "$75 per user/month",
+            "billing_period": "Annual (contact sales for details)",
+            "billing_unit": "Per user per month",
+            "agents_included": "Unlimited users (minimum 10 users)",
+            "lite_seats": 50,
+            "key_features": [
+              "Everything in Plus plus:",
+              "Unlimited workflows",
+              "Multiple routing types",
+              "SSO/SAML authentication",
+              "HIPAA compliance",
+              "Up to 50 light users",
+              "Dedicated onboarding specialist",
+              "Strategic account manager",
+              "Priority support",
+              "Custom integrations support",
+              "Advanced security features"
+            ]
+          }
+        ],
+        "add_ons": {
+          "ai_answers": "$0.75 per resolution (with 3-month free trial)",
+          "note": "Pre-paid discounts available. AI Answers feature automatically resolves up to 70% of routine requests."
+        },
+        "additional_costs": null,
+        "enterprise_custom": true,
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": null,
+            "max": null
+          },
+          "training_hours_estimate": null,
+          "training_cost_per_hour": null,
+          "premium_integrations": null,
+          "api_limits": {
+            "included_calls": null,
+            "overage_per_10k": null
+          },
+          "data_storage_limits": null,
+          "migration_estimate": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "features": [
+        {
+          "name": "Shared Inbox",
+          "description": "Centralize all customer conversations (email, chat, social) in one organized inbox with collision detection, @mentions, and private notes for seamless team collaboration without duplicating responses.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Core Ticketing"
+        },
+        {
+          "name": "AI Answers",
+          "description": "Automatically resolves up to 70% of routine customer inquiries 24/7 using your knowledge base content, reducing repetitive support work and enabling faster first-response times.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "AI & Automation"
+        },
+        {
+          "name": "AI Drafts & Assist",
+          "description": "Generate, edit, and translate reply drafts with a single click; expand fragmented thoughts, adjust tone, and fix wordiness to help agents write better responses faster.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "AI & Automation"
+        },
+        {
+          "name": "AI Summarize",
+          "description": "Automatically condense long email threads into bullet-point summaries in seconds, saving agents time and providing instant context without manually reading entire conversation histories.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "AI & Automation"
+        },
+        {
+          "name": "Beacon (Embeddable Support Hub)",
+          "description": "Embed a customizable widget on your website offering live chat, support form submission, and instant knowledge base search—allowing customers to self-serve or contact you directly without leaving your site.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Multi-Channel Support"
+        },
+        {
+          "name": "Docs (Knowledge Base)",
+          "description": "Create and publish a self-service knowledge base with articles, FAQs, and guides that customers can search through Beacon or on your website, reducing support volume and improving customer satisfaction.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Self-Service"
+        },
+        {
+          "name": "Live Chat",
+          "description": "Enable real-time conversations with website visitors; conversations automatically convert to tickets when agents are offline, maintaining continuity in the shared inbox.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Multi-Channel Support"
+        },
+        {
+          "name": "Omnichannel Support",
+          "description": "Manage customer interactions across email, live chat, Instagram, Facebook, Messenger, and WhatsApp from a single unified inbox without switching tabs or losing context.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Multi-Channel Support"
+        },
+        {
+          "name": "Workflows & Automation",
+          "description": "Automate repetitive tasks like ticket routing, assignment, status changes, and message scheduling; advanced workflows (Plus/Pro) include complex conditional logic and routing rules.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Automation"
+        },
+        {
+          "name": "Reporting & Analytics",
+          "description": "Track key metrics including response times, resolution rates, team performance, happiness scores, and channel-specific insights to identify bottlenecks and optimize support operations.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Analytics"
+        },
+        {
+          "name": "Company Management",
+          "description": "View complete account hierarchies and customer relationships; track all interactions with a company and its users, enabling contextual support based on full account history.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "CRM Integration"
+        },
+        {
+          "name": "Saved Replies & Canned Responses",
+          "description": "Create templates for common responses, maintain consistency in messaging, and enable agents to answer faster by reusing pre-approved content with customization options.",
+          "available_in_plans": [
+            "Free",
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Productivity"
+        },
+        {
+          "name": "Multiple Inboxes",
+          "description": "Separate customer conversations by department, product line, or function (Standard: 2 inboxes, Plus/Pro: unlimited); each inbox maintains its own settings, teams, and workflows.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Organization"
+        },
+        {
+          "name": "In-App Messaging",
+          "description": "Send targeted messages to website visitors using modals, banners, and notifications; include NPS surveys or custom surveys to gather feedback from specific customer segments.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Engagement"
+        },
+        {
+          "name": "Proactive Engagement",
+          "description": "Reach out to customers with targeted messages based on user behavior, product usage, or lifecycle stage; send notifications about updates, promotions, or personalized offers.",
+          "available_in_plans": [
+            "Standard",
+            "Plus",
+            "Pro"
+          ],
+          "category": "Engagement"
+        },
+        {
+          "name": "Advanced Permissions & Access Control",
+          "description": "Control visibility and data access at the company, team, or individual user level; available in Pro plan for organizations requiring granular security and compliance.",
+          "available_in_plans": [
+            "Pro"
+          ],
+          "category": "Security"
+        },
+        {
+          "name": "SSO/SAML Authentication",
+          "description": "Enterprise-grade single sign-on via SAML 2.0 integration; centralize user management and enforce corporate security policies (Pro plan only).",
+          "available_in_plans": [
+            "Pro"
+          ],
+          "category": "Security"
+        },
+        {
+          "name": "HIPAA Compliance",
+          "description": "Enable HIPAA support through Business Associate Agreement (BAA); encrypt data in transit (256-bit SSL) and at rest; audit access controls for healthcare and regulated industries (Pro plan).",
+          "available_in_plans": [
+            "Pro"
+          ],
+          "category": "Compliance"
+        },
+        {
+          "name": "Dedicated Onboarding & Account Manager",
+          "description": "Pro plan customers receive a dedicated onboarding specialist to set up the platform and a strategic account manager for ongoing optimization and success.",
+          "available_in_plans": [
+            "Pro"
+          ],
+          "category": "Support"
+        },
+        {
+          "name": "Round Robin Routing",
+          "description": "Automatically distribute incoming conversations equally among team members based on availability and workload; Plus plan and above includes advanced routing options.",
+          "available_in_plans": [
+            "Plus",
+            "Pro"
+          ],
+          "category": "Automation"
+        }
+      ],
+      "integrations": {
+        "has_api": true,
+        "api_docs_url": "https://developer.helpscout.com/",
+        "api_type": "REST API with webhook support",
+        "total_integrations": "100+",
+        "total_integrations_source": "https://www.helpscout.com/help-desk-integration/",
+        "app_store_topics": null,
+        "top_integrations": [
+          "Slack",
+          "Zapier",
+          "Salesforce",
+          "Jira",
+          "HubSpot",
+          "Trello",
+          "Mailchimp",
+          "Google Workspace (Gmail, Drive, Meet)",
+          "Shopify",
+          "Stripe",
+          "Make (formerly Zapier alternative)",
+          "Aircall",
+          "Linear",
+          "Intercom",
+          "Process Street",
+          "Asana",
+          "Pipedrive",
+          "ActiveCampaign",
+          "Keyboard Maestro",
+          "Custom apps via API"
+        ],
+        "integration_categories": [
+          "Communication & Collaboration",
+          "CRM & Sales",
+          "Project Management",
+          "E-Commerce",
+          "Payment Processing",
+          "Marketing Automation",
+          "Analytics & Reporting",
+          "Telephony & Voice",
+          "No-Code Automation (Zapier, Make)",
+          "Custom Integrations via API/Webhooks"
+        ],
+        "api_capabilities": "Read/write access to mailboxes, conversations, customers, customers' activity, workflows, and reporting; webhook support for real-time event notifications; rate limiting based on plan (varies by endpoint)"
+      },
+      "unique_selling_points": [
+        "Simplicity-first design: Built by support professionals for support professionals, with an intuitive email-like interface that minimizes learning curve and reduces training time.",
+        "Best-in-class NPS: Independent research shows Help Scout's Net Promoter Score (NPS) is 7x higher than competitors, reflecting exceptional ease of use and customer satisfaction.",
+        "AI-powered efficiency: Built-in AI features (AI Answers, Drafts, Summarize, Assist) are included—not add-ons—helping teams resolve 36% more emails with human oversight.",
+        "Transparent, predictable pricing: Per-user pricing with no hidden fees; significant savings (up to 20%) with annual billing; free plan available for small teams without credit card requirement.",
+        "Unified omnichannel inbox: Consolidates email, live chat, social media, and messaging in one shared space with collision detection, preventing duplicate responses and enabling seamless collaboration.",
+        "Strong customer retention: 80% of customers remain after 4 years, indicating product-market fit and reliability for scaling businesses.",
+        "Rapid deployment: 15-day free trial and 3-month free AI Answers trial enable low-risk evaluation; support team answers 99% of emails within 24 hours for implementation help."
+      ],
+      "target_audience": [
+        "Small to mid-sized businesses (1-200 employees)",
+        "E-commerce and online retail companies",
+        "SaaS companies",
+        "Tech startups and venture-backed companies",
+        "Remote-first and fully distributed teams",
+        "Healthcare providers (with HIPAA Pro plan)",
+        "Professional services and consulting firms",
+        "Non-profits and B Corporations (Help Scout for Good program)",
+        "Bootstrapped and early-stage companies seeking affordable solutions",
+        "Teams prioritizing ease of use and fast time-to-value over complex enterprise features",
+        "Organizations valuing exceptional customer support as a core competitive advantage"
+      ],
+      "reputation": {
+        "g2_rating": 4.4,
+        "g2_rating_max": 5.0,
+        "g2_reviews_count": null,
+        "g2_url": "https://www.g2.com/products/help-scout/reviews",
+        "g2_source": "https://www.g2.com/products/help-scout/pricing",
+        "g2_rating_details": "Rated 4.4 out of 5 stars on G2; recognized for ease of use and value; not explicitly listed as Grid Leader but consistently praised by users.",
+        "g2_leader_status": null,
+        "capterra_rating": 4.6,
+        "capterra_rating_max": 5.0,
+        "capterra_reviews_count": 225,
+        "capterra_url": "https://www.capterra.com/p/136909/Help-Scout/",
+        "capterra_source": "https://www.capterra.ca/reviews/136909/help-scout",
+        "capterra_value_rating": 4.4,
+        "trustradius_rating": null,
+        "trustradius_rating_max": null,
+        "trustradius_reviews_count": null,
+        "trustradius_url": "https://www.trustradius.com/products/help-scout/reviews",
+        "trustradius_source": null,
+        "awards": [
+          "Capterra: 4.6/5 stars (225 verified reviews)",
+          "G2: 4.4/5 stars",
+          "GetApp: 4.6/5 stars",
+          "Featured in Gartner reports for help desk solutions",
+          "Recognized for best value for small teams"
+        ]
+      },
+      "security_compliance": {
+        "certifications": [
+          "SOC 2 Type 2 certified (Security and Availability)",
+          "HIPAA compliant (Pro plan with BAA)",
+          "GDPR compliant"
+        ],
+        "security_features": [
+          "256-bit SSL encryption (in transit and at rest)",
+          "AWS cloud hosting with multi-region redundancy",
+          "Multi-factor authentication (MFA)",
+          "Annual third-party penetration testing",
+          "Vulnerability scanning and code reviews",
+          "VPC (Virtual Private Cloud) isolation",
+          "Role-based access control",
+          "Data backup and recovery procedures",
+          "Incident response procedures"
+        ]
+      },
+      "seo_metadata": {
+        "alternative_names": [
+          "HelpScout",
+          "Help-Scout",
+          "Help Scout Platform",
+          "Help Scout App"
+        ],
+        "main_competitors": [
+          "Zendesk (Suite/Support)",
+          "Freshdesk",
+          "Intercom",
+          "Gorgias",
+          "Front"
+        ],
+        "keywords": [
+          "help desk software",
+          "customer support platform",
+          "shared inbox",
+          "live chat software",
+          "ticketing system",
+          "knowledge base",
+          "AI customer service",
+          "omnichannel support",
+          "email management",
+          "customer service software",
+          "small business help desk",
+          "SaaS support tool",
+          "Zendesk alternative",
+          "affordable help desk",
+          "customer success software"
+        ]
+      },
+      "founder_information": {
+        "founders": [
+          "Nick Francis (Co-Founder and Chairman of the Board)",
+          "Jared McDaniel (VP of Product Design and Co-Founder)",
+          "Denny Swindle (Distinguished Architect & Co-Founder)"
+        ],
+        "origin_story": "Founded in 2011 by three entrepreneurs (Nick, Jared, and Denny) who were running a web design consultancy in Nashville, Tennessee. They struggled to find customer support software that was both powerful and user-friendly. Recognizing the gap in the market, they pivoted to create Help Scout during their participation in Techstars Boston accelerator, raising seed funding (~$400,000) to launch the platform.",
+        "headquarters": "Boston, Massachusetts, USA"
+      },
+      "company_info": {
+        "headquarters": "177 Huntington Ave Ste 1703, Boston, Massachusetts 02115, USA (currently; operations based at 100 City Hall Plaza, 5th Floor, Boston, MA 02108)",
+        "original_headquarters": "Nashville, Tennessee",
+        "founding_location": "Nashville, Tennessee",
+        "founders": [
+          "Nick Francis",
+          "Jared McDaniel",
+          "Denny Swindle"
+        ],
+        "employees": "140+",
+        "employee_count": "Over 100-140 distributed globally across 80+ cities",
+        "nasdaq_listing": null,
+        "company_mission": "Empower businesses to delight more customers through simple, powerful, and human-centered customer support tools.",
+        "company_structure": "B Corporation (certified public benefit corporation - PBC)"
+      },
+      "market_presence": {
+        "global_coverage": "140+ countries",
+        "primary_market": "North America (USA, Canada); strong presence in Europe",
+        "traffic_source": "Direct, organic search, word-of-mouth, partnerships (e.g., TD SYNNEX distribution partnership)",
+        "global_ranking": null
+      },
+      "additional_info": {
+        "headquarters": "Boston, Massachusetts, USA",
+        "founding_location": "Nashville, Tennessee",
+        "employee_count": "140+ globally distributed (fully remote since 2020)",
+        "global_presence": "140+ countries; present in 80+ cities across all continents",
+        "acquisition_history": [],
+        "mission": "Empower businesses to delight more customers with simple, powerful, and human-centered support tools."
+      },
+      "data_sources": {
+        "official_website": "https://www.helpscout.com",
+        "g2_reviews": "https://www.g2.com/products/help-scout/reviews",
+        "capterra_reviews": "https://www.capterra.com/p/136909/Help-Scout/",
+        "api_documentation": "https://developer.helpscout.com/",
+        "pricing_page": "https://www.helpscout.com/pricing/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Help_Scout"
+      },
+      "suitability": {
+        "company_size": [
+          "1-10",
+          "11-50",
+          "51-200",
+          "201-1000"
+        ],
+        "industries": [
+          "SaaS",
+          "E-commerce",
+          "Online Retail",
+          "Technology",
+          "Healthcare (HIPAA-compliant Pro plan)",
+          "Professional Services",
+          "Consulting",
+          "Non-profits",
+          "B Corporations",
+          "Subscription-based businesses"
+        ],
+        "support_volume": [
+          "100-1K",
+          "1K-10K"
+        ],
+        "complexity_score": 3,
+        "implementation_time_days": 1,
+        "best_for": [
+          "Small to mid-market businesses seeking simplicity and ease of adoption",
+          "Teams prioritizing transparent, predictable per-user pricing",
+          "E-commerce and SaaS companies managing customer-facing support",
+          "Remote-first and distributed teams needing real-time collaboration",
+          "Organizations wanting AI assistance without enterprise complexity",
+          "Budget-conscious startups and bootstrapped companies",
+          "Businesses valuing customer support quality as a competitive advantage",
+          "Teams evaluating help desk tools for the first time"
+        ],
+        "not_ideal_for": [
+          "Large enterprises requiring complex custom workflows and advanced automation",
+          "Organizations needing extensive native phone/voice support (integrations available)",
+          "Companies with highly specialized support processes requiring deep customization",
+          "Businesses requiring multiple concurrent live agents on a single chat widget",
+          "Organizations needing advanced field service or asset management features",
+          "Teams requiring real-time advanced AI agents for automated problem-solving without human handoff"
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "Low",
+        "lock_in_risk": "Low",
+        "contract_flexibility": "Monthly or annual billing; month-to-month plans available; no long-term contracts required; 15-day free trial for risk-free evaluation.",
+        "data_export": "All customer and conversation data accessible via Inbox API; no built-in export to ZIP with HTML/CSS/assets yet (as of latest info), but API-based export is supported; Help Scout is working on in-app export tools.",
+        "common_complaints": [
+          "Reporting capabilities are basic compared to enterprise competitors (Zendesk)",
+          "Limited advanced customization for highly unique workflows",
+          "Mobile app lacks some desktop features (e.g., workflows not available on mobile)",
+          "Limited native integration with certain platforms; relies on Zapier for additional connections",
+          "Recent pricing increases and changes have disappointed some long-term customers",
+          "Knowledge base (Docs) design may appear basic without HTML/CSS customization",
+          "No native phone support (integrations like Aircall, JustCall required)",
+          "Some users report occasional app bugs and performance issues"
+        ],
+        "mitigation": [
+          "Start with the free 15-day trial to evaluate reporting capabilities and feature set",
+          "Use Zapier for custom integrations if official integrations don't cover your needs",
+          "Leverage Help Scout's strong API and developer documentation for custom solutions",
+          "Review Help Scout for Good program (startup/non-profit discounts) if eligible",
+          "Consider the Pro plan for dedicated onboarding and account management if migrating from another tool",
+          "Plan for API-based migration by documenting current workflows before switch",
+          "Engage Help Scout support early (99% response within 24 hours) to clarify customization possibilities"
+        ]
+      },
+      "last_verified": "2025-12-16"
+    },
+    {
+      "company_name": "Grexit Software Private Limited",
+      "trade_name": "Hiver",
+      "tagline": "AI-powered customer service platform empowering teams to deliver stellar support to every customer",
+      "description": "Hiver is a modern, inbox-style customer service platform that unifies email, live chat, WhatsApp, voice, and social channels into a single omnichannel interface. Built on Gmail and Outlook, it enables teams to manage customer conversations, automate workflows, and deliver exceptional support without switching between tools—powered by advanced AI and collaboration features designed for teams of all sizes.",
+      "category_primary": "Help Desk / Customer Service Software",
+      "categories_secondary": [
+        "Shared Inbox Software",
+        "Omnichannel Help Desk",
+        "Email Management",
+        "Team Collaboration",
+        "Ticketing System",
+        "AI-Powered Support",
+        "Workflow Automation"
+      ],
+      "logo_url": null,
+      "website_url": "https://hiverhq.com/",
+      "pricing_url": "https://hiverhq.com/pricing",
+      "founded_year": 2011,
+      "statistics": {
+        "customer_count": "10,000+ teams globally",
+        "customer_count_source": "https://hiverhq.com/products/customer-service",
+        "market_share": null,
+        "market_share_source": null,
+        "annual_resolutions": null,
+        "industries_served": "Customer Service, Finance & IT, Recruitment, E-commerce, SaaS, Education, Enterprise",
+        "notable_customers": "Flexport, Harvard University, Vacasa, Epic Games, Upwork, AppsFlyer, NYU, Veolia, Kiwi.com, Shutterstock, Pinterest, Airbnb, HubSpot",
+        "market_position": "Leader in shared inbox and email-based customer service solutions; recognized for ease of use and AI capabilities"
+      },
+      "pricing": {
+        "model": "Per user per month, tiered plans with optional AI add-ons",
+        "free_trial": true,
+        "free_trial_duration": "7 days (full access to Elite plan)",
+        "free_plan": true,
+        "currency": "USD",
+        "billing_period": "Monthly or Annual (annual offers up to 20% savings)",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "Free forever",
+            "price_annual": null,
+            "price_monthly": null,
+            "billing_period": "Free",
+            "billing_unit": "Unlimited users",
+            "agents_included": "Unlimited users",
+            "lite_seats": null,
+            "key_features": [
+              "Omnichannel inbox (email, chat, WhatsApp, voice)",
+              "Up to 2 shared inboxes",
+              "Basic collision alerts",
+              "Unlimited tags",
+              "Basic team collaboration",
+              "Customer portal (basic)",
+              "Knowledge base (basic)",
+              "24/7 community support"
+            ]
+          },
+          {
+            "name": "Lite",
+            "price": "$19 per user per month",
+            "price_annual": "$228 per user per year",
+            "price_monthly": "$19",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per user/agent",
+            "agents_included": "As many as needed",
+            "lite_seats": null,
+            "key_features": [
+              "Everything in Free plan",
+              "2 shared inboxes",
+              "Live chat with AI",
+              "WhatsApp support",
+              "Voice integration",
+              "Unlimited email templates",
+              "Collision alerts",
+              "Basic automations (limited)",
+              "Customer portal",
+              "Knowledge base",
+              "Team collaboration (notes, @mentions)",
+              "Basic analytics",
+              "24/7 priority support"
+            ]
+          },
+          {
+            "name": "Growth",
+            "price": "$29 per user per month",
+            "price_annual": "$348 per user per year",
+            "price_monthly": "$29",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per user/agent",
+            "agents_included": "As many as needed",
+            "lite_seats": null,
+            "key_features": [
+              "Everything in Lite plan",
+              "3 shared inboxes",
+              "15 rule-based automations",
+              "CSAT surveys",
+              "Advanced analytics and custom reports",
+              "AI Summarizer",
+              "AI Template suggestions",
+              "Email sentiment analysis",
+              "Zapier integration",
+              "Advanced reporting and dashboards",
+              "SLA policies and alerts",
+              "24/7 priority support"
+            ]
+          },
+          {
+            "name": "Pro",
+            "price": "$49 per user per month",
+            "price_annual": "$588 per user per year",
+            "price_monthly": "$49",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per user/agent",
+            "agents_included": "As many as needed",
+            "lite_seats": null,
+            "key_features": [
+              "Everything in Growth plan",
+              "5 shared inboxes",
+              "Unlimited rule-based automations",
+              "AI Chatbots",
+              "Round-robin assignment",
+              "Skill-based auto-assignment",
+              "Salesforce native integration",
+              "Advanced CSAT reports",
+              "Thank You detection (Harvey AI)",
+              "Email template AI suggestions",
+              "SLA reports and business hours",
+              "Custom Reports and Dashboards",
+              "24/7 priority support"
+            ]
+          },
+          {
+            "name": "Elite",
+            "price": "$79 per user per month",
+            "price_annual": "$948 per user per year",
+            "price_monthly": "$79",
+            "billing_period": "Monthly or Annual",
+            "billing_unit": "Per user/agent",
+            "agents_included": "As many as needed",
+            "lite_seats": null,
+            "key_features": [
+              "Everything in Pro plan",
+              "Unlimited shared inboxes",
+              "HIPAA compliance certification",
+              "Okta integration",
+              "Advanced skill-based routing",
+              "Unlimited automations with body-search",
+              "Priority onboarding",
+              "Dedicated account management (on request)",
+              "Enhanced SLA management",
+              "Advanced reporting",
+              "24/7 priority phone support",
+              "Custom integrations support"
+            ]
+          }
+        ],
+        "add_ons": {
+          "hiver_ai_add_on": "$20 per user per month - Includes AI Compose, AI Summarizer, AI Tagging, AI Sentiment Analysis, AI Suggested Responses, AI Thank You Detector, Ask AI (including PDF upload and Notion integration), AI Extract",
+          "note": "Hiver AI features are foundational across the product but advanced AI capabilities require the separate $20/user/month AI add-on for offline purchase through Account Manager or Sales"
+        },
+        "additional_costs": null,
+        "enterprise_custom": true,
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": null,
+            "max": null
+          },
+          "training_hours_estimate": null,
+          "training_cost_per_hour": null,
+          "premium_integrations": null,
+          "api_limits": null,
+          "data_storage_limits": null,
+          "migration_estimate": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "features": [
+        {
+          "name": "Omnichannel Inbox",
+          "description": "Manage customer conversations across email, live chat, WhatsApp, voice, SMS, Facebook, and Instagram from a single unified interface, eliminating tool-switching and providing 360-degree customer visibility.",
+          "available_in_plans": [
+            "Free",
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Core Features"
+        },
+        {
+          "name": "Shared Inboxes with Collision Alerts",
+          "description": "Create team-based shared inboxes for support, sales, or operations with real-time collision detection that prevents duplicate replies and ensures every customer query receives exactly one response.",
+          "available_in_plans": [
+            "Free",
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Team Collaboration"
+        },
+        {
+          "name": "AI-Powered Automation & Workflows",
+          "description": "Set up rule-based automations to triage, assign, tag, and monitor tickets automatically based on keywords, priority, or customer attributes, reducing manual work and ensuring consistent handling.",
+          "available_in_plans": [
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Automation"
+        },
+        {
+          "name": "Harvey AI Sidekick",
+          "description": "Intelligent AI assistant that suggests relevant email templates, automatically detects and closes non-actionable 'thank you' responses, summarizes conversations, performs sentiment analysis, and extracts key information—improving agent efficiency and SLA accuracy.",
+          "available_in_plans": [
+            "Pro",
+            "Elite"
+          ],
+          "category": "AI Features"
+        },
+        {
+          "name": "Ask AI with Knowledge Integration",
+          "description": "AI-powered feature that answers customer and team questions by searching your knowledge base, Notion pages, snippets, and uploaded PDFs—enabling agents to provide accurate, context-aware responses in seconds without manual research.",
+          "available_in_plans": [
+            "Pro",
+            "Elite"
+          ],
+          "category": "AI Features"
+        },
+        {
+          "name": "AI Chatbots & Live Chat",
+          "description": "Deploy AI-powered chatbots to handle repetitive queries automatically and offer real-time chat support with intelligent suggestions, enabling 24/7 self-service and faster customer resolutions.",
+          "available_in_plans": [
+            "Pro",
+            "Elite"
+          ],
+          "category": "Customer Engagement"
+        },
+        {
+          "name": "Skill-Based Assignment & Round-Robin",
+          "description": "Automatically route customer queries to the most qualified agent based on language, product expertise, skill level, or availability—ensuring faster resolutions and consistent quality while balancing workload.",
+          "available_in_plans": [
+            "Pro",
+            "Elite"
+          ],
+          "category": "Workflow Automation"
+        },
+        {
+          "name": "SLA Management & Alerts",
+          "description": "Define and enforce service-level agreements with real-time alerts, reminders, and business hours settings to ensure timely responses and resolutions, with comprehensive SLA reporting for accountability.",
+          "available_in_plans": [
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Performance Management"
+        },
+        {
+          "name": "Knowledge Base & Help Center",
+          "description": "Build a branded, searchable knowledge base with multi-layered categories and AI-powered article suggestions, reducing repetitive queries and enabling customers to find answers independently 24/7.",
+          "available_in_plans": [
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Self-Service"
+        },
+        {
+          "name": "Customer Portal",
+          "description": "Empower customers with a personalized portal to submit tickets, track progress in real-time, and access the knowledge base—reducing agent interactions and enabling self-service issue management with customizable forms.",
+          "available_in_plans": [
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Self-Service"
+        },
+        {
+          "name": "CSAT Surveys & Sentiment Analysis",
+          "description": "Gather customer satisfaction feedback through automated CSAT surveys and AI-powered sentiment analysis to track satisfaction trends, identify service gaps, and measure team performance across conversations.",
+          "available_in_plans": [
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Analytics & Insights"
+        },
+        {
+          "name": "Advanced Analytics & Custom Reports",
+          "description": "Access built-in dashboards and create custom reports tracking key metrics like response time, resolution time, SLA compliance, team workload, customer satisfaction, and conversation volume with data export capabilities.",
+          "available_in_plans": [
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Analytics & Insights"
+        },
+        {
+          "name": "Integrations & API",
+          "description": "Connect with 100+ business tools including Salesforce, HubSpot, Slack, Zapier, Jira, Asana, Monday.com, Aircall, and more—plus a REST API for custom integrations and data synchronization.",
+          "available_in_plans": [
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Integration"
+        },
+        {
+          "name": "Team Collaboration Features",
+          "description": "Collaborate efficiently with internal notes, @mentions, shared drafts, and conversation threading—enabling seamless team coordination without adding to customer-facing emails.",
+          "available_in_plans": [
+            "Free",
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Team Collaboration"
+        },
+        {
+          "name": "Mobile Apps & Responsive Design",
+          "description": "Manage customer conversations on-the-go with native iOS and Android mobile apps offering full functionality, enabling agents to respond and collaborate from anywhere.",
+          "available_in_plans": [
+            "Free",
+            "Lite",
+            "Growth",
+            "Pro",
+            "Elite"
+          ],
+          "category": "Accessibility"
+        }
+      ],
+      "integrations": {
+        "has_api": true,
+        "api_docs_url": "https://developer.hiverhq.com/hiver-api",
+        "api_type": "REST API",
+        "total_integrations": "100+",
+        "total_integrations_source": "https://hiverhq.com/integrations/app-library",
+        "app_store_topics": null,
+        "top_integrations": [
+          "Salesforce",
+          "HubSpot",
+          "Slack",
+          "Zapier",
+          "Jira",
+          "Asana",
+          "Monday.com",
+          "Aircall",
+          "Okta",
+          "Google Workspace",
+          "Microsoft Teams",
+          "Shopify",
+          "Pipedrive",
+          "Notion",
+          "Google Calendar"
+        ],
+        "integration_categories": [
+          "CRM (Salesforce, HubSpot, Pipedrive)",
+          "Project Management (Jira, Asana, Monday.com, ClickUp)",
+          "Communication (Slack, Microsoft Teams, Aircall)",
+          "Automation (Zapier, n8n)",
+          "E-commerce (Shopify)",
+          "Knowledge Management (Notion)",
+          "Identity & Access (Okta)",
+          "Workspace (Google Workspace, Microsoft 365)"
+        ],
+        "api_capabilities": "REST API for programmatic access to inboxes, conversations, users, tags, and custom integrations; supports webhook and automation triggers"
+      },
+      "unique_selling_points": [
+        "Gmail-native interface that feels like email, enabling instant adoption without training friction—agents are productive from day one without complex onboarding",
+        "Industry-leading AI features (Harvey, Ask AI, sentiment analysis) built into all plans, with optional advanced AI add-on providing comprehensive automation across the entire support lifecycle",
+        "24/7 human-led support and personalized onboarding available across all pricing tiers at no extra cost—ensuring customers always have access to expert help",
+        "Omnichannel in a single inbox without complicated ticketing systems—managing email, chat, voice, WhatsApp, and social from one unified, intuitive interface reduces tool sprawl",
+        "Flexible pricing with a free forever plan supporting unlimited users, making it accessible for startups while scaling affordably as teams grow",
+        "Skill-based auto-assignment and round-robin routing powered by AI automation ensure faster resolutions and balanced workload distribution"
+      ],
+      "target_audience": [
+        "Small to mid-market teams (startups to 1000+ employees)",
+        "Companies using Google Workspace or Microsoft 365 extensively",
+        "Customer service and support teams",
+        "Recruitment and HR teams managing high email volume",
+        "Finance and accounts payable teams",
+        "E-commerce and SaaS businesses",
+        "Educational institutions",
+        "Organizations prioritizing ease of use over complex customization",
+        "Budget-conscious teams seeking affordable, feature-rich solutions"
+      ],
+      "reputation": {
+        "g2_rating": 4.6,
+        "g2_rating_max": 5,
+        "g2_reviews_count": 1171,
+        "g2_url": "https://www.g2.com/products/hiver/reviews",
+        "g2_source": "https://www.rannkly.com/company/reviews/hiver-reviews-ratings",
+        "g2_rating_details": "4.6 out of 5 stars based on 1,171 verified reviews as of December 2024; 80% of reviews are 5-star ratings; consistently ranked in G2's top software lists",
+        "g2_leader_status": "Recognized in G2's Best Software lists for multiple years; strong performance in customer satisfaction and support quality rankings",
+        "capterra_rating": 4.7,
+        "capterra_rating_max": 5,
+        "capterra_reviews_count": 144,
+        "capterra_url": "https://www.capterra.com/p/142975/Hiver/",
+        "capterra_source": "https://www.capterra.com/p/142975/Hiver/",
+        "capterra_value_rating": 4.7,
+        "trustradius_rating": 7.7,
+        "trustradius_rating_max": 10,
+        "trustradius_reviews_count": 14,
+        "trustradius_url": "https://www.trustradius.com/products/hiver/reviews",
+        "trustradius_source": "https://www.rannkly.com/company/reviews/hiver-reviews-ratings",
+        "awards": [
+          "G2 Best Software (multiple categories, 2022-2024)",
+          "G2 Top 100 products",
+          "G2 Top 20 for customer satisfaction",
+          "G2 Leader in Help Desk Software",
+          "Users Love Us badge (customer sentiment)",
+          "High Performer in customer support and ease of use categories"
+        ]
+      },
+      "security_compliance": {
+        "certifications": [
+          "GDPR compliant",
+          "ISO 27001 certified",
+          "SOC 2 Type II certified",
+          "HIPAA compliant (Elite plan)",
+          "CCPA compliant"
+        ],
+        "security_features": [
+          "AWS-hosted infrastructure with redundancy and failover mechanisms",
+          "Encryption for data in transit and at rest",
+          "Role-based access control (RBAC) with Okta integration support",
+          "Regular security audits and vulnerability assessments",
+          "Strict firewall controls and network security",
+          "Data backup and disaster recovery protocols"
+        ]
+      },
+      "seo_metadata": {
+        "alternative_names": [
+          "Hiver HQ",
+          "Gmail help desk",
+          "Email collaboration tool",
+          "Shared inbox software",
+          "Customer service for Gmail"
+        ],
+        "main_competitors": [
+          "Zendesk",
+          "Freshdesk",
+          "Front",
+          "Help Scout",
+          "Intercom",
+          "HubSpot Service Hub",
+          "Kayako",
+          "Zoho Desk",
+          "LiveAgent"
+        ],
+        "keywords": [
+          "Help desk software",
+          "Email management",
+          "Shared inbox",
+          "Customer service platform",
+          "Omnichannel support",
+          "Team collaboration",
+          "AI customer service",
+          "Gmail help desk",
+          "Ticket management",
+          "Customer portal",
+          "Live chat software",
+          "Knowledge base",
+          "SLA management",
+          "Workflow automation"
+        ]
+      },
+      "founder_information": {
+        "founders": [
+          "Niraj Ranjan Rout (CEO & Co-founder)",
+          "Nitesh Nandy (Co-founder)"
+        ],
+        "origin_story": "Founded in 2011 by IIT-Kharagpur graduates Niraj and Nitesh, Hiver started as Grexit (Latin for 'flock') with a simple mission: solve the problem of email collaboration for teams. The founders identified a market gap when Gmail was being underutilized for business collaboration. Initially bootstrapped, they achieved significant traction through inbound marketing and product-led growth. In 2016, they secured Series A funding ($4M) from Kalaari Capital and Kae Capital. By 2022, the company raised Series B funding of $22M from K1 Capital and existing investors, accelerating growth and product development.",
+        "headquarters": "San Jose, California, USA",
+        "offices": [
+          "San Jose, California, USA (2880 Zanker Rd, Ste 203)",
+          "Bangalore, India (HSR Layout, 1496/A 2nd floor, 8th Cross Road)"
+        ]
+      },
+      "funding_history": {
+        "total_raised": "$30+ million",
+        "valuation": null,
+        "funding_rounds": [
+          "Bootstrapped (2011-2015)",
+          "Series A: $4 million (2016, from Kalaari Capital and Kae Capital)",
+          "Series B: $22 million (2022, from K1 Capital, Kalaari Capital, Kae Capital, AngelList)"
+        ]
+      },
+      "company_info": {
+        "headquarters": "2880 Zanker Rd, Suite 203, San Jose, California 95134, USA",
+        "original_headquarters": "Bangalore, India",
+        "founding_location": "Bangalore, India",
+        "founders": [
+          "Niraj Ranjan Rout",
+          "Nitesh Nandy"
+        ],
+        "employees": "80-100 (51-200 range per LinkedIn; approx. 80-100 current headcount)",
+        "employee_count": "51-200 employees",
+        "nasdaq_listing": null,
+        "company_mission": "Empower teams to deliver stellar customer support by simplifying email collaboration and customer communication through an intuitive, AI-powered platform"
+      },
+      "market_presence": {
+        "global_coverage": "30+ countries across Americas, Europe, Asia-Pacific, and EMEA",
+        "primary_market": "United States (50%+ revenue share); strong presence in Europe and English-speaking markets",
+        "traffic_source": "Primarily organic/inbound marketing from SEO and content; strong product-led growth",
+        "global_ranking": null
+      },
+      "additional_info": {
+        "headquarters": "San Jose, California, USA",
+        "founding_location": "Bangalore, India",
+        "employee_count": "51-200 employees globally",
+        "global_presence": "10,000+ customers across 30+ countries including US, UK, Europe, Asia-Pacific",
+        "acquisition_history": [],
+        "mission": "Deliver exceptional customer service through simplicity, AI-powered automation, and team collaboration built into an intuitive platform that works where teams already work—Gmail and Outlook"
+      },
+      "data_sources": {
+        "official_website": "https://hiverhq.com/",
+        "g2_reviews": "https://www.g2.com/products/hiver/reviews",
+        "capterra_reviews": "https://www.capterra.com/p/142975/Hiver/",
+        "api_documentation": "https://developer.hiverhq.com/hiver-api",
+        "pricing_page": "https://hiverhq.com/pricing",
+        "wikipedia": null
+      },
+      "suitability": {
+        "company_size": [
+          "1-10",
+          "11-50",
+          "51-200",
+          "201-1000",
+          "1001+"
+        ],
+        "industries": [
+          "E-commerce",
+          "SaaS",
+          "Recruitment & HR",
+          "Finance & Accounting",
+          "Logistics",
+          "Education",
+          "Technology",
+          "Professional Services",
+          "Customer Service/Support Centers",
+          "Marketing Agencies"
+        ],
+        "support_volume": [
+          "100-1K",
+          "1K-10K",
+          "10K+"
+        ],
+        "complexity_score": 5,
+        "implementation_time_days": 1,
+        "best_for": [
+          "Teams already using Google Workspace or Outlook seeking seamless email-based support",
+          "Small to mid-market businesses prioritizing affordability with powerful features",
+          "Organizations valuing ease of adoption over complex customization",
+          "Companies needing fast deployment and minimal onboarding effort",
+          "Support teams managing high email volume across multiple channels",
+          "Businesses seeking cost-effective AI-powered customer service automation"
+        ],
+        "not_ideal_for": [
+          "Large enterprises requiring deep customization and complex workflows from the start",
+          "Organizations exclusively using email systems other than Gmail/Outlook",
+          "Teams needing phone support as a primary channel without third-party integration",
+          "Highly regulated industries requiring on-premises deployment options",
+          "Businesses requiring extensive out-of-the-box telephony integrations"
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "Medium",
+        "lock_in_risk": "Medium",
+        "contract_flexibility": "Flexible month-to-month or annual billing with no multi-year lock-in; annual plans offer up to 20% discount",
+        "data_export": "Data can be exported; standard APIs support integration and custom export workflows",
+        "common_complaints": [
+          "Significant pricing increases when plans change (user reports of 62% increases); plans frequently restructured with features moved to higher tiers",
+          "Steep pricing relative to very small teams and startups (though free plan available)",
+          "Mobile app experience not as robust as desktop version",
+          "Email sending reliability concerns reported by small number of users",
+          "Limited customization compared to enterprise help desk solutions",
+          "Performance lag with very high email volumes",
+          "Support responsiveness variable (excellent for most, some delays reported)"
+        ],
+        "mitigation": [
+          "Start with free plan to evaluate before committing to paid tiers",
+          "Document current feature needs to track changes during plan restructuring",
+          "Negotiate annual plans for 20% savings and rate lock-in",
+          "Set up comprehensive data exports and API integrations early for data portability",
+          "For large-scale deployments, discuss custom pricing and contract terms with sales",
+          "Utilize 24/7 support channel for rapid issue escalation if needed",
+          "Maintain documentation of integrations and workflows for potential migration planning"
+        ]
+      },
+      "last_verified": "2025-12-16"
+    },
+    {
+      "company_name": "Salesforce, Inc.",
+      "trade_name": "Salesforce Service Cloud",
+      "tagline": "Deliver smarter, faster, more personalized service with the world’s #1 AI CRM.",
+      "description": "Salesforce Service Cloud is an omnichannel customer service platform that centralizes cases, conversations, and knowledge so agents can resolve issues faster across every touchpoint. Built on the Salesforce Customer 360 platform, it combines case management, automation, AI, and analytics to help support teams deliver personalized, scalable customer experiences. Designed for high-growth and enterprise organizations, it connects digital channels, back‑office systems, and self‑service into one unified service workspace.",
+      "category_primary": "Help Desk / Customer Service CRM",
+      "categories_secondary": [
+        "Contact Center",
+        "Ticketing System",
+        "Omnichannel Support",
+        "Customer Service Automation",
+        "Knowledge Base & Self-Service",
+        "Field Service Management"
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Salesforce.com_logo.svg",
+      "website_url": "https://www.salesforce.com/products/service-cloud/overview/",
+      "pricing_url": "https://www.salesforce.com/products/service-cloud/pricing/",
+      "founded_year": 1999,
+      "statistics": {
+        "customer_count": "Salesforce CRM is used by over 150,000 customers worldwide; Service Cloud is widely adopted across Fortune 500 and enterprise organizations.",
+        "customer_count_source": "https://www.salesforce.com/company/news-press/press-releases/",
+        "market_share": "Salesforce holds the #1 global CRM market share position; Service Cloud is a leading customer service CRM within this portfolio.",
+        "market_share_source": "https://www.salesforce.com/news/stories/salesforce-named-1-crm-2024/",
+        "annual_resolutions": null,
+        "industries_served": "Cross‑industry platform used in technology, financial services, retail, manufacturing, healthcare, public sector, and more.",
+        "notable_customers": "Frequently referenced customers include Toyota, Adidas, American Express, and other large global brands using Salesforce for service operations.",
+        "market_position": "Positioned as an enterprise‑grade, AI‑enhanced service platform for complex, high‑volume, omnichannel customer support."
+      },
+      "pricing": {
+        "model": "Per-user, per-month subscription (SaaS), billed annually for most licenses.",
+        "free_trial": true,
+        "free_trial_duration": "Typically 30 days (exact availability and duration may vary by region and offer).",
+        "free_plan": false,
+        "currency": "USD",
+        "billing_period": "Monthly (billed annually for core editions)",
+        "plans": [
+          {
+            "name": "Starter Suite",
+            "price": "From $25/user/month billed annually",
+            "price_annual": "$25/user/month billed annually",
+            "price_monthly": null,
+            "billing_period": "per user / month (annual contract)",
+            "billing_unit": "per user",
+            "agents_included": "Minimum of 5 users recommended; each additional agent requires a license.",
+            "lite_seats": null,
+            "key_features": [
+              "Entry-level CRM suite combining basic sales, service, marketing, and commerce capabilities for small teams",
+              "Email, phone, and basic case management to centralize support requests",
+              "Simple configuration and out‑of‑the‑box workflows for faster onboarding"
+            ]
+          },
+          {
+            "name": "Pro Suite",
+            "price": "Around $100/user/month (representative third‑party listing; check Salesforce pricing page for current official price)",
+            "price_annual": "Approximately $100/user/month billed annually (verify on official pricing page)",
+            "price_monthly": null,
+            "billing_period": "per user / month (annual contract)",
+            "billing_unit": "per user",
+            "agents_included": "Licensed per named user; no fixed maximum.",
+            "lite_seats": null,
+            "key_features": [
+              "More flexible CRM suite with expanded sales, service, marketing, and commerce tools",
+              "Enhanced automation and customization options across multiple clouds",
+              "Improved reporting and configuration for growing teams"
+            ]
+          },
+          {
+            "name": "Enterprise (Service Cloud)",
+            "price": "From $175/user/month billed annually",
+            "price_annual": "$175/user/month billed annually",
+            "price_monthly": null,
+            "billing_period": "per user / month (annual contract)",
+            "billing_unit": "per user",
+            "agents_included": "Per named agent license; designed for mid‑market and enterprise service teams.",
+            "lite_seats": null,
+            "key_features": [
+              "Full Service Cloud with advanced case management and omnichannel routing",
+              "Configurable workflows, automation, SLAs, and service processes",
+              "Access to Einstein AI capabilities for case recommendations and automation (depending on configuration and add‑ons)",
+              "Integrated knowledge base and customer self‑service portals"
+            ]
+          },
+          {
+            "name": "Unlimited (Service Cloud)",
+            "price": "From $350/user/month billed annually",
+            "price_annual": "$350/user/month billed annually",
+            "price_monthly": null,
+            "billing_period": "per user / month (annual contract)",
+            "billing_unit": "per user",
+            "agents_included": "Per named agent; intended for large, business‑critical service operations.",
+            "lite_seats": null,
+            "key_features": [
+              "All Enterprise features plus 24/7 support and additional success resources",
+              "Expanded customization, sandboxes, and configuration options",
+              "Higher limits for data, automation, and API calls compared with Enterprise",
+              "Priority customer support from Salesforce"
+            ]
+          },
+          {
+            "name": "Agentforce 1 Service / Einstein 1 Service (top tier)",
+            "price": "From $500–$550/user/month billed annually (depending on edition name and package; see official pricing page for exact current price)",
+            "price_annual": "$500–$550/user/month billed annually (estimate based on recent pricing guides)",
+            "price_monthly": null,
+            "billing_period": "per user / month (annual contract)",
+            "billing_unit": "per user",
+            "agents_included": "Per named agent; targeted at very large, AI‑driven enterprises.",
+            "lite_seats": null,
+            "key_features": [
+              "Best-of-Salesforce service stack with deeply integrated Einstein AI and Data Cloud",
+              "Advanced automation, predictive insights, and generative AI agent assistance",
+              "Broader platform entitlements and higher usage limits for mission‑critical environments"
+            ]
+          }
+        ],
+        "add_ons": {
+          "freddy_ai_agent": null,
+          "note": "Salesforce offers numerous paid add‑ons such as Salesforce Service Cloud Voice, Slack Enterprise+, Tableau analytics, and industry-specific clouds; pricing is typically additional per user or per org and varies by product."
+        },
+        "additional_costs": [
+          {
+            "name": "Implementation & consulting services (via Salesforce partners or internal teams)",
+            "cost": null,
+            "cost_inbound": null,
+            "cost_call_recording": null,
+            "cost_outbound_us": null,
+            "applies_to": "Organizations requiring custom configuration, integrations, data migration, and training"
+          }
+        ],
+        "enterprise_custom": true,
+        "contact_sales_for_enterprise": true,
+        "hidden_costs": {
+          "implementation_fee": {
+            "min": 0,
+            "max": 0
+          },
+          "training_hours_estimate": 0,
+          "training_cost_per_hour": null,
+          "premium_integrations": null,
+          "api_limits": null,
+          "data_storage_limits": null,
+          "migration_estimate": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "features": [
+        {
+          "name": "Case & Ticket Management",
+          "description": "Centralizes customer issues into structured cases so agents can track, prioritize, and resolve requests across channels in a single console.",
+          "available_in_plans": [
+            "Starter Suite",
+            "Pro Suite",
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Ticketing/Case Management"
+        },
+        {
+          "name": "Omnichannel & Digital Engagement",
+          "description": "Routes and manages conversations from email, phone, chat, messaging, social media, and self‑service portals so customers can use their preferred channel without losing context.",
+          "available_in_plans": [
+            "Pro Suite",
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Multi-channel support"
+        },
+        {
+          "name": "Einstein AI & Automation",
+          "description": "Uses AI to suggest replies, summarize cases, recommend next best actions, and power chatbots that handle routine questions, reducing handle time and improving first‑contact resolution.",
+          "available_in_plans": [
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Automations/AI"
+        },
+        {
+          "name": "Knowledge Base & Self-Service Portals",
+          "description": "Lets teams create, manage, and publish articles and FAQs so agents and customers can quickly find answers without escalating to live support.",
+          "available_in_plans": [
+            "Starter Suite",
+            "Pro Suite",
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Knowledge base/Self-service"
+        },
+        {
+          "name": "Analytics, Dashboards, and Reporting",
+          "description": "Provides real‑time dashboards and reports on KPIs like CSAT, handle time, and backlog so leaders can optimize staffing, processes, and channels.",
+          "available_in_plans": [
+            "Starter Suite",
+            "Pro Suite",
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Analytics/Reporting"
+        },
+        {
+          "name": "Integrations & AppExchange Ecosystem",
+          "description": "Connects Service Cloud with email, telephony, collaboration tools, and business apps through a large integration marketplace so support data stays in sync with the rest of the tech stack.",
+          "available_in_plans": [
+            "Starter Suite",
+            "Pro Suite",
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Integrations"
+        },
+        {
+          "name": "Agent Workspace & Team Collaboration (Slack Swarming)",
+          "description": "Gives agents a unified workspace and integrates with Slack to swarm complex cases with experts across the company, speeding up resolution for multi‑stakeholder issues.",
+          "available_in_plans": [
+            "Enterprise",
+            "Unlimited",
+            "Agentforce / Einstein 1 Service"
+          ],
+          "category": "Team collaboration"
+        }
+      ],
+      "integrations": {
+        "has_api": true,
+        "api_docs_url": "https://developer.salesforce.com/docs/",
+        "api_type": "REST and SOAP APIs with extensive platform and bulk APIs",
+        "total_integrations": "Thousands of apps and integrations available via Salesforce AppExchange (exact count changes over time).",
+        "total_integrations_source": "https://appexchange.salesforce.com/",
+        "app_store_topics": null,
+        "top_integrations": [
+          "Slack",
+          "Service Cloud Voice (Amazon Connect and other telephony partners)",
+          "Twilio",
+          "WhatsApp and SMS messaging providers",
+          "Facebook, Twitter/X, and other social channels",
+          "Gmail and Microsoft Outlook (email integration)",
+          "Zendesk or external helpdesk migration connectors",
+          "Tableau and other analytics tools"
+        ],
+        "integration_categories": [
+          "Telephony & Contact Center",
+          "Messaging & Collaboration",
+          "Analytics & BI",
+          "Marketing & CRM",
+          "ITSM and Productivity"
+        ],
+        "api_capabilities": "Robust platform APIs for CRUD operations on CRM and service objects, bulk data operations, metadata and configuration APIs, streaming events, and integrations with external data platforms via Salesforce Data Cloud."
+      },
+      "unique_selling_points": [
+        "Deep native integration with the broader Salesforce Customer 360 platform, allowing service teams to leverage unified customer data from sales, marketing, and commerce for more personalized support.",
+        "Enterprise‑grade omnichannel routing and case management capable of handling highly complex, high‑volume service operations across voice, digital, and field service.",
+        "Einstein AI features that use first‑party CRM data to power generative replies, recommendations, and intelligent automation in the service console.",
+        "Extensible platform with one of the largest CRM app ecosystems (AppExchange), enabling organizations to tailor Service Cloud to virtually any industry or workflow.",
+        "Proven fit for large and global enterprises with strong security, compliance, and governance features suitable for regulated industries."
+      ],
+      "target_audience": [
+        "Mid‑market and enterprise customer service organizations",
+        "Global brands with complex, multi‑channel support requirements",
+        "Companies already invested in Salesforce Sales Cloud or Marketing Cloud",
+        "Industries with regulated or complex service processes such as financial services, healthcare, manufacturing, and public sector"
+      ],
+      "reputation": {
+        "g2_rating": 4.4,
+        "g2_rating_max": 5,
+        "g2_reviews_count": 7164,
+        "g2_url": "https://www.g2.com/products/salesforce-service-cloud/reviews",
+        "g2_source": "https://www.g2.com/products/salesforce-service-cloud/reviews",
+        "g2_rating_details": "G2 users rate Salesforce Service Cloud 4.4/5, with strong scores for feature richness and flexibility, but note complexity and implementation effort.",
+        "g2_leader_status": "Consistently recognized as a Leader in the G2 Grid for Customer Service & CRM categories.",
+        "capterra_rating": 4.4,
+        "capterra_rating_max": 5,
+        "capterra_reviews_count": 700,
+        "capterra_url": "https://www.capterra.com/p/85376/Salesforce-Service-Cloud/",
+        "capterra_source": "https://www.capterra.com/p/85376/Salesforce-Service-Cloud/",
+        "capterra_value_rating": null,
+        "trustradius_rating": 8.6,
+        "trustradius_rating_max": 10,
+        "trustradius_reviews_count": 398,
+        "trustradius_url": "https://www.trustradius.com/products/salesforce-service-cloud/reviews",
+        "trustradius_source": "https://www.trustradius.com/products/salesforce-service-cloud/reviews",
+        "awards": [
+          "Regularly ranked a Leader in G2 Service Desk and Customer Service & Support grids",
+          "Recognized in Gartner Magic Quadrant reports for CRM Customer Engagement (Salesforce platform)",
+          "Multiple industry awards for CRM and customer experience innovation"
+        ]
+      },
+      "security_compliance": {
+        "certifications": [
+          "SOC 1",
+          "SOC 2",
+          "SOC 3",
+          "ISO 27001",
+          "HIPAA-ready capabilities (for eligible clouds and configurations)",
+          "GDPR support features"
+        ],
+        "security_features": [
+          "Role-based access control and granular permissions",
+          "Data encryption at rest and in transit",
+          "Field-level security and object-level security",
+          "Single sign-on (SSO) and multi-factor authentication (MFA)",
+          "Audit logs and event monitoring",
+          "IP restrictions and login controls"
+        ]
+      },
+      "seo_metadata": {
+        "alternative_names": [
+          "Salesforce Service Cloud",
+          "Salesforce customer service",
+          "Salesforce support cloud",
+          "Service Cloud CRM",
+          "Salesforce help desk"
+        ],
+        "main_competitors": [
+          "Zendesk",
+          "Freshdesk (Freshservice/Freshworks)",
+          "Zoho Desk",
+          "ServiceNow Customer Service Management",
+          "HubSpot Service Hub"
+        ],
+        "keywords": [
+          "Salesforce Service Cloud",
+          "customer service CRM",
+          "omnichannel contact center",
+          "case management software",
+          "AI customer service platform",
+          "enterprise help desk",
+          "knowledge base and self service",
+          "customer support automation",
+          "service cloud pricing",
+          "Salesforce support software"
+        ]
+      },
+      "founder_information": {
+        "founders": [
+          "Marc Benioff",
+          "Parker Harris",
+          "Dave Moellenhoff",
+          "Frank Dominguez"
+        ],
+        "origin_story": "Salesforce pioneered the software‑as‑a‑service model in CRM starting in 1999, and Service Cloud was later introduced as a dedicated platform to bring the same cloud-first approach to customer service and support.",
+        "headquarters": "San Francisco, California, United States",
+        "offices": [
+          "San Francisco, CA, USA",
+          "Indianapolis, IN, USA",
+          "Dublin, Ireland",
+          "London, United Kingdom",
+          "Tokyo, Japan",
+          "Sydney, Australia",
+          "Global regional hubs across North America, EMEA, APAC, and LATAM"
+        ]
+      },
+      "funding_history": {
+        "total_raised": "Salesforce, Inc. is a long‑established public company; early venture funding predates its IPO.",
+        "valuation": "Market capitalization fluctuates as a publicly traded company on the NYSE under ticker CRM.",
+        "funding_rounds": [
+          "Early venture rounds prior to 2004 IPO",
+          "Public equity financing via New York Stock Exchange listing"
+        ]
+      },
+      "company_info": {
+        "headquarters": "Salesforce Tower, San Francisco, California, United States",
+        "original_headquarters": "San Francisco, California, United States",
+        "founding_location": "San Francisco, California, United States",
+        "founders": [
+          "Marc Benioff",
+          "Parker Harris",
+          "Dave Moellenhoff",
+          "Frank Dominguez"
+        ],
+        "employees": "Over 70,000 employees globally (Salesforce, Inc.)",
+        "employee_count": "70,000+ employees worldwide (company-wide, not Service Cloud specific).",
+        "nasdaq_listing": "Listed on NYSE under ticker CRM (not Nasdaq).",
+        "company_mission": "To empower companies of every size and industry to connect with their customers in a whole new way using trusted AI, data, and CRM."
+      },
+      "market_presence": {
+        "global_coverage": "Global customer base across North America, EMEA, APAC, and Latin America, with data centers and localizations for many regions.",
+        "primary_market": "Mid‑market and enterprise organizations requiring robust CRM and customer service platforms.",
+        "traffic_source": null,
+        "global_ranking": "Consistently recognized as the #1 CRM provider globally by market share."
+      },
+      "additional_info": {
+        "headquarters": "Salesforce Tower, San Francisco, California, United States",
+        "founding_location": "San Francisco, California, United States",
+        "employee_count": "70,000+ (Salesforce, Inc.)",
+        "global_presence": "Offices and customers across more than 100 countries with regional headquarters in key global cities.",
+        "acquisition_history": [
+          "Acquisition of Slack Technologies to strengthen collaboration and case swarming in Service Cloud.",
+          "Acquisition of Tableau to enhance analytics and reporting across the Salesforce platform.",
+          "Numerous other acquisitions (e.g., MuleSoft, ExactTarget) that indirectly enhance Service Cloud through broader platform capabilities."
+        ],
+        "mission": "To help companies deliver trusted, data‑driven, AI‑powered customer experiences across every touchpoint using a unified CRM platform."
+      },
+      "data_sources": {
+        "official_website": "https://www.salesforce.com/products/service-cloud/overview/",
+        "g2_reviews": "https://www.g2.com/products/salesforce-service-cloud/reviews",
+        "capterra_reviews": "https://www.capterra.com/p/85376/Salesforce-Service-Cloud/",
+        "api_documentation": "https://developer.salesforce.com/docs/",
+        "pricing_page": "https://www.salesforce.com/products/service-cloud/pricing/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Salesforce"
+      },
+      "suitability": {
+        "company_size": [
+          "11-50",
+          "51-200",
+          "201-1000",
+          "1001+"
+        ],
+        "industries": [
+          "Technology",
+          "Financial Services",
+          "Retail and E-commerce",
+          "Manufacturing",
+          "Healthcare and Life Sciences",
+          "Telecommunications",
+          "Public Sector",
+          "Professional Services"
+        ],
+        "support_volume": [
+          "1K-10K",
+          "10K+"
+        ],
+        "complexity_score": 9,
+        "implementation_time_days": 90,
+        "best_for": [
+          "Organizations needing deep CRM integration between sales, service, and marketing.",
+          "Enterprise and global brands with complex, regulated, or high‑volume customer service operations.",
+          "Companies investing in AI‑driven service automation and analytics.",
+          "Teams that want extensive customization, integration, and ecosystem options."
+        ],
+        "not_ideal_for": [
+          "Very small teams needing a simple, low‑cost ticketing tool.",
+          "Organizations unwilling to invest in implementation, configuration, and ongoing admin resources.",
+          "Use cases where a lightweight, out‑of‑the‑box help desk is sufficient without broader CRM."
+        ]
+      },
+      "risk_assessment": {
+        "switching_difficulty": "High",
+        "lock_in_risk": "High",
+        "contract_flexibility": "Annual per‑user contracts are common; scaling down users mid‑term can be limited and requires negotiation.",
+        "data_export": "Exports are possible via reports, APIs, and data loader tools, but complex data models and integrations make full migration effort significant.",
+        "common_complaints": [
+          "Steep learning curve for admins and agents, especially in complex deployments.",
+          "High total cost of ownership when factoring in add‑ons, implementation, and partner services.",
+          "Configuration complexity and time to value for large or heavily customized environments.",
+          "Integrations and cross‑cloud configurations can require expert support."
+        ],
+        "mitigation": [
+          "Start with a clearly scoped implementation and prioritize core use cases before advanced customizations.",
+          "Invest in certified Salesforce admins or partner with experienced implementation consultants.",
+          "Use standardized data models and integration patterns to simplify future changes or migrations.",
+          "Leverage Salesforce training resources and Trailhead to upskill internal teams and reduce reliance on external partners."
+        ]
+      },
+      "last_verified": "2025-12-16"
     }
   ]
 }

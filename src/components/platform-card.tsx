@@ -88,7 +88,7 @@ export function PlatformCard({ platform }: PlatformCardProps) {
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
               <span className="font-semibold text-sm">{displayRating}</span>
               <span className="text-xs text-muted-foreground">
-                ({displayReviewCount.toLocaleString()})
+                ({displayReviewCount})
               </span>
             </div>
           )}

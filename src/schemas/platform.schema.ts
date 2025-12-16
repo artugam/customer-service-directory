@@ -39,7 +39,7 @@ export const pricingSchema = z.object({
   plans: z.array(pricingPlanSchema),
   add_ons: z
     .object({
-      freddy_ai_agent: z.string().nullable(),
+      freddy_ai_agent: z.string().nullable().optional(),
       note: z.string().nullable(),
     })
     .nullable(),
@@ -88,9 +88,9 @@ export const integrationsSchema = z.object({
 
 // Reputation Schema
 export const reputationSchema = z.object({
-  g2_rating: z.number().min(0).max(5),
+  g2_rating: z.number().min(0).max(5).nullable(),
   g2_rating_max: z.number().nullable(),
-  g2_reviews_count: z.number(),
+  g2_reviews_count: z.number().nullable(),
   g2_url: z.string().url().nullable(),
   g2_source: z.string().nullable(),
   g2_rating_details: z.string().nullable(),
@@ -127,13 +127,13 @@ export const founderInformationSchema = z.object({
   founders: z.array(z.string()),
   origin_story: z.string().nullable(),
   headquarters: z.string(),
-  offices: z.array(z.string()).nullable(),
+  offices: z.array(z.string()).nullable().optional(),
 });
 
 // Funding History Schema
 export const fundingHistorySchema = z.object({
-  total_raised: z.string(),
-  valuation: z.string(),
+  total_raised: z.string().nullable(),
+  valuation: z.string().nullable(),
   funding_rounds: z.array(z.string()),
 });
 
@@ -191,28 +191,28 @@ export const suitabilitySchema = z.object({
 // Hidden Costs Schema (for TCO Calculator)
 export const hiddenCostsSchema = z.object({
   implementation_fee: z.object({
-    min: z.number(),
-    max: z.number(),
+    min: z.number().nullable(),
+    max: z.number().nullable(),
   }),
-  training_hours_estimate: z.number(), // estimated hours needed for training
+  training_hours_estimate: z.number().nullable(), // estimated hours needed for training
   training_cost_per_hour: z.number().nullable(), // if platform offers paid training
   premium_integrations: z.array(z.object({
     name: z.string(),
-    cost: z.number(),
+    cost: z.number().nullable(),
     per: z.enum(["month", "year", "one-time"]),
   })).nullable(),
   api_limits: z.object({
-    included_calls: z.number(),
-    overage_per_10k: z.number(), // cost per 10k additional API calls
+    included_calls: z.number().nullable(),
+    overage_per_10k: z.number().nullable(), // cost per 10k additional API calls
   }).nullable(),
   data_storage_limits: z.object({
-    included_gb: z.number(),
-    overage_per_gb: z.number(),
+    included_gb: z.number().nullable(),
+    overage_per_gb: z.number().nullable(),
   }).nullable(),
   migration_estimate: z.object({
-    min: z.number(),
-    max: z.number(),
-  }),
+    min: z.number().nullable(),
+    max: z.number().nullable(),
+  }).nullable(),
 });
 
 // Risk Assessment Schema (for decision confidence)
@@ -247,7 +247,7 @@ export const platformSchema = z.object({
   security_compliance: securityComplianceSchema.nullable(),
   seo_metadata: seoMetadataSchema,
   founder_information: founderInformationSchema.nullable(),
-  funding_history: fundingHistorySchema.nullable(),
+  funding_history: fundingHistorySchema.nullable().optional(),
   company_info: companyInfoSchema.nullable(),
   market_presence: marketPresenceSchema.nullable(),
   additional_info: additionalInfoSchema.nullable(),

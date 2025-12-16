@@ -168,7 +168,7 @@ export default async function PlatformPage({
                     {platform.reputation.g2_rating}
                   </span>
                   <span className="text-muted-foreground">
-                    / 5.0 ({platform.reputation.g2_reviews_count.toLocaleString()}{" "}
+                    / 5.0 ({platform.reputation.g2_reviews_count}{" "}
                     reviews)
                   </span>
                 </div>
