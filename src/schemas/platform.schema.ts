@@ -40,7 +40,7 @@ export const pricingSchema = z.object({
   add_ons: z
     .object({
       freddy_ai_agent: z.string().nullable().optional(),
-      note: z.string().nullable(),
+      note: z.string().nullable().optional(),
     })
     .nullable(),
   additional_costs: z.array(additionalCostSchema).nullable(),
@@ -89,24 +89,24 @@ export const integrationsSchema = z.object({
 // Reputation Schema
 export const reputationSchema = z.object({
   g2_rating: z.number().min(0).max(5).nullable(),
-  g2_rating_max: z.number().nullable(),
-  g2_reviews_count: z.number().nullable(),
-  g2_url: z.string().url().nullable(),
-  g2_source: z.string().nullable(),
-  g2_rating_details: z.string().nullable(),
-  g2_leader_status: z.string().nullable(),
-  capterra_rating: z.number().min(0).max(5).nullable(),
-  capterra_rating_max: z.number().nullable(),
-  capterra_reviews_count: z.number().nullable(),
-  capterra_url: z.string().url().nullable(),
-  capterra_source: z.string().nullable(),
-  capterra_value_rating: z.number().nullable(),
-  trustradius_rating: z.number().nullable(),
-  trustradius_rating_max: z.number().nullable(),
-  trustradius_reviews_count: z.number().nullable(),
-  trustradius_url: z.string().url().nullable(),
-  trustradius_source: z.string().nullable(),
-  awards: z.array(z.string()),
+  g2_rating_max: z.number().nullable().optional(),
+  g2_reviews_count: z.number().nullable().optional(),
+  g2_url: z.string().url().nullable().optional(),
+  g2_source: z.string().nullable().optional(),
+  g2_rating_details: z.string().nullable().optional(),
+  g2_leader_status: z.string().nullable().optional(),
+  capterra_rating: z.number().min(0).max(5).nullable().optional(),
+  capterra_rating_max: z.number().nullable().optional(),
+  capterra_reviews_count: z.number().nullable().optional(),
+  capterra_url: z.string().url().nullable().optional(),
+  capterra_source: z.string().nullable().optional(),
+  capterra_value_rating: z.number().nullable().optional(),
+  trustradius_rating: z.number().nullable().optional(),
+  trustradius_rating_max: z.number().nullable().optional(),
+  trustradius_reviews_count: z.number().nullable().optional(),
+  trustradius_url: z.string().url().nullable().optional(),
+  trustradius_source: z.string().nullable().optional(),
+  awards: z.array(z.string()).optional(),
 });
 
 // Security & Compliance Schema
@@ -140,21 +140,21 @@ export const fundingHistorySchema = z.object({
 // Company Info Schema
 export const companyInfoSchema = z.object({
   headquarters: z.string(),
-  original_headquarters: z.string().nullable(),
+  original_headquarters: z.string().nullable().optional(),
   founding_location: z.string().nullable().optional(),
-  founders: z.array(z.string()).nullable(),
-  employees: z.union([z.number(), z.string()]).nullable(),
+  founders: z.array(z.string()).nullable().optional(),
+  employees: z.union([z.number(), z.string()]).nullable().optional(),
   employee_count: z.string().nullable().optional(),
-  nasdaq_listing: z.string().nullable(),
-  company_mission: z.string().nullable(),
+  nasdaq_listing: z.string().nullable().optional(),
+  company_mission: z.string().nullable().optional(),
 });
 
 // Market Presence Schema
 export const marketPresenceSchema = z.object({
-  global_coverage: z.string().nullable(),
-  primary_market: z.string().nullable(),
-  traffic_source: z.string().nullable(),
-  global_ranking: z.string().nullable(),
+  global_coverage: z.string().nullable().optional(),
+  primary_market: z.string().nullable().optional(),
+  traffic_source: z.string().nullable().optional(),
+  global_ranking: z.string().nullable().optional(),
 });
 
 // Additional Info Schema
@@ -174,7 +174,7 @@ export const dataSourcesSchema = z.object({
   capterra_reviews: z.string().url().nullable(),
   api_documentation: z.string().url().nullable(),
   pricing_page: z.string().url().nullable(),
-  wikipedia: z.string().url().nullable(),
+  wikipedia: z.string().url().nullable().optional(),
 });
 
 // Suitability Schema (for Platform Finder Wizard)
@@ -198,8 +198,8 @@ export const hiddenCostsSchema = z.object({
   training_cost_per_hour: z.number().nullable(), // if platform offers paid training
   premium_integrations: z.array(z.object({
     name: z.string(),
-    cost: z.number().nullable(),
-    per: z.enum(["month", "year", "one-time"]),
+    cost: z.string().nullable(),
+    per: z.string().nullable(),
   })).nullable(),
   api_limits: z.object({
     included_calls: z.number().nullable(),
@@ -217,10 +217,10 @@ export const hiddenCostsSchema = z.object({
 
 // Risk Assessment Schema (for decision confidence)
 export const riskAssessmentSchema = z.object({
-  switching_difficulty: z.enum(["Low", "Medium", "High"]),
-  lock_in_risk: z.enum(["Low", "Medium", "High"]),
-  contract_flexibility: z.string(), // e.g., "Month-to-month available"
-  data_export: z.string(), // e.g., "Full export via API"
+  switching_difficulty: z.string().nullable(),
+  lock_in_risk: z.string().nullable(),
+  contract_flexibility: z.string().nullable(), // e.g., "Month-to-month available"
+  data_export: z.string().nullable(), // e.g., "Full export via API"
   common_complaints: z.array(z.string()), // top complaints from reviews
   mitigation: z.array(z.string()), // how to mitigate risks
 });
@@ -248,12 +248,12 @@ export const platformSchema = z.object({
   seo_metadata: seoMetadataSchema,
   founder_information: founderInformationSchema.nullable(),
   funding_history: fundingHistorySchema.nullable().optional(),
-  company_info: companyInfoSchema.nullable(),
-  market_presence: marketPresenceSchema.nullable(),
-  additional_info: additionalInfoSchema.nullable(),
-  data_sources: dataSourcesSchema.nullable(),
-  suitability: suitabilitySchema.nullable(), // NEW: For Platform Finder Wizard
-  risk_assessment: riskAssessmentSchema.nullable(), // NEW: For decision confidence
+  company_info: companyInfoSchema.nullable().optional(),
+  market_presence: marketPresenceSchema.nullable().optional(),
+  additional_info: additionalInfoSchema.nullable().optional(),
+  data_sources: dataSourcesSchema.nullable().optional(),
+  suitability: suitabilitySchema.nullable().optional(), // NEW: For Platform Finder Wizard
+  risk_assessment: riskAssessmentSchema.nullable().optional(), // NEW: For decision confidence
   last_verified: z.string(),
 });
 
