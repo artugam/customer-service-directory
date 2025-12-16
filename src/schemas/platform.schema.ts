@@ -22,9 +22,9 @@ export const pricingPlanSchema = z.object({
 export const additionalCostSchema = z.object({
   name: z.string(),
   cost: z.string().nullable(),
-  cost_inbound: z.string().nullable(),
-  cost_call_recording: z.string().nullable(),
-  cost_outbound_us: z.string().nullable(),
+  cost_inbound: z.string().nullable().optional(),
+  cost_call_recording: z.string().nullable().optional(),
+  cost_outbound_us: z.string().nullable().optional(),
   applies_to: z.string(),
 });
 
@@ -55,14 +55,14 @@ interface ManualPricing {
 
 // Statistics Schema
 export const statisticsSchema = z.object({
-  customer_count: z.string(),
-  customer_count_source: z.string().nullable(),
-  market_share: z.string().nullable(),
-  market_share_source: z.string().nullable(),
-  annual_resolutions: z.string().nullable(),
-  industries_served: z.string().nullable(),
-  notable_customers: z.string().nullable(),
-  market_position: z.string().nullable(),
+  customer_count: z.string().nullable().optional(),
+  customer_count_source: z.string().nullable().optional(),
+  market_share: z.string().nullable().optional(),
+  market_share_source: z.string().nullable().optional(),
+  annual_resolutions: z.string().nullable().optional(),
+  industries_served: z.string().nullable().optional(),
+  notable_customers: z.string().nullable().optional(),
+  market_position: z.string().nullable().optional(),
 });
 
 // Feature Schema
@@ -78,12 +78,12 @@ export const integrationsSchema = z.object({
   has_api: z.boolean(),
   api_docs_url: z.string().url().nullable(),
   api_type: z.string().nullable(),
-  total_integrations: z.union([z.number(), z.string()]),
-  total_integrations_source: z.string().nullable(),
-  app_store_topics: z.number().nullable(),
+  total_integrations: z.union([z.number(), z.string(), z.null()]).optional(),
+  total_integrations_source: z.string().nullable().optional(),
+  app_store_topics: z.number().nullable().optional(),
   top_integrations: z.array(z.string()),
-  integration_categories: z.array(z.string()).nullable(),
-  api_capabilities: z.string().nullable(),
+  integration_categories: z.array(z.string()).nullable().optional(),
+  api_capabilities: z.string().nullable().optional(),
 });
 
 // Reputation Schema
@@ -244,9 +244,9 @@ export const platformSchema = z.object({
   unique_selling_points: z.array(z.string()),
   target_audience: z.array(z.string()),
   reputation: reputationSchema,
-  security_compliance: securityComplianceSchema.nullable(),
+  security_compliance: securityComplianceSchema.nullable().optional(),
   seo_metadata: seoMetadataSchema,
-  founder_information: founderInformationSchema.nullable(),
+  founder_information: founderInformationSchema.nullable().optional(),
   funding_history: fundingHistorySchema.nullable().optional(),
   company_info: companyInfoSchema.nullable().optional(),
   market_presence: marketPresenceSchema.nullable().optional(),

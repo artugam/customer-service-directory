@@ -130,7 +130,7 @@ export function PlatformCard({ platform }: PlatformCardProps) {
             <Users className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
             <div>
               <p className="text-xs font-medium line-clamp-2">
-                {platform.statistics.customer_count.split(";")[0]}
+                {platform.statistics.customer_count?.split(";")[0]}
               </p>
             </div>
           </div>

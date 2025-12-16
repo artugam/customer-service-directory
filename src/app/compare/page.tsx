@@ -289,7 +289,7 @@ function ComparePageContent() {
                             </p>
                             <p className="text-muted-foreground">
                               <span className="font-medium text-foreground">Customers:</span>{" "}
-                              {platform.statistics.customer_count.split(";")[0]}
+                              {platform.statistics.customer_count?.split(";")[0]}
                             </p>
                           </div>
                         </div>

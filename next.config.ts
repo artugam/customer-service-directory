@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "brandfetch.com" },
       { protocol: "https", hostname: "cloud.gmelius.com" },
       { protocol: "https", hostname: "images.g2crowd.com" },
+      { protocol: "https", hostname: "logo.clearbit.com" },
+      { protocol: "https", hostname: "galleryapplogos1.azureedge.net" },
+      { protocol: "https", hostname: "media.licdn.com" },
+      { protocol: "https", hostname: "osticket.com" },
+      { protocol: "https", hostname: "www.uvdesk.com" },
     ],
   },
 };
