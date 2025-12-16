@@ -58,8 +58,8 @@ export function exportComparisonToCSV(platforms: Platform[]): string {
       `"${platform.tagline}"`,
       platform.founded_year.toString(),
       platform.statistics.customer_count.split(/[;,:]/)[0].trim(),
-      platform.reputation.g2_rating.toString(),
-      platform.reputation.g2_reviews_count.toString(),
+      platform.reputation.g2_rating?.toString() ?? "N/A",
+      platform.reputation.g2_reviews_count?.toString() ?? "0",
       platform.pricing.free_trial ? "Yes" : "No",
       platform.pricing.free_plan ? "Yes" : "No",
       startingPrice,
@@ -96,7 +96,7 @@ ${platform.description}
 ## Key Statistics
 - **Founded**: ${platform.founded_year}
 - **Customers**: ${platform.statistics.customer_count}
-- **G2 Rating**: ${platform.reputation.g2_rating}/5 (${platform.reputation.g2_reviews_count} reviews)
+- **G2 Rating**: ${platform.reputation.g2_rating ?? "N/A"}/5 (${platform.reputation.g2_reviews_count ?? 0} reviews)
 - **Integrations**: ${platform.integrations.total_integrations}+
 
 ## Pricing
@@ -144,7 +144,7 @@ ${platform.integrations.top_integrations.slice(0, 10).join(", ")}
 ${platform.security_compliance ? platform.security_compliance.certifications.join(", ") : "Standard security features"}
 
 ## Awards & Recognition
-${platform.reputation.awards.slice(0, 5).map((award) => `- ${award}`).join("\n")}
+${(platform.reputation.awards ?? []).slice(0, 5).map((award) => `- ${award}`).join("\n")}
 
 ${platform.risk_assessment ? `
 ## Important Considerations
@@ -190,7 +190,7 @@ export function generateComparisonMatrix(platforms: Platform[]): string {
 | **Category** | ${platforms.map((p) => p.category_primary).join(" | ")} |
 | **Founded** | ${platforms.map((p) => p.founded_year).join(" | ")} |
 | **Customers** | ${platforms.map((p) => p.statistics.customer_count.split(/[;,:]/)[0].trim()).join(" | ")} |
-| **G2 Rating** | ${platforms.map((p) => `${p.reputation.g2_rating}/5 (${p.reputation.g2_reviews_count} reviews)`).join(" | ")} |
+| **G2 Rating** | ${platforms.map((p) => `${p.reputation.g2_rating ?? "N/A"}/5 (${p.reputation.g2_reviews_count ?? 0} reviews)`).join(" | ")} |
 | **Free Trial** | ${platforms.map((p) => p.pricing.free_trial ? "✅ Yes" : "❌ No").join(" | ")} |
 | **Free Plan** | ${platforms.map((p) => p.pricing.free_plan ? "✅ Yes" : "❌ No").join(" | ")} |
 | **Starting Price** | ${platforms.map((p) => {

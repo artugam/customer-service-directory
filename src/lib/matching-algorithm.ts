@@ -306,9 +306,9 @@ export function generateMatchReasons(
   }
 
   // High rating
-  if (platform.reputation.g2_rating >= 4.5) {
+  if ((platform.reputation.g2_rating ?? 0) >= 4.5) {
     reasons.push(
-      `Highly rated (${platform.reputation.g2_rating}/5 on G2)`
+      `Highly rated (${platform.reputation.g2_rating ?? "N/A"}/5 on G2)`
     );
   }
 
