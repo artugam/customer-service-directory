@@ -131,9 +131,9 @@ function calculateBaseSubscription(
     const fallbackPlan = platform.pricing.plans[0];
     const price = extractPrice(
       fallbackPlan.price_annual ||
-        fallbackPlan.price_monthly ||
-        fallbackPlan.price ||
-        "0"
+      fallbackPlan.price_monthly ||
+      fallbackPlan.price ||
+      "0"
     );
     return price * agents;
   }
@@ -184,11 +184,12 @@ function calculateIntegrationCosts(
         pi.name.toLowerCase().includes(integration.toLowerCase())
       );
 
-    if (premiumIntegration) {
+    if (premiumIntegration && premiumIntegration.cost) {
+      const costValue = extractPrice(premiumIntegration.cost);
       if (premiumIntegration.per === "month") {
-        total += premiumIntegration.cost;
+        total += costValue;
       } else if (premiumIntegration.per === "year") {
-        total += premiumIntegration.cost / 12;
+        total += costValue / 12;
       }
     }
   });
@@ -206,10 +207,13 @@ function calculateAPIUsage(platform: Platform, monthlyTickets: number): number {
   // Estimate API calls (assume 10 calls per ticket)
   const estimatedCalls = monthlyTickets * 10;
 
-  if (estimatedCalls > limits.included_calls) {
-    const overageCalls = estimatedCalls - limits.included_calls;
+  const includedCalls = limits.included_calls || 0;
+  const overageCost = limits.overage_per_10k || 0;
+
+  if (estimatedCalls > includedCalls) {
+    const overageCalls = estimatedCalls - includedCalls;
     const overageBlocks = Math.ceil(overageCalls / 10000);
-    return overageBlocks * limits.overage_per_10k;
+    return overageBlocks * overageCost;
   }
 
   return 0;
@@ -225,9 +229,12 @@ function calculateStorageCosts(platform: Platform, agents: number): number {
   // Estimate storage (assume 2GB per agent)
   const estimatedStorage = agents * 2;
 
-  if (estimatedStorage > limits.included_gb) {
-    const overageGB = estimatedStorage - limits.included_gb;
-    return overageGB * limits.overage_per_gb;
+  const includedGB = limits.included_gb || 0;
+  const overageCost = limits.overage_per_gb || 0;
+
+  if (estimatedStorage > includedGB) {
+    const overageGB = estimatedStorage - includedGB;
+    return overageGB * overageCost;
   }
 
   return 0;
@@ -284,7 +291,9 @@ function generateWarnings(
     const limits = data.platform.pricing.hidden_costs.api_limits;
     const estimatedCalls = data.inputs.expectedTickets * 10;
 
-    if (estimatedCalls > limits.included_calls * 0.8) {
+    const includedCalls = limits.included_calls || 0;
+
+    if (estimatedCalls > includedCalls * 0.8) {
       warnings.push({
         type: "medium",
         message: "You may exceed API limits with current ticket volume",

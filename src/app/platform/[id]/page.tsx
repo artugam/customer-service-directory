@@ -92,13 +92,15 @@ export default async function PlatformPage({
         .sort((a, b) => a - b)[0] || 0,
       offerCount: platform.pricing.plans.length,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: platform.reputation.g2_rating,
-      ratingCount: platform.reputation.g2_reviews_count,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    ...(platform.reputation.g2_rating ? {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: platform.reputation.g2_rating,
+        ratingCount: platform.reputation.g2_reviews_count ?? 0,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    } : {}),
     description: platform.description,
     url: platform.website_url,
     creator: {
@@ -165,10 +167,10 @@ export default async function PlatformPage({
                 <div className="flex items-center gap-2">
                   <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   <span className="text-2xl font-bold">
-                    {platform.reputation.g2_rating}
+                    {platform.reputation.g2_rating ?? "N/A"}
                   </span>
                   <span className="text-muted-foreground">
-                    / 5.0 ({platform.reputation.g2_reviews_count}{" "}
+                    / 5.0 ({platform.reputation.g2_reviews_count ?? 0}{" "}
                     reviews)
                   </span>
                 </div>

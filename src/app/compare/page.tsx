@@ -188,10 +188,10 @@ function ComparePageContent() {
                         <div className="flex items-center gap-2 pt-2">
                           <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                           <span className="font-semibold text-sm">
-                            {platform.reputation.g2_rating}/5.0
+                            {platform.reputation.g2_rating ?? "N/A"}/5.0
                           </span>
                           <span className="text-sm text-muted-foreground">
-                            ({platform.reputation.g2_reviews_count} reviews)
+                            ({platform.reputation.g2_reviews_count ?? 0} reviews)
                           </span>
                         </div>
                       </CardHeader>

@@ -108,14 +108,14 @@ export async function getFeaturedPlatforms(): Promise<Platform[]> {
 
   // Sort by G2 rating (highest first) and filter for quality platforms
   const sortedPlatforms = platforms
-    .filter((p) => p.reputation.g2_rating >= 4.0) // Only high-rated platforms
+    .filter((p) => (p.reputation.g2_rating ?? 0) >= 4.0) // Only high-rated platforms
     .sort((a, b) => {
       // Primary sort: G2 rating
-      if (b.reputation.g2_rating !== a.reputation.g2_rating) {
-        return b.reputation.g2_rating - a.reputation.g2_rating;
+      if ((b.reputation.g2_rating ?? 0) !== (a.reputation.g2_rating ?? 0)) {
+        return (b.reputation.g2_rating ?? 0) - (a.reputation.g2_rating ?? 0);
       }
       // Secondary sort: Review count
-      return b.reputation.g2_reviews_count - a.reputation.g2_reviews_count;
+      return (b.reputation.g2_reviews_count ?? 0) - (a.reputation.g2_reviews_count ?? 0);
     });
 
   // Select 5 platforms with diverse categories

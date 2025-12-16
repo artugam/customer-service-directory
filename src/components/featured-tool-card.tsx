@@ -65,7 +65,7 @@ export function FeaturedToolCard({ platform }: FeaturedToolCardProps) {
                         <div className="flex items-center text-amber-400">
                             <Star className="w-3.5 h-3.5 fill-current" />
                         </div>
-                        <span className="text-sm font-medium text-foreground/80">{rating}</span>
+                        <span className="text-sm font-medium text-foreground/80">{rating ?? "N/A"}</span>
                         <span className="text-xs text-muted-foreground">/ 5</span>
                     </div>
 

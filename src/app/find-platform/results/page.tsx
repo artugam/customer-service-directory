@@ -166,11 +166,10 @@ export default function ResultsPage() {
             return (
               <Card
                 key={match.platformId}
-                className={`p-6 relative ${
-                  isTopPick
+                className={`p-6 relative ${isTopPick
                     ? "border-2 border-green-500 shadow-lg"
                     : ""
-                }`}
+                  }`}
               >
                 {isTopPick && (
                   <div className="absolute -top-3 left-6">
@@ -210,7 +209,7 @@ export default function ResultsPage() {
                               {match.score}% Match
                             </Badge>
                             <div className="flex items-center text-sm">
-                              ⭐ {platform.reputation.g2_rating}/5
+                              ⭐ {platform.reputation.g2_rating ?? "N/A"}/5
                             </div>
                           </div>
                         </div>
