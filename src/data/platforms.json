@@ -6448,9 +6448,9 @@
         "plans": [
           {
             "name": "Hero (flagship agent seat)",
-            "price": "Third‑party sources report starting prices around 150–180 USD per user per month, billed annually, for full-featured Hero seats (e.g., Gladly’s own Gorgias comparison blog cites 150 USD/user/month; SMBGuide and Tekpon list 180 USD/user/month, 10-seat minimum). Prospects should verify current pricing directly with Gladly.",
-            "price_annual": "Approximately 1,800–2,160 USD per agent per year according to external reviews (exact pricing subject to contract and changes).",
-            "price_monthly": "Approx. 150–180 USD per agent/month (billed annually) per Gladly blog and third‑party reviews; confirm with sales.",
+            "price": "$150–180/user/mo",
+            "price_annual": "~$1,800–2,160/agent/yr",
+            "price_monthly": "~$150–180/agent/mo",
             "billing_period": "Per user per month, usually billed annually with a minimum number of Hero seats.",
             "billing_unit": "Per named Hero agent (full seat)",
             "agents_included": "External sources mention a 10-hero minimum on some Hero packages; actual minimums may vary by contract.",
@@ -6459,7 +6459,7 @@
               "Full omnichannel agent workspace (voice, email, SMS, chat, social) organized around a single customer conversation instead of tickets.",
               "Native voice and IVR, SMS, web chat, email, Facebook Messenger, Instagram messaging and other digital channels in one interface.",
               "Customer AI and Sidekick capabilities for AI-assisted replies, summaries, intent understanding, and suggested actions.",
-              "Built-in knowledge base and Help Center (“Answers”) for both agent assistance and customer self-service across channels.",
+              "Built-in knowledge base and Help Center for both agent assistance and customer self-service across channels.",
               "Advanced routing and workforce features (People Match, Skills, agent statuses, proactive outreach).",
               "Real-time and historical analytics (Liveboards, Insight Builder) across agents, channels, and topics.",
               "Access to Gladly integrations and App Platform (Shopify, Magento, BigCommerce, Salesforce, Klaviyo, Slack, loyalty and returns tools, etc.)."
@@ -6467,9 +6467,9 @@
           },
           {
             "name": "Superhero (higher-tier Hero package)",
-            "price": "SMBGuide and Tekpon list a “Superhero” package starting around 210 USD per user per month, typically with higher seat minimums (e.g., 45 heroes). Exact pricing is not published by Gladly and should be confirmed directly.",
-            "price_annual": "Approximately 2,520 USD per Hero per year at 210 USD/user/month (billed annually), per Tekpon/SMBGuide listings.",
-            "price_monthly": "Around 210 USD per Hero/month billed annually, according to third‑party reviews.",
+            "price": "~$210/user/mo",
+            "price_annual": "~$2,520/hero/yr",
+            "price_monthly": "~$210/hero/mo",
             "billing_period": "Per user per month, billed annually with a higher minimum number of seats (e.g., 45 Heroes reported by SMBGuide).",
             "billing_unit": "Per named Superhero agent (enhanced Hero seat)",
             "agents_included": "External reviews mention a minimum of ~45 Superhero seats; actual thresholds can differ by deal.",
@@ -6482,9 +6482,9 @@
           },
           {
             "name": "Task User (back-office / limited seat)",
-            "price": "TrustRadius and multiple comparison sites report a starting price of approximately 38 USD per user per month for Task Users, designed for back‑office and non-frontline roles.",
-            "price_annual": "Approximately 456 USD per Task User per year at 38 USD/user/month (billed annually), based on TrustRadius and comparison articles.",
-            "price_monthly": "Around 38 USD per Task User/month (billed annually), per TrustRadius and third‑party comparisons.",
+            "price": "~$38/user/mo",
+            "price_annual": "~$456/user/yr",
+            "price_monthly": "~$38/user/mo",
             "billing_period": "Per user per month, usually billed annually as an add-on alongside Hero seats.",
             "billing_unit": "Per Task User (limited functionality seat, e.g., back‑office and non-contact roles)",
             "agents_included": "Offered as an add-on to a core Hero deployment; number of Task Users depends on contract.",
@@ -17735,7 +17735,7 @@
         "api_docs_url": "https://support.uvdesk.com/en/blog/uvdesk-api-overview",
         "api_type": "REST API using standard HTTP methods (GET, POST, PATCH/UPDATE, DELETE)",
         "total_integrations": "Dozens of official apps and connectors across ecommerce, CMS, communication and storage platforms (exact count not officially stated)",
-        "total_integrations_source": "https://support.uvdesk.com/en/folder/184",
+        "total_integrations_source": null,
         "app_store_topics": null,
         "top_integrations": [
           "Magento and Magento 2",
