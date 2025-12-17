@@ -249,9 +249,9 @@ export default async function PlatformPage({
                   <CardContent className="p-6 text-center">
                     <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
                     <div className="text-2xl font-bold mb-1">
-                      {typeof platform.integrations.total_integrations === 'number'
-                        ? platform.integrations.total_integrations
-                        : platform.integrations.total_integrations}+
+                      {platform.integrations.total_integrations === "Not provided"
+                        ? <span className="text-xl text-muted-foreground">N/A</span>
+                        : platform.integrations.total_integrations}
                     </div>
                     <div className="text-xs text-muted-foreground uppercase">
                       Integrations
@@ -428,7 +428,9 @@ export default async function PlatformPage({
                   Top Integrations
                 </CardTitle>
                 <CardDescription>
-                  {platform.integrations.total_integrations}+ integrations available
+                  {platform.integrations.total_integrations === "Not provided"
+                    ? "Integrations available"
+                    : `${platform.integrations.total_integrations} integrations available`}
                 </CardDescription>
               </CardHeader>
               <CardContent>
