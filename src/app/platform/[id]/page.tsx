@@ -238,7 +238,7 @@ export default async function PlatformPage({
                   <CardContent className="p-6 text-center">
                     <Users className="h-8 w-8 text-primary mx-auto mb-2" />
                     <div className="text-2xl font-bold mb-1">
-                      {platform.statistics.customer_count.split(/[;,:]/)[0].trim().split(" ")[0]}
+                      {platform.statistics.customer_count?.split(/[;,:]/)[0].trim().split(" ")[0]}
                     </div>
                     <div className="text-xs text-muted-foreground uppercase">
                       Customers

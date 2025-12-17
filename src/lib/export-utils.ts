@@ -57,14 +57,14 @@ export function exportComparisonToCSV(platforms: Platform[]): string {
       platform.category_primary,
       `"${platform.tagline}"`,
       platform.founded_year.toString(),
-      platform.statistics.customer_count.split(/[;,:]/)[0].trim(),
+      platform.statistics.customer_count?.split(/[;,:]/)[0].trim(),
       platform.reputation.g2_rating?.toString() ?? "N/A",
       platform.reputation.g2_reviews_count?.toString() ?? "0",
       platform.pricing.free_trial ? "Yes" : "No",
       platform.pricing.free_plan ? "Yes" : "No",
       startingPrice,
       topPrice,
-      platform.integrations.total_integrations.toString(),
+      platform.integrations.total_integrations?.toString(),
       `"${topFeatures}"`,
       `"${bestFor}"`,
       platform.website_url,
@@ -189,7 +189,7 @@ export function generateComparisonMatrix(platforms: Platform[]): string {
 |---------|${platforms.map(() => "-------").join("|")}|
 | **Category** | ${platforms.map((p) => p.category_primary).join(" | ")} |
 | **Founded** | ${platforms.map((p) => p.founded_year).join(" | ")} |
-| **Customers** | ${platforms.map((p) => p.statistics.customer_count.split(/[;,:]/)[0].trim()).join(" | ")} |
+| **Customers** | ${platforms.map((p) => p.statistics.customer_count?.split(/[;,:]/)[0].trim()).join(" | ")} |
 | **G2 Rating** | ${platforms.map((p) => `${p.reputation.g2_rating ?? "N/A"}/5 (${p.reputation.g2_reviews_count ?? 0} reviews)`).join(" | ")} |
 | **Free Trial** | ${platforms.map((p) => p.pricing.free_trial ? "✅ Yes" : "❌ No").join(" | ")} |
 | **Free Plan** | ${platforms.map((p) => p.pricing.free_plan ? "✅ Yes" : "❌ No").join(" | ")} |
